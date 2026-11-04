@@ -1,0 +1,87 @@
+@{
+    ViewData["title"] = Lang.GetKey("dm_page_title");
+    var allowManage = (bool)(ViewData["AllowManage"] ?? false);
+
+}
+
+<div class="card">
+    <div class="card-body table-responsive">
+        <div id="gridContainer"></div>
+        <div id="importPopup"></div>
+        <div id="importErrorsPopup"></div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        window.allowManage = @(allowManage ? "true" : "false");
+        window.dmI18n = {
+            col_no: '@Html.Raw(Lang.GetKey("dm_col_no"))',
+            col_name: '@Html.Raw(Lang.GetKey("dm_col_name"))',
+            col_short_name: '@Html.Raw(Lang.GetKey("dm_col_short_name"))',
+            col_site: '@Html.Raw(Lang.GetKey("dm_col_site"))',
+            col_main_approver: '@Html.Raw(Lang.GetKey("dm_col_main_approver"))',
+            col_backup_approver: '@Html.Raw(Lang.GetKey("dm_col_backup_approver"))',
+            col_description: '@Html.Raw(Lang.GetKey("dm_col_description"))',
+            col_action: '@Html.Raw(Lang.GetKey("dm_col_action"))',
+            col_status: '@Html.Raw(Lang.GetKey("dm_col_status"))',
+            col_created: '@Html.Raw(Lang.GetKey("dm_col_created"))',
+            status_active: '@Html.Raw(Lang.GetKey("dm_status_active"))',
+            status_inactive: '@Html.Raw(Lang.GetKey("dm_status_inactive"))',
+            action_edit: '@Html.Raw(Lang.GetKey("dm_action_edit"))',
+            action_copy: '@Html.Raw(Lang.GetKey("dm_action_copy"))',
+            copied: '@Html.Raw(Lang.GetKey("dm_copied"))',
+            copy_failed: '@Html.Raw(Lang.GetKey("dm_copy_failed"))',
+            picker_user_name: '@Html.Raw(Lang.GetKey("um_col_username"))',
+            picker_full_name: '@Html.Raw(Lang.GetKey("um_col_fullname"))',
+            picker_section: '@Html.Raw(Lang.GetKey("common_section"))',
+            picker_department: '@Html.Raw(Lang.GetKey("common_department"))',
+            picker_site: '@Html.Raw(Lang.GetKey("common_site"))',
+            picker_position: '@Html.Raw(Lang.GetKey("um_col_position"))',
+            common_search_placeholder: '@Html.Raw(Lang.GetKey("common_search_placeholder"))',
+            import_result_title: '@Html.Raw(Lang.GetKey("import_result_title"))',
+            import_error_row: '@Html.Raw(Lang.GetKey("import_error_row"))',
+            import_error_issuer: '@Html.Raw(Lang.GetKey("import_error_issuer"))',
+            import_error_message: '@Html.Raw(Lang.GetKey("import_error_message"))',
+            btn_create: '@Html.Raw(Lang.GetKey("dm_btn_create"))',
+            btn_import: '@Html.Raw(Lang.GetKey("dm_btn_import"))',
+            btn_export_excel: '@Html.Raw(Lang.GetKey("admin_btn_export_excel"))',
+            import_title: '@Html.Raw(Lang.GetKey("dm_import_title"))',
+            import_select_file: '@Html.Raw(Lang.GetKey("dm_import_select_file"))',
+            btn_cancel: '@Html.Raw(Lang.GetKey("dm_btn_cancel"))',
+            btn_import_do: '@Html.Raw(Lang.GetKey("dm_btn_import_do"))',
+            msg_no_file: '@Html.Raw(Lang.GetKey("dm_msg_no_file"))',
+            msg_importing: '@Html.Raw(Lang.GetKey("dm_msg_importing"))',
+            msg_exporting: '@Html.Raw(Lang.GetKey("admin_msg_exporting"))',
+            msg_export_fail: '@Html.Raw(Lang.GetKey("admin_msg_export_fail"))',
+            msg_import_fail: '@Html.Raw(Lang.GetKey("dm_msg_import_fail"))',
+            msg_import_completed: '@Html.Raw(Lang.GetKey("dm_msg_import_completed"))',
+            msg_total: '@Html.Raw(Lang.GetKey("dm_msg_total"))',
+            msg_succeeded: '@Html.Raw(Lang.GetKey("dm_msg_succeeded"))',
+            msg_failed_count: '@Html.Raw(Lang.GetKey("dm_msg_failed_count"))',
+            lbl_name: '@Html.Raw(Lang.GetKey("dmf_lbl_name"))',
+            lbl_short_name: '@Html.Raw(Lang.GetKey("dmf_lbl_short_name"))',
+            lbl_site: '@Html.Raw(Lang.GetKey("dmf_lbl_site"))',
+            lbl_main_approver: '@Html.Raw(Lang.GetKey("dmf_lbl_main_approver"))',
+            lbl_backup_approver: '@Html.Raw(Lang.GetKey("dmf_lbl_backup_approver"))',
+            lbl_description: '@Html.Raw(Lang.GetKey("dmf_lbl_description"))',
+            create_title: '@Html.Raw(Lang.GetKey("dmf_create_title"))',
+            edit_title: '@Html.Raw(Lang.GetKey("dmf_edit_title"))',
+            btn_popup_cancel: '@Html.Raw(Lang.GetKey("dmf_btn_cancel"))',
+            btn_popup_create: '@Html.Raw(Lang.GetKey("dmf_btn_create"))',
+            btn_popup_save: '@Html.Raw(Lang.GetKey("dmf_btn_save"))',
+            msg_saving: '@Html.Raw(Lang.GetKey("dmf_msg_saving"))',
+            msg_save_fail: '@Html.Raw(Lang.GetKey("dmf_msg_save_fail"))',
+            msg_created: '@Html.Raw(Lang.GetKey("dmf_msg_created"))',
+            msg_updated: '@Html.Raw(Lang.GetKey("dmf_msg_updated"))',
+            msg_error: '@Html.Raw(Lang.GetKey("dmf_msg_error"))'
+        };
+    </script>
+    <link rel="stylesheet" href="~/css/admin/section-management-style.css" asp-append-version="true" />
+    <script src="~/js/admin/lookup-cache.js" asp-append-version="true"></script>
+    <script src="~/js/admin/user-picker.js" asp-append-version="true"></script>
+    <script src="~/js/admin/import-errors.js" asp-append-version="true"></script>
+    <script src="~/js/admin/admin-grid-export.js" asp-append-version="true"></script>
+    <script src="~/js/admin/department-form-popup.js" asp-append-version="true"></script>
+    <script src="~/js/admin/department-management.js" asp-append-version="true"></script>
+}

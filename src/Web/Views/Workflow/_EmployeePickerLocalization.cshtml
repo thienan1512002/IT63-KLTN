@@ -1,0 +1,20 @@
+@*
+    Shared i18n for employee-picker.js (popup grid inside dxDropDownBox).
+    Include this partial on any page that uses loadEmployees / createEmpPickerColumn / createEmpPickerWithLeaveDay.
+    Keys map to existing SharedResource entries — add new cultures in .resx as needed.
+*@
+@inject LanguageService language;
+<script>
+    Object.assign(window.i18n = window.i18n || {}, {
+        employeeGrid: {
+            colNo:                  "@Html.Raw(language.GetKey("grid_col_no"))",
+            colUserName:            "@Html.Raw(language.GetKey("wfr_col_fax_code"))",
+            colEmpId:               "@Html.Raw(language.GetKey("ot_col_emp_id"))",
+            colFullName:            "@Html.Raw(language.GetKey("ot_col_fullname"))",
+            colDepartment:          "@Html.Raw(language.GetKey("workflow_department_name"))",
+            colSection:             "@Html.Raw(language.GetKey("common_section"))",
+            colPosition:            "@Html.Raw(language.GetKey("workflow_grid_position"))",
+            searchPlaceholder:      "@Html.Raw(language.GetKey("common_search_placeholder"))",
+        },
+    });
+</script>

@@ -1,0 +1,59 @@
+@{
+    ViewData["Title"] = Lang.GetKey("approver_page_title");
+}
+
+<div class="card h-100">
+    <div class="card-body">
+        <div class="d-flex align-items-center mb-3">
+            <i class="mdi mdi-account-check mr-2 text-primary" style="font-size:1.4rem;"></i>
+            <h5 class="mb-0">@Lang.GetKey("approver_page_title")</h5>
+        </div>
+        <div id="approverSettingGrid"></div>
+    </div>
+</div>
+
+<div id="approverSettingPopup"></div>
+<div id="userPickerPopup"></div>
+
+@section Scripts {
+    <script>
+        window.approverI18n = {
+            pageTitle:              '@Html.Raw(Lang.GetKey("approver_page_title"))',
+            addNew:                 '@Html.Raw(Lang.GetKey("common_add_new"))',
+            save:                   '@Html.Raw(Lang.GetKey("common_save"))',
+            cancel:                 '@Html.Raw(Lang.GetKey("common_cancel"))',
+            confirm:                '@Html.Raw(Lang.GetKey("common_confirm"))',
+            searchPlaceholder:      '@Html.Raw(Lang.GetKey("common_search_placeholder"))',
+            colNo:                  '@Html.Raw(Lang.GetKey("common_col_no"))',
+            colActions:             '@Html.Raw(Lang.GetKey("common_col_actions"))',
+            colFormCode:            '@Html.Raw(Lang.GetKey("approver_form_code"))',
+            colTitle:               '@Html.Raw(Lang.GetKey("approver_col_title"))',
+            colDisplayTitle:        '@Html.Raw(Lang.GetKey("approver_col_display_title"))',
+            colApprovers:           '@Html.Raw(Lang.GetKey("approver_col_approvers"))',
+            popupAdd:               '@Html.Raw(Lang.GetKey("approver_popup_add"))',
+            popupEdit:              '@Html.Raw(Lang.GetKey("approver_popup_edit"))',
+            fieldUsers:             '@Html.Raw(Lang.GetKey("approver_field_users"))',
+            btnBrowse:              '@Html.Raw(Lang.GetKey("approver_btn_browse"))',
+            placeholderUsers:       '@Html.Raw(Lang.GetKey("approver_placeholder_users"))',
+            pickerTitle:            '@Html.Raw(Lang.GetKey("approver_picker_title"))',
+            pickerUsername:         '@Html.Raw(Lang.GetKey("approver_picker_username"))',
+            pickerFullname:         '@Html.Raw(Lang.GetKey("approver_picker_fullname"))',
+            pickerSection:          '@Html.Raw(Lang.GetKey("common_section"))',
+            pickerPosition:         '@Html.Raw(Lang.GetKey("approver_picker_position"))',
+            pickerEmail:            'Email',
+            deleteConfirm:          '@Html.Raw(Lang.GetKey("approver_delete_confirm"))',
+            deleted:                '@Html.Raw(Lang.GetKey("approver_deleted"))',
+            deleteFailed:           '@Html.Raw(Lang.GetKey("approver_delete_failed"))',
+            updated:                '@Html.Raw(Lang.GetKey("approver_updated"))',
+            created:                '@Html.Raw(Lang.GetKey("approver_created"))',
+            saveFailed:             '@Html.Raw(Lang.GetKey("approver_save_failed"))',
+            loadFailed:             '@Html.Raw(Lang.GetKey("approver_load_failed"))',
+            loadUsersFailed:        '@Html.Raw(Lang.GetKey("approver_load_users_failed"))',
+            formcodeRequired:       '@Html.Raw(Lang.GetKey("approver_formcode_required"))',
+            titleRequired:          '@Html.Raw(Lang.GetKey("approver_title_required"))',
+            displayTitleRequired:   '@Html.Raw(Lang.GetKey("approver_display_title_required"))',
+            approverRequired:       '@Html.Raw(Lang.GetKey("approver_approver_required"))',
+        };
+    </script>
+    <script type="module" src="~/js/workflow/approver-setting/approver-setting.js" asp-append-version="true"></script>
+}

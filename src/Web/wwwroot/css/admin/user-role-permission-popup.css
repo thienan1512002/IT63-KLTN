@@ -1,0 +1,246 @@
+/* Popup phân quyền — dxDataGrid (nhóm) + dxSwitch */
+
+.user-role-permission-dx-popup .dx-popup-content {
+    padding: 0;
+}
+
+.user-role-permission-dx-popup .dx-popup-title {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.user-role-popup-body {
+    min-height: 200px;
+}
+
+.user-role-popup-shell {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.user-role-popup-toolbar {
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 0.5rem;
+}
+
+/* Ô tìm kiếm ngoài toolbar (dxTextBox), không dùng searchPanel trong DataGrid */
+.user-role-popup-search .dx-texteditor {
+    max-width: 100%;
+}
+
+.user-role-treelist-wrap {
+    flex: 1;
+    min-height: 0;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    background: #fff;
+    overflow: hidden;
+}
+
+/* Tránh vỡ layout: ép bảng thật + checkbox/icon + chữ cùng hàng (không bị xuống dòng lệch cột) */
+.user-role-permission-dx-popup .user-role-treelist-wrap .dx-treelist-table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.user-role-permission-dx-popup .user-role-treelist-wrap .dx-treelist-rowsview .dx-row {
+    display: table-row !important;
+}
+
+.user-role-permission-dx-popup .user-role-treelist-wrap .dx-treelist-rowsview .dx-row > td {
+    display: table-cell !important;
+    vertical-align: middle !important;
+}
+
+.user-role-permission-dx-popup .user-role-treelist-wrap .dx-treelist-rowsview .dx-row > td.dx-command-select,
+.user-role-permission-dx-popup .user-role-treelist-wrap .dx-treelist-rowsview .dx-row > td.dx-datagrid-cell-select {
+    width: 46px !important;
+    max-width: 52px !important;
+    min-width: 40px !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+}
+
+.user-role-permission-dx-popup .user-role-treelist-wrap .dx-command-select .dx-checkbox,
+.user-role-permission-dx-popup .user-role-treelist-wrap .dx-select-checkbox {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    vertical-align: middle !important;
+}
+
+.user-role-permission-dx-popup .user-role-treelist-wrap .dx-treelist-cell-expandable {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    flex-wrap: nowrap !important;
+}
+
+.user-role-permission-dx-popup .user-role-treelist-wrap .dx-treelist-cell-expandable .dx-treelist-icon-container {
+    flex-shrink: 0 !important;
+}
+
+.user-role-permission-dx-popup .user-role-treelist-wrap .dx-treelist-cell-expandable .user-role-tl-cat,
+.user-role-permission-dx-popup .user-role-treelist-wrap .dx-treelist-cell-expandable .user-role-tl-leaf {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    white-space: normal !important;
+    word-break: break-word;
+    line-height: 1.4;
+}
+
+.user-role-treelist-wrap .dx-treelist-rowsview .dx-row > td {
+    vertical-align: middle;
+}
+
+.user-role-tl-row-cat > td {
+    background-color: #f8f9fa !important;
+}
+
+.user-role-treelist-row-selected > td {
+    background-color: #e6f7ff !important;
+}
+
+.user-role-permission-scroll {
+    flex: 1;
+    min-height: 0;
+    max-height: calc(85vh - 220px);
+    overflow-y: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 0.35rem 0.5rem;
+    background: #fff;
+}
+
+.user-role-cat-block {
+    margin-bottom: 0.85rem;
+}
+
+.user-role-cat-block:last-child {
+    margin-bottom: 0;
+}
+
+.user-role-cat-head {
+    margin-bottom: 0.2rem;
+}
+
+.user-role-cat-badge {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.user-role-cat-body {
+    padding-left: 0.15rem;
+}
+
+.user-role-perm-row {
+    border-color: #e9ecef !important;
+}
+
+.user-role-perm-row:last-child {
+    border-bottom: none !important;
+}
+
+.user-role-perm-cb .dx-checkbox-text {
+    white-space: normal;
+    line-height: 1.35;
+    padding-top: 1px;
+}
+
+/* Nút Hủy / Lưu trên thanh toolbar dưới của dxPopup */
+.user-role-permission-dx-popup .dx-popup-bottom .dx-toolbar {
+    border-top: 1px solid #dee2e6;
+    background: #fff;
+}
+
+.user-role-permission-dx-popup .dx-popup-bottom .dx-toolbar-items-container {
+    padding: 10px 14px;
+    gap: 8px;
+}
+
+/* Legacy class names — giữ nếu còn dùng ở view khác */
+.user-role-group-cb-wrap {
+    flex-shrink: 0;
+}
+
+.user-role-cb-super,
+.user-role-cb-group,
+.user-role-cb-row {
+    vertical-align: middle;
+}
+
+.user-role-cb-row .dx-checkbox-icon,
+.user-role-cb-group .dx-checkbox-icon,
+.user-role-cb-super .dx-checkbox-icon {
+    border-radius: 3px;
+}
+
+.user-role-wrap-cell {
+    white-space: normal !important;
+    word-wrap: break-word;
+}
+
+.user-role-highlight-permission {
+    background-color: #e6f7ff !important;
+    font-weight: 600;
+}
+
+.user-role-toolbar-super {
+    min-height: 36px;
+}
+
+/* DataGrid + cột Switch */
+.user-role-roles-grid {
+    flex: 1;
+    min-height: 0;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.user-role-roles-grid .dx-datagrid-rowsview .dx-row > td {
+    vertical-align: middle;
+}
+
+.user-role-col-switch,
+.user-role-group-switch,
+.user-role-row-switch {
+    text-align: center;
+}
+
+.user-role-col-switch .dx-switch,
+.user-role-group-switch .dx-switch,
+.user-role-row-switch .dx-switch {
+    vertical-align: middle;
+}
+
+.user-role-super-wrap .dx-switch {
+    flex-shrink: 0;
+}
+
+.user-role-group-cell {
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+}
+
+.user-role-group-title {
+    font-size: 0.95rem;
+}
+
+.user-role-col-permission .user-role-permission-label {
+    font-size: 0.9375rem;
+    line-height: 1.35;
+}
+
+.user-role-row-selected > td {
+    background-color: #e6f7ff !important;
+}
+
+.user-role-roles-grid .dx-toolbar-items-container {
+    padding: 4px 0;
+}

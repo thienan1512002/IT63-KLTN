@@ -1,0 +1,124 @@
+@{
+    ViewData["title"] = Lang.GetKey("um_page_title");
+    var allowManage = (bool)(ViewData["AllowManage"] ?? false);
+}
+
+<div class="card">
+    <div class="card-body table-responsive">
+        <div id="gridContainer"></div>
+        <div id="importPopup"></div>
+        <div id="importErrorsPopup"></div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        window.allowManage = @(allowManage ? "true" : "false");
+        window.umI18n = {
+            col_no: '@Html.Raw(Lang.GetKey("um_col_no"))',
+            col_username: '@Html.Raw(Lang.GetKey("um_col_username"))',
+            col_empid: '@Html.Raw(Lang.GetKey("um_col_empid"))',
+            col_fullname: '@Html.Raw(Lang.GetKey("um_col_fullname"))',
+            col_email: '@Html.Raw(Lang.GetKey("um_col_email"))',
+            col_phone: '@Html.Raw(Lang.GetKey("um_col_phone"))',
+            col_site: '@Html.Raw(Lang.GetKey("um_col_site"))',
+            col_dept: '@Html.Raw(Lang.GetKey("um_col_dept"))',
+            col_section: '@Html.Raw(Lang.GetKey("um_col_section"))',
+            col_position: '@Html.Raw(Lang.GetKey("um_col_position"))',
+            col_dob: '@Html.Raw(Lang.GetKey("um_col_dob"))',
+            col_status: '@Html.Raw(Lang.GetKey("um_col_status"))',
+            status_active: '@Html.Raw(Lang.GetKey("um_status_active"))',
+            status_inactive: '@Html.Raw(Lang.GetKey("um_status_inactive"))',
+            action_edit: '@Html.Raw(Lang.GetKey("um_action_edit"))',
+            action_reset_pwd: '@Html.Raw(Lang.GetKey("um_action_reset_pwd"))',
+            action_edit_perm: '@Html.Raw(Lang.GetKey("um_action_edit_perm"))',
+            action_lock: '@Html.Raw(Lang.GetKey("um_action_lock"))',
+            action_unlock: '@Html.Raw(Lang.GetKey("um_action_unlock"))',
+            copied: '@Html.Raw(Lang.GetKey("um_copied"))',
+            copy_failed: '@Html.Raw(Lang.GetKey("um_copy_failed"))',
+            common_cancel: '@Html.Raw(Lang.GetKey("common_cancel"))',
+            common_save: '@Html.Raw(Lang.GetKey("common_save"))',
+            common_search_placeholder: '@Html.Raw(Lang.GetKey("common_search_placeholder"))',
+            login_username_placeholder: '@Html.Raw(Lang.GetKey("login_username_placeholder"))',
+            workflow_swal_loading: '@Html.Raw(Lang.GetKey("workflow_swal_loading"))',
+            ra_network_error: '@Html.Raw(Lang.GetKey("ra_network_error"))',
+            import_result_title: '@Html.Raw(Lang.GetKey("import_result_title"))',
+            import_error_row: '@Html.Raw(Lang.GetKey("import_error_row"))',
+            import_error_issuer: '@Html.Raw(Lang.GetKey("import_error_issuer"))',
+            import_error_message: '@Html.Raw(Lang.GetKey("import_error_message"))',
+            urp_user_account: '@Html.Raw(Lang.GetKey("urp_user_account"))',
+            urp_group: '@Html.Raw(Lang.GetKey("urp_group"))',
+            urp_group_toggle_hint: '@Html.Raw(Lang.GetKey("urp_group_toggle_hint"))',
+            urp_permission: '@Html.Raw(Lang.GetKey("urp_permission"))',
+            urp_super_user: '@Html.Raw(Lang.GetKey("urp_super_user"))',
+            urp_super_user_hint: '@Html.Raw(Lang.GetKey("urp_super_user_hint"))',
+            urp_msg_save_failed: '@Html.Raw(Lang.GetKey("urp_msg_save_failed"))',
+            urp_msg_saved: '@Html.Raw(Lang.GetKey("urp_msg_saved"))',
+            urp_msg_missing_user: '@Html.Raw(Lang.GetKey("urp_msg_missing_user"))',
+            urp_msg_load_failed: '@Html.Raw(Lang.GetKey("urp_msg_load_failed"))',
+            btn_create: '@Html.Raw(Lang.GetKey("um_btn_create"))',
+            btn_import: '@Html.Raw(Lang.GetKey("um_btn_import"))',
+            btn_export_excel: '@Html.Raw(Lang.GetKey("admin_btn_export_excel"))',
+            import_title: '@Html.Raw(Lang.GetKey("um_import_title"))',
+            import_select_file: '@Html.Raw(Lang.GetKey("um_import_select_file"))',
+            btn_cancel: '@Html.Raw(Lang.GetKey("um_btn_cancel"))',
+            btn_import_do: '@Html.Raw(Lang.GetKey("um_btn_import_do"))',
+            msg_no_file: '@Html.Raw(Lang.GetKey("um_msg_no_file"))',
+            msg_importing: '@Html.Raw(Lang.GetKey("um_msg_importing"))',
+            msg_exporting: '@Html.Raw(Lang.GetKey("admin_msg_exporting"))',
+            msg_export_fail: '@Html.Raw(Lang.GetKey("admin_msg_export_fail"))',
+            msg_import_fail: '@Html.Raw(Lang.GetKey("um_msg_import_fail"))',
+            msg_import_completed: '@Html.Raw(Lang.GetKey("um_msg_import_completed"))',
+            msg_total: '@Html.Raw(Lang.GetKey("um_msg_total"))',
+            msg_succeeded: '@Html.Raw(Lang.GetKey("um_msg_succeeded"))',
+            msg_failed_count: '@Html.Raw(Lang.GetKey("um_msg_failed_count"))',
+            umf_create_title: '@Html.Raw(Lang.GetKey("umf_create_title"))',
+            umf_edit_title: '@Html.Raw(Lang.GetKey("umf_edit_title"))',
+            umf_lbl_faxcode: '@Html.Raw(Lang.GetKey("umf_lbl_faxcode"))',
+            umf_lbl_empid: '@Html.Raw(Lang.GetKey("umf_lbl_empid"))',
+            umf_lbl_fullname: '@Html.Raw(Lang.GetKey("umf_lbl_fullname"))',
+            umf_lbl_email: '@Html.Raw(Lang.GetKey("umf_lbl_email"))',
+            umf_lbl_phone: '@Html.Raw(Lang.GetKey("umf_lbl_phone"))',
+            umf_lbl_position: '@Html.Raw(Lang.GetKey("umf_lbl_position"))',
+            umf_lbl_dob: '@Html.Raw(Lang.GetKey("umf_lbl_dob"))',
+            umf_lbl_site: '@Html.Raw(Lang.GetKey("umf_lbl_site"))',
+            umf_lbl_dept: '@Html.Raw(Lang.GetKey("umf_lbl_dept"))',
+            umf_lbl_section: '@Html.Raw(Lang.GetKey("umf_lbl_section"))',
+            umf_lbl_password: '@Html.Raw(Lang.GetKey("umf_lbl_password"))',
+            umf_lbl_confirm_pwd: '@Html.Raw(Lang.GetKey("umf_lbl_confirm_pwd"))',
+            umf_lbl_avatar: '@Html.Raw(Lang.GetKey("umf_lbl_avatar"))',
+            umf_pwd_rules: '@Html.Raw(Lang.GetKey("umf_pwd_rules"))',
+            umf_pwd_mismatch: '@Html.Raw(Lang.GetKey("umf_pwd_mismatch"))',
+            umf_btn_cancel: '@Html.Raw(Lang.GetKey("umf_btn_cancel"))',
+            umf_btn_create: '@Html.Raw(Lang.GetKey("umf_btn_create"))',
+            umf_btn_save: '@Html.Raw(Lang.GetKey("umf_btn_save"))',
+            umf_msg_saving: '@Html.Raw(Lang.GetKey("umf_msg_saving"))',
+            umf_msg_save_fail: '@Html.Raw(Lang.GetKey("umf_msg_save_fail"))',
+            umf_msg_created: '@Html.Raw(Lang.GetKey("umf_msg_created"))',
+            umf_msg_updated: '@Html.Raw(Lang.GetKey("umf_msg_updated"))',
+            uma_reset_title: '@Html.Raw(Lang.GetKey("uma_reset_title"))',
+            uma_reset_confirm: '@Html.Raw(Lang.GetKey("uma_reset_confirm"))',
+            uma_new_pwd_title: '@Html.Raw(Lang.GetKey("uma_new_pwd_title"))',
+            uma_new_pwd_warning: '@Html.Raw(Lang.GetKey("uma_new_pwd_warning"))',
+            uma_btn_copy: '@Html.Raw(Lang.GetKey("uma_btn_copy"))',
+            uma_copied: '@Html.Raw(Lang.GetKey("uma_copied"))',
+            uma_reset_failed: '@Html.Raw(Lang.GetKey("uma_reset_failed"))',
+            uma_error: '@Html.Raw(Lang.GetKey("uma_error"))',
+            uma_lock_title: '@Html.Raw(Lang.GetKey("uma_lock_title"))',
+            uma_unlock_title: '@Html.Raw(Lang.GetKey("uma_unlock_title"))',
+            uma_lock_confirm: '@Html.Raw(Lang.GetKey("uma_lock_confirm"))',
+            uma_unlock_confirm: '@Html.Raw(Lang.GetKey("uma_unlock_confirm"))',
+            uma_op_failed: '@Html.Raw(Lang.GetKey("uma_op_failed"))',
+            uma_status_changed: '@Html.Raw(Lang.GetKey("uma_status_changed"))'
+        };
+    </script>
+    <link rel="stylesheet" href="~/css/admin/user-management-style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/admin/user-role-permission-popup.css" asp-append-version="true" />
+    <script src="~/js/admin/lookup-cache.js" asp-append-version="true"></script>
+    <script src="~/js/admin/import-errors.js" asp-append-version="true"></script>
+    <script src="~/js/admin/admin-grid-export.js" asp-append-version="true"></script>
+    <script src="~/js/admin/user-form-popup.js" asp-append-version="true"></script>
+    <script src="~/js/admin/user-actions.js" asp-append-version="true"></script>
+    <script src="~/js/admin/user-role-permission-popup.js" asp-append-version="true"></script>
+    <script src="~/js/admin/user-management.js" asp-append-version="true"></script>
+}

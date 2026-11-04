@@ -1,0 +1,94 @@
+﻿@using Web.Models.Dtos.Workflow
+@using Web.Data.Enums.Workflow
+@using Web.Data.Entities.Workflow
+@using Web.Services.Workflow
+@{
+    var item = ViewBag.Request as RequestDetailsDto;
+    var types = ViewBag.RequestTypes as List<RequestType> ?? [];
+    ViewData["Title"] = item == null ? "Tạo yêu cầu mới" : "Chỉnh sửa yêu cầu";
+    string PriorityName(RequestPriority value) => value switch { RequestPriority.Low => "Thấp", RequestPriority.High => "Cao", RequestPriority.Urgent => "Khẩn cấp", _ => "Bình thường" };
+}
+<link rel="stylesheet" href="~/css/workflow/request-forms.css" asp-append-version="true" />
+<div class="wf-page">
+    <nav class="wf-breadcrumb" aria-label="Đường dẫn"><a href="/Requests"><i class="mdi mdi-arrow-left" aria-hidden="true"></i> Danh sách yêu cầu</a><i class="mdi mdi-chevron-right" aria-hidden="true"></i><span>@ViewData["Title"]</span></nav>
+    <div class="wf-create-layout">
+        <section class="wf-panel wf-editor">
+            <header class="wf-form-heading"><span class="wf-feature-icon"><i id="requestFormIcon" class="mdi mdi-file-document-edit-outline" aria-hidden="true"></i></span><div><h1 id="requestFormHeading">@ViewData["Title"]</h1><p>Chọn loại yêu cầu để điền mẫu thông tin tương ứng.</p></div></header>
+            @if (item != null)
+            {
+                <partial name="~/Views/Workflow/Request/_RequestReturnHistory.cshtml" model="item" />
+            }
+            <form id="requestForm" enctype="multipart/form-data" data-request-status="@item?.Status" novalidate>
+                <input type="hidden" id="requestId" value="@item?.Id" />
+                <nav class="wf-stepper" aria-label="Các bước tạo yêu cầu">
+                    <button type="button" class="is-active" data-step="0" aria-current="step"><span>1</span>Thông tin chung</button>
+                    <button type="button" data-step="1"><span>2</span>Chi tiết yêu cầu</button>
+                    <button type="button" data-step="2"><span>3</span>Tệp đính kèm</button>
+                    <button type="button" data-step="3"><span>4</span>Xác nhận &amp; Gửi</button>
+                </nav>
+                <div class="wf-form-section" data-step-panel="0">
+                    <div class="wf-section-heading"><h2>1. Thông tin chung</h2><p>Chọn mẫu biểu và thông tin người đề nghị.</p></div>
+                    <div class="wf-fields">
+                        <div class="wf-field"><label for="requestType">Loại yêu cầu <em>*</em></label><select id="requestType" name="RequestTypeId" required>
+                            <option value="">Chọn loại yêu cầu</option>
+                            @foreach (var t in types) { <option value="@t.Id" selected="@(item?.RequestTypeId == t.Id)" disabled="@(item?.Status == RequestStatus.Returned && item.RequestTypeId != t.Id)" data-template="@t.TemplateCode" data-date="@t.RequireRequestedDate.ToString().ToLowerInvariant()" data-amount="@t.RequireAmount.ToString().ToLowerInvariant()" data-reason="@t.RequireReason.ToString().ToLowerInvariant()" data-attachment="@t.AllowAttachment.ToString().ToLowerInvariant()">@t.Name</option> }
+                        </select></div>
+                        <div class="wf-field"><label for="requestPriority">Mức độ ưu tiên</label><select id="requestPriority" name="Priority">@foreach (var p in Enum.GetValues<RequestPriority>()) { <option value="@((int)p)" selected="@((item?.Priority ?? RequestPriority.Normal) == p)">@PriorityName(p)</option> }</select></div>
+                        <div class="wf-field wf-field-full"><label for="requestTitle">Tiêu đề yêu cầu <em>*</em></label><input id="requestTitle" name="Title" maxlength="250" required value="@item?.Title" placeholder="Nhập tiêu đề ngắn gọn cho yêu cầu" /></div>
+                        <div class="wf-field"><label for="requestCreator">Người đề nghị</label><div class="wf-input-icon"><i class="mdi mdi-account-outline" aria-hidden="true"></i><input id="requestCreator" readonly value="@(item?.CreatedBy ?? User.Identity?.Name)" /></div><small>Người tạo và đơn vị được hệ thống ghi nhận theo tài khoản.</small></div>
+                    </div>
+                    <div id="requestTemplateSummary" class="wf-info-note" hidden></div>
+                </div>
+                <div class="wf-form-section" data-step-panel="1" hidden>
+                    <div class="wf-section-heading"><h2 id="businessSectionHeading">2. Chi tiết yêu cầu</h2><p>Điền các thông tin riêng của mẫu biểu đã chọn.</p></div>
+                    <div id="businessFields"></div>
+                    <div class="wf-fields">
+                        <div class="wf-field" id="commonDateField"><label for="requestDate"><span id="requestDateLabel">Ngày yêu cầu</span> <em data-required-for="RequestedDate" hidden>*</em></label><input id="requestDate" type="date" name="RequestedDate" value="@item?.RequestedDate?.ToString("yyyy-MM-dd")" /></div>
+                        <div class="wf-field wf-field-full"><label for="requestContent"><span id="requestContentLabel">Nội dung yêu cầu</span> <em>*</em></label><textarea id="requestContent" name="Content" rows="5" maxlength="4000" required placeholder="Mô tả nội dung cần phê duyệt...">@item?.Content</textarea></div>
+                        <div class="wf-field" id="commonAmountField"><label for="requestAmount"><span id="requestAmountLabel">Ngân sách dự kiến (VND)</span> <em data-required-for="Amount" hidden>*</em></label><input id="requestAmount" type="number" name="Amount" min="0" max="9999999999999999.99" step="0.01" value="@(item?.Amount?.ToString(System.Globalization.CultureInfo.InvariantCulture))" placeholder="Nhập số tiền" /></div>
+                        <div class="wf-field wf-field-full"><label for="requestReason">Lý do đề nghị <em data-required-for="Reason" hidden>*</em></label><textarea id="requestReason" name="Reason" rows="3" maxlength="2000" placeholder="Giải thích lý do đề nghị...">@item?.Reason</textarea></div>
+                    </div>
+                </div>
+                <div class="wf-form-section" data-step-panel="2" hidden>
+                    <div class="wf-section-heading"><h2>3. Tệp đính kèm</h2><p>Đính kèm tài liệu để người phê duyệt có đầy đủ thông tin.</p></div>
+                    @if (item?.Attachments.Count > 0)
+                    {
+                        <h3 class="wf-small-heading">Tài liệu đã lưu</h3><div class="wf-attachments">@foreach (var file in item.Attachments) { <a class="wf-attachment" href="@file.Url"><i class="mdi mdi-file-document-outline" aria-hidden="true"></i><span>@file.FileName<small>@((file.FileSize / 1024d).ToString("N0")) KB</small></span><i class="mdi mdi-download" aria-hidden="true"></i></a> }</div>
+                    }
+                    <label class="wf-upload" for="requestFiles"><i class="mdi mdi-cloud-upload-outline" aria-hidden="true"></i><strong>Chọn tài liệu đính kèm</strong><span>PDF, Word, Excel hoặc hình ảnh</span><input id="requestFiles" type="file" name="files" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg" /></label>
+                    <p class="wf-help" id="attachmentHint">Bạn có thể chọn nhiều tệp trong một lần.</p><ul id="selectedFiles" class="wf-file-list" aria-live="polite"></ul>
+                </div>
+                <div class="wf-form-section" data-step-panel="3" hidden>
+                    <div class="wf-section-heading"><h2>4. Xác nhận &amp; Gửi</h2><p>Kiểm tra thông tin bên dưới trước khi gửi yêu cầu.</p></div>
+                    <dl class="wf-info-table" id="requestReview"></dl>
+                    <div class="wf-info-note"><i class="mdi mdi-information-outline" aria-hidden="true"></i> Yêu cầu sẽ được chuyển đến người phê duyệt theo quy trình của loại yêu cầu đã chọn.</div>
+                </div>
+                <section class="wf-route-preview" id="requestApprovalPreview" aria-labelledby="requestApprovalPreviewHeading">
+                    <div class="wf-route-header"><div><h2 id="requestApprovalPreviewHeading"><i class="mdi mdi-source-branch" aria-hidden="true"></i> Luồng phê duyệt dự kiến</h2><p>Xem các tầng và người sẽ tiếp nhận yêu cầu của bạn.</p></div><span id="requestApprovalVersion" class="wf-route-version" hidden></span></div>
+                    <p id="requestApprovalState" class="wf-route-state" role="status" aria-live="polite">Chọn loại yêu cầu để xem người duyệt dự kiến.</p>
+                    <ol id="requestApprovalSteps" class="wf-route-steps" aria-label="Thứ tự các tầng phê duyệt" hidden></ol>
+                    <p id="requestApprovalNote" class="wf-route-note" hidden></p>
+                    <button type="button" id="requestApprovalRetry" class="wf-button" hidden><i class="mdi mdi-refresh" aria-hidden="true"></i> Tải lại luồng</button>
+                </section>
+                <div id="businessLookupError" class="wf-alert" role="alert" hidden></div>
+                <div id="requestFormError" class="wf-alert" role="alert" hidden></div>
+                <footer class="wf-form-footer"><a class="wf-button" href="/Requests">Hủy</a><div class="wf-actions"><button class="wf-button" id="requestPrevious" type="button" hidden><i class="mdi mdi-arrow-left" aria-hidden="true"></i> Quay lại</button><button class="wf-button wf-button-outline" type="submit" value="draft" formnovalidate><i class="mdi mdi-content-save-outline" aria-hidden="true"></i> Lưu nháp</button><button class="wf-button wf-button-primary" id="requestNext" type="button">Tiếp theo <i class="mdi mdi-arrow-right" aria-hidden="true"></i></button><button class="wf-button wf-button-primary" id="requestSend" type="submit" value="send" hidden><i class="mdi mdi-send" aria-hidden="true"></i> Gửi phê duyệt</button></div></footer>
+            </form>
+        </section>
+        <aside class="wf-panel wf-guide">
+            <h2 id="requestGuideHeading">Hướng dẫn tạo yêu cầu</h2>
+            <div class="wf-guide-visual" aria-hidden="true"><div class="wf-document"><i class="mdi mdi-file-document-outline"></i><span></span><span></span><span></span><b><i class="mdi mdi-check"></i></b></div><span class="wf-visual-caption">Rõ thông tin · Dễ phê duyệt</span></div>
+            <div class="wf-guide-notes"><h3><i class="mdi mdi-information" aria-hidden="true"></i> Lưu ý khi điền form</h3><ol><li>Chọn đúng loại yêu cầu và mức độ ưu tiên.</li><li>Chọn dữ liệu từ danh mục đã được quản lý.</li><li>Điền đầy đủ các trường có dấu <em>*</em>.</li><li>Kiểm tra thông tin và các dòng chi tiết trước khi gửi.</li></ol></div>
+            <div class="wf-guide-bottom"><i class="mdi mdi-content-save-outline" aria-hidden="true"></i><p>Chưa sẵn sàng gửi?<br /><strong>Lưu nháp để tiếp tục sau.</strong></p></div>
+            @if (User.IsInRole("SuperUser")) { <a class="wf-guide-link" href="/RequestMasterData" target="_blank" rel="noopener"><i class="mdi mdi-database" aria-hidden="true"></i> Quản lý danh mục nhập liệu</a> }
+        </aside>
+    </div>
+</div>
+@section Scripts {
+    <script>window.requestBusinessConfig = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(new { definitions = RequestFormCatalog.All, initial = item?.BusinessData, initialRequestTypeId = item?.RequestTypeId, initialAmount = item?.Amount, editing = item != null }, new System.Text.Json.JsonSerializerOptions(System.Text.Json.JsonSerializerDefaults.Web)));</script>
+    <script src="~/js/workflow/request-business.js" asp-append-version="true"></script>
+    <script src="~/js/workflow/request-approval-preview.js" asp-append-version="true"></script>
+    <script src="~/js/workflow/request-feedback.js" asp-append-version="true"></script>
+    <script src="~/js/workflow/request-edit.js" asp-append-version="true"></script>
+}
+

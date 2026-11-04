@@ -1,0 +1,98 @@
+﻿@using System.Collections.Generic
+@using Web.Common
+@{
+    var isAdmin = User?.Identity?.IsAuthenticated == true
+        && AuthHelper.CheckRoles(User, new List<string> { RoleConstants.SuperUser });
+    var canPersonnel = User?.Identity?.IsAuthenticated == true && AuthHelper.CheckRoles(User, RoleConstants.AccessPersonnel());
+    var canConfigureOperations = User?.Identity?.IsAuthenticated == true && AuthHelper.CheckRoles(User,
+        new List<string> { RoleConstants.SuperUser, RoleConstants.HRLeaveView, RoleConstants.HRLeaveManage, RoleConstants.TransportDispatch });
+}
+
+<nav class="sidebar sidebar-offcanvas sidebar-hierarchy" id="sidebar">
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/">
+                <i class="icon-grid menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Requests">
+                <i class="icon-paper menu-icon"></i>
+                <span class="menu-title">Yêu cầu của tôi</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Approvals" id="pendingApprovalsLink">
+                <i class="icon-check menu-icon"></i>
+                <span class="menu-title">Chờ tôi phê duyệt</span>
+                <span id="pendingApprovalsBadge" class="pending-approvals-badge" hidden aria-hidden="true"></span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/RequestReports">
+                <i class="icon-bar-graph menu-icon" aria-hidden="true"></i>
+                <span class="menu-title">Báo cáo yêu cầu</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Operations?tab=calendar" data-operations-tab="calendar">
+                <i class="mdi mdi-calendar-month-outline menu-icon" aria-hidden="true"></i>
+                <span class="menu-title">Lịch làm việc</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Operations?tab=dispatch" data-operations-tab="dispatch">
+                <i class="mdi mdi-car menu-icon" aria-hidden="true"></i>
+                <span class="menu-title">Điều phối xe</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Operations?tab=leave" data-operations-tab="leave">
+                <i class="mdi mdi-calendar-check menu-icon" aria-hidden="true"></i>
+                <span class="menu-title">Sổ phép &amp; Phép tồn</span>
+            </a>
+        </li>
+        @if (canConfigureOperations)
+        {
+            <li class="nav-item">
+                <a class="nav-link" href="/Operations?tab=settings" data-operations-tab="settings">
+                    <i class="mdi mdi-tune menu-icon" aria-hidden="true"></i>
+                    <span class="menu-title">Thiết lập vận hành</span>
+                </a>
+            </li>
+        }
+        @if (canPersonnel)
+        {
+            <li class="nav-item">
+                <a class="nav-link" href="/User">
+                    <i class="icon-head menu-icon"></i>
+                    <span class="menu-title">Tài khoản và vai trò</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Department">
+                    <i class="icon-briefcase menu-icon"></i>
+                    <span class="menu-title">Phòng/Khoa/Trung tâm</span>
+                </a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="/Section"><i class="icon-briefcase menu-icon"></i><span class="menu-title">Bộ phận/Bộ môn</span></a></li>
+        }
+        @if (isAdmin)
+        {
+            <li class="nav-item">
+                <a class="nav-link" href="/RequestTypes">
+                    <i class="icon-layers menu-icon"></i>
+                    <span class="menu-title">Loại yêu cầu</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Workflows">
+                    <i class="icon-share menu-icon"></i>
+                    <span class="menu-title">Quy trình phê duyệt</span>
+                </a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="/Roles"><i class="icon-head menu-icon"></i><span class="menu-title">Vai trò và quyền</span></a></li>
+        }
+    </ul>
+</nav>

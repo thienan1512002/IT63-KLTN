@@ -1,0 +1,450 @@
+@{
+    ViewData["ResetPasswordAlert"] = TempData["ResetPasswordAlert"];
+    var returnUrl = $"{Context.Request.Path}{Context.Request.QueryString}";
+
+    var currentUrl = $"{Context.Request.Path}{Context.Request.QueryString}";
+    var currentCulture = CultureInfo.CurrentUICulture.Name;
+    var devExtremeLicenseKey = System.Environment.GetEnvironmentVariable("DEVEXTREME_LICENSE_KEY");
+    string currentFlag;
+    string currentLanguageName;
+    if (string.Equals(currentCulture, "en-US", StringComparison.OrdinalIgnoreCase))
+    {
+        currentFlag = Url.Content("~/images/flag/united-kingdom.png");
+        currentLanguageName = "ENG";
+    }
+    else
+    {
+        currentFlag = Url.Content("~/images/flag/vietnam.png");
+        currentLanguageName = "VNI";
+    }
+
+}
+<!DOCTYPE html>
+<html lang="@CultureInfo.CurrentUICulture.TwoLetterISOLanguageName">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    @inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Antiforgery
+    <meta name="csrf-token" content="@Antiforgery.GetAndStoreTokens(Context).RequestToken">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    @* <meta http-equiv="Refresh" content="300"> *@
+    <title>@ViewData["Title"] - @Lang.GetKey("brand_university")</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="~/layout_assets/css/feather.css">
+    <link rel="stylesheet" href="~/layout_assets/css/themify-icons.css">
+    <link rel="stylesheet" href="~/layout_assets/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="~/layout_assets/css/vendor.bundle.base.css">
+    <link href="~/layout_assets/sweetalert2/dist/sweetalert2.css" rel="stylesheet" />
+
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- jquery 3.6.1-->
+    <script src="~/layout_assets/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/layout_assets/css/dataTables.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="~/layout_assets/css/select.dataTables.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="~/layout_assets/css/vertical-layout-light/style.css">
+    <link rel="stylesheet" href="~/layout_assets/css/main.css">
+    <link rel="stylesheet" href="~/css/university-brand.css" asp-append-version="true">
+    <!-- endinject -->
+    <link rel="icon" type="image/png" href="~/images/branding/nam-viet-mark.png" asp-append-version="true" />
+    @* <script src="~/layout_assets/js/sweetalert.min.js"></script> *@
+    <link href="~/layout_assets/css/icon-mobile.css" rel="stylesheet" />
+    <script src="~/layout_assets/sweetalert2/dist/sweetalert2.js"></script>
+    <script src="~/js/common/session-expired.js" asp-append-version="true"></script>
+
+    <style>
+        #notificationDropdown1 {
+        max-height: 330px;
+        overflow-y: scroll;
+        }
+
+        .goog-te-banner-frame.skiptranslate {
+        display: none !important;
+        }
+
+        div.goog-te-gadget {
+        color: transparent !important;
+        }
+
+        #google_translate_element a {
+        display: none;
+        }
+
+        body {
+        top: 0px !important;
+        }
+
+        /*#truncateLongTexts {
+        width: 335px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        }*/
+        .content-wrapper,
+        .card .card-body {
+        padding: 1rem;
+        }
+
+        /* .content-wrapper,
+        .footer
+        {
+        background: #fff;
+        } */
+
+
+        @@media only screen and (max-width:576px) {
+
+        .content-wrapper,
+        .card .card-body {
+        padding: 0.5rem;
+        }
+        }
+
+        #online-status {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 2px solid white;
+        bottom: 5px;
+        right: 0;
+        position: absolute;
+        }
+
+        .footer {
+        padding: 1rem;
+        }
+
+        .offline {
+        opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-scroller">
+        <!-- partial:partials/_navbar.html -->
+        <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                <a class="navbar-brand brand-logo nvu-navbar-brand" href="/" aria-label="@Lang.GetKey("brand_university")">
+                    <partial name="Partials/_UniversityBrand" />
+                </a>
+                <a class="navbar-brand brand-logo-mini nvu-navbar-brand" href="/" aria-label="@Lang.GetKey("brand_university")">
+                    <img src="~/images/branding/nam-viet-mark.png" asp-append-version="true" alt="" width="38" height="38" />
+                </a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                    <span class="icon-menu"></span>
+                </button>
+                <ul class="navbar-nav mr-lg-2">
+                    <li class="nav-item nav-search d-none d-lg-block">
+                        <div class="input-group input-group-sm flex-nowrap">
+                            <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                                <span class="input-group-text" id="search">
+                                    <i class="icon-search" style="font-size: 18px;"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control" maxlength="60" id="navbar-search-input"
+                                   placeholder="@Lang.GetKey("user_search_emp")" aria-label="search"
+                                   aria-describedby="search" style="width: 300px;">
+                            <button style="display: none;" data-target="#modalSearch" data-toggle="modal" id="aSearch"
+                                    href="#modalSearch">
+                                a
+                            </button>
+                            <button style="display: none;" data-target="#searchEmpty" data-toggle="modal" id="aEmpty"
+                                    href="#searchEmpty">
+                                b
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="langDropdown" href="#" data-toggle="dropdown">
+                            <img src="@currentFlag" height="32" width="32" alt="@currentCulture" class="align-middle" />
+                            <span class="ml-1 align-middle">@currentLanguageName</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="langDropdown">
+                            <a class="dropdown-item" asp-action="SetLanguage" asp-controller="home"
+                               asp-route-culture="en-US" asp-route-returnUrl="@currentUrl">
+                                <img src="~/images/flag/united-kingdom.png" height="32" /> &nbsp;&nbsp;
+                                ENG
+                            </a>
+                            <a class="dropdown-item" asp-action="SetLanguage" asp-controller="home"
+                               asp-route-culture="vi-VN" asp-route-returnUrl="@currentUrl">
+                                <img src="~/images/flag/vietnam.png" height="32" />&nbsp;&nbsp;
+                                VNI
+                            </a>
+                        </div>
+                    </li>
+                    <div id="google_translate_element" style="margin-top: 14px;"></div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
+                           data-toggle="dropdown">
+                            <i class="icon-bell mx-0"></i>
+                            @* <span class="count"></span> *@
+                            <span class="badge badge-primary" id="countNoti"
+                                  style="position:absolute; margin-left:-10px; padding:3px 4.8px"></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                             aria-labelledby="notificationDropdown" id="notificationDropdown1">
+                            <p class="mb-0 font-weight-normal float-left dropdown-header">@Lang.GetKey("noti_page_title")</p>
+                            <p class="mb-0 text-primary float-right dropdown-header" style="cursor:pointer"
+                               id="clearNotiAll">
+                                @Lang.GetKey("noti_clear_all")
+                            </p>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <p style="margin-top:10px; font-size:0.75rem">@User.Identity.Name</p>
+                    </li>
+                    <li class="nav-item nav-profile dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown"
+                           style="position: relative">
+                            <img src="" alt="profile" id="avtImg" />
+                            <div id='online-status'> </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                             aria-labelledby="profileDropdown">
+                            <a class="dropdown-item" asp-action="Setting" asp-controller="User">
+                                <i class="ti-settings text-primary"></i>
+                                @Lang.GetKey("common_setting")
+                            </a>
+                            <form asp-action="Logout" asp-controller="Account" method="post"><button type="submit" class="dropdown-item">
+                                <i class="ti-power-off text-primary"></i>
+                                @Lang.GetKey("common_logout")
+                            </button></form>
+                        </div>
+                    </li>
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                        data-toggle="offcanvas">
+                    <span class="icon-menu"></span>
+                </button>
+            </div>
+        </nav>
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial -->
+            <!-- partial:partials/_sidebar.html -->
+            @* <partial name="/Views/Shared/Partials/_Sidebar.cshtml" /> *@
+            <partial name="/Views/Shared/Partials/_SidebarHierarchy.cshtml" />
+            <!-- partial -->
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    @RenderBody()
+                </div>
+                <!-- content-wrapper ends -->
+                @* modal search employee information *@
+                <div class="modal" id="modalSearch" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-xl" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Search Result</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row" id="resultDiv">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                                        onclick="return closeSearch()">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @* modal search Empty *@
+                <div class="modal fade" id="searchEmpty" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Search result</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Không tìm thấy kết quả cho "<span id="searchText"></span>"
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                                        onclick="return closeSearch()">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- partial:partials/_footer.html -->
+                <footer class="footer">
+                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">
+                            © @DateTime.Today.Year — Hệ thống phê duyệt yêu cầu tự động.
+                    </span>
+                </div>
+            </footer>
+            <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+<!-- plugins:js -->
+@* @await Component.InvokeAsync("NToastNotify") *@
+
+<!-- Modal -->
+<div class="modal fade" id="accessModal" tabindex="-1" role="dialog" aria-labelledby="accessModalLabel"
+     aria-hidden="true" style="overflow-y: hidden;">
+    <div class="modal-dialog modal-dialog-centered mt-0" role="document">
+        <div class="modal-content" style="overflow-y: hidden; max-height:400px;">
+            <div class="modal-header d-flex justify-content-center align-items-center"
+                 style="padding: 15px; background-color: #F5B184">
+                <h3 class="modal-title text-light font-weight-bold" id="accessModalLabel">Notice</h3>
+            </div>
+            <div class="modal-body d-flex justify-content-center align-items-center flex-column">
+                <span class="mdi mdi-alert-circle"
+                      style="color: #F5B184; font-size: 120px; width: 120px; height:120px"></span>
+                <span class="font-weight-bold text-center" style="margin-top: 10px; font-size:18px">
+                    You do not have permission to access this function!
+                </span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" style="width:90px; height:45px;"
+                        data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- partial: resetPasswordAlert-->
+<partial name="/Views/Shared/Partials/_ResetPasswordAlert.cshtml" view-data="ViewData" />
+<!--partial-->
+<!-- Latest compiled JavaScript -->
+<script src="~/layout_assets/js/bootstrap.bundle.min.js"></script>
+<!-- endinject -->
+<script src="~/layout_assets/js/perfect-scrollbar.min.js"></script>
+<!-- Plugin js for this page -->
+<script src="~/layout_assets/js/chart.min.js"></script>
+<script src="~/layout_assets/js/jquery.dataTables.js"></script>
+<script src="~/layout_assets/js/dataTables.bootstrap4.js"></script>
+<script src="~/layout_assets/js/dataTables.select.min.js"></script>
+<script src="~/layout_assets/js/moment.min.js"></script>
+<script src="~/layout_assets/js/datatable-sorting-datetime-moment.js"></script>
+<script src="~/layout_assets/js/signalr.min.js"></script>
+<!-- End plugin js for this page -->
+<!-- inject:js -->
+<script src="~/layout_assets/js/sidebar/off-canvas.js"></script>
+<script src="~/layout_assets/js/sidebar/hoverable-collapse.js"></script>
+<script src="~/layout_assets/js/sidebar/template.js" asp-append-version="true"></script>
+<script src="~/layout_assets/js/sidebar/settings.js"></script>
+<script src="~/layout_assets/js/sidebar/todolist.js"></script>
+<!-- endinject -->
+<!-- Custom js for this page-->
+<script src="~/layout_assets/js/dashboard.js"></script>
+<script src="~/layout_assets/js/Chart.roundedBarCharts.js"></script>
+<!-- End custom js for this page-->
+<link href="~/layout_assets/css/izitoast.min.css" rel="stylesheet" />
+<script src="~/layout_assets/js/izitoast.min.js"></script>
+
+<script src="~/js/changeProfile.js"></script>
+<script src="~/js/bs4-custom-file-input.js"></script>
+<script src="~/layout_assets/js/es5.js"></script>
+<!--file upload-->
+<script src="~/layout_assets/js/file-upload.js"></script>
+<!--Devextreme-->
+
+@* <link rel="stylesheet" href="~/layout_assets/devextreme/dx.light.css"> *@
+<link rel="stylesheet" href="~/layout_assets/devextreme/dx.material.blue.light.compact.min.css">
+<script src="~/layout_assets/devextreme/dx-quill.min.js"></script>
+<script src="~/layout_assets/devextreme/dx.all.js"></script>
+@if (!string.IsNullOrWhiteSpace(devExtremeLicenseKey))
+{
+    <script>
+        DevExpress.config({
+            licenseKey: @Html.Raw(System.Text.Json.JsonSerializer.Serialize(devExtremeLicenseKey))
+        });
+    </script>
+}
+<script src="~/layout_assets/devextreme/localization/dx.messages.en.js"></script>
+<script src="~/layout_assets/devextreme/localization/dx.messages.vi.js"></script>
+
+<script>
+    (function () {     
+        var culture = "@currentCulture";
+        var isVi = culture.toLowerCase().indexOf("vi") === 0;
+        // Override decimal number format   
+        var Original = window.Intl && Intl.NumberFormat;
+        if (isVi && Original) {
+            Intl.NumberFormat = function (locales, options) {
+                var loc = locales;
+                if (typeof loc === "string" && loc.toLowerCase().indexOf("vi") === 0) {
+                    loc = "en-US";
+                }
+                return new Original(loc, options);
+            };
+            Intl.NumberFormat.prototype = Original.prototype;
+            Intl.NumberFormat.supportedLocalesOf = Original.supportedLocalesOf.bind(Original);
+        }       
+      
+        var dxLocale = culture.toLowerCase().indexOf("vi") === 0 ? "vi" : "en";
+        if (window.DevExpress && DevExpress.localization) {
+            DevExpress.localization.locale(dxLocale);
+        }
+
+    })();
+</script>
+
+<script src="~/layout_assets/highcharts/highcharts.js"></script>
+<script src="~/layout_assets/highcharts/accessibility.js"></script>
+<!--Excel parse to js object-->
+<script src="~/layout_assets/js/xlsx.full.min.js"></script>
+<script src="~/js/common/toast.js"></script>
+
+<link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+
+<script>
+    window.layoutConfig = {
+    culture: "@currentCulture"
+    };
+    Object.assign(window.i18n = window.i18n || {}, @Html.Raw(System.Text.Json.JsonSerializer.Serialize(new
+    {
+        userName = Lang.GetKey("user_emp_name"),
+        fullName = Lang.GetKey("user_emp_fullName"),
+        email = Lang.GetKey("user_emp_email"),
+        phone = Lang.GetKey("user_emp_phone"),
+        dob = Lang.GetKey("user_emp_dob"),
+        department = Lang.GetKey("common_department"),
+        section = Lang.GetKey("common_section"),
+        position = Lang.GetKey("user_emp_position"),
+        site = Lang.GetKey("common_site"),
+        upload = new
+        {
+            invalidFilesTitle = Lang.GetKey("upload_invalid_files_title"),
+            invalidClipboardFilesTitle = Lang.GetKey("upload_invalid_clipboard_files_title"),
+            emptyFile = Lang.GetKey("upload_empty_file"),
+            unnamedFile = Lang.GetKey("upload_unnamed_file"),
+            fileTooLarge = Lang.GetKey("upload_file_too_large"),
+            unsupportedType = Lang.GetKey("upload_unsupported_type"),
+            invalidFile = Lang.GetKey("upload_invalid_file"),
+            maxFilesExceeded = Lang.GetKey("upload_max_files_exceeded")
+        },
+    })));
+</script>
+<script src="~/js/common/layout.js" asp-append-version="true"></script>
+<script src="~/js/workflow/pending-approvals-badge.js" asp-append-version="true"></script>
+<script src="~/js/common/security.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

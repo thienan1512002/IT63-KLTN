@@ -1,0 +1,41 @@
+﻿@{ ViewData["title"] = "Cấu hình luồng phê duyệt"; }
+<link rel="stylesheet" href="~/css/workflow/workflows.css" asp-append-version="true" />
+<div class="wf-admin" id="workflowAdmin" aria-busy="true">
+    <header class="wf-header"><span class="wf-header-icon"><i class="mdi mdi-source-branch" aria-hidden="true"></i></span><div><h1>Cấu hình luồng phê duyệt</h1><p>Thiết lập người duyệt và thứ tự phê duyệt riêng cho từng loại form.</p></div><a href="/RequestTypes"><i class="mdi mdi-file-document-outline" aria-hidden="true"></i> Quản lý loại yêu cầu</a></header>
+    <div id="workflowError" class="wf-error" role="alert" hidden></div>
+    <div class="wf-shell">
+        <section class="wf-panel wf-form-picker" aria-label="Chọn form cần cấu hình">
+            <div class="wf-picker-heading"><h2>Loại form</h2><span class="wf-count" id="workflowFormCount">—</span></div>
+            <label class="wf-search"><i class="mdi mdi-magnify" aria-hidden="true"></i><span class="wf-sr-only">Tìm loại form</span><input type="search" id="workflowFormSearch" placeholder="Tìm tên hoặc mã form..." /></label>
+            <div id="workflowFormList" class="wf-form-list"><p class="wf-loading">Đang tải danh sách...</p></div>
+            <div class="wf-picker-foot"><i class="mdi mdi-information-outline" aria-hidden="true"></i> Mỗi loại form có thể có số tầng và người phê duyệt khác nhau.</div>
+        </section>
+        <main class="wf-main">
+            <div id="workflowLoading" class="wf-panel wf-loading" role="status">Đang tải cấu hình phê duyệt...</div>
+            <section id="workflowEditor" class="wf-panel" hidden>
+                <div class="wf-editor-header">
+                    <div class="wf-editor-title"><h2 id="workflowFormName"></h2><span class="wf-badge" id="workflowRevision"></span><span class="wf-badge wf-badge-green" id="workflowActiveBadge"></span></div><p id="workflowFormCode"></p>
+                    <div class="wf-tabs" role="tablist" aria-label="Cấu hình và lịch sử"><button id="workflowDesignTab" role="tab" aria-selected="true" aria-controls="workflowDesign" type="button">Thiết kế luồng</button><button id="workflowHistoryTab" role="tab" aria-selected="false" aria-controls="workflowHistory" tabindex="-1" type="button">Lịch sử phiên bản <span id="workflowVersionCount"></span></button></div>
+                </div>
+                <div class="wf-editor-body" id="workflowDesign" role="tabpanel" aria-labelledby="workflowDesignTab">
+                    <div class="wf-settings">
+                        <div class="wf-field"><label for="workflowName">Tên luồng phê duyệt *</label><input id="workflowName" type="text" required maxlength="200" placeholder="Ví dụ: Luồng phê duyệt đăng ký công tác" /></div>
+                        <label class="wf-switch"><input id="workflowActive" type="checkbox" /> Cho phép tạo yêu cầu mới</label>
+                        <div class="wf-field wf-description"><label for="workflowDescription">Mô tả luồng (không bắt buộc)</label><input id="workflowDescription" type="text" maxlength="300" placeholder="Ghi chú về phạm vi áp dụng của luồng này..." /></div>
+                    </div>
+                    <div class="wf-designer">
+                        <section aria-label="Danh sách các tầng phê duyệt"><div class="wf-section-heading"><h3>Các tầng phê duyệt</h3><span id="workflowStepCount"></span></div><p class="wf-help">Kéo tay nắm hoặc dùng nút ↑ ↓ để đổi thứ tự. Các tầng được duyệt lần lượt.</p><div id="workflowSteps" class="wf-steps"></div><button class="wf-add" id="workflowAddStep" type="button"><i class="mdi mdi-plus" aria-hidden="true"></i> Thêm tầng phê duyệt</button></section>
+                        <aside class="wf-preview" aria-label="Xem trước luồng phê duyệt"><h3><i class="mdi mdi-eye-outline" aria-hidden="true"></i> Xem trước luồng</h3><p>Từ khi gửi đến khi hoàn thành</p><div id="workflowPreview" class="wf-preview-flow"></div><div class="wf-preview-rule"><i class="mdi mdi-account-check-outline" aria-hidden="true"></i> Người tạo không được tự phê duyệt.<br />Người duyệt theo đơn vị hoặc vai trò được xác định khi gửi yêu cầu, sau đó lưu cố định.</div></aside>
+                    </div>
+                    <div class="wf-notice"><i class="mdi mdi-shield-check-outline" aria-hidden="true"></i><div><strong>Yêu cầu cũ giữ nguyên luồng phê duyệt</strong><span id="workflowProtectionNote">Mỗi lần lưu tạo một phiên bản mới. Các yêu cầu đã tạo, kể cả bản nháp, tiếp tục dùng phiên bản đã gắn.</span></div></div>
+                </div>
+                <div class="wf-editor-body" id="workflowHistory" role="tabpanel" aria-labelledby="workflowHistoryTab" hidden><p class="wf-help">Xem lại cấu hình đã công bố. Mỗi phiên bản giữ nguyên số tầng, thứ tự và cách gán người duyệt.</p><div class="wf-history" id="workflowHistoryList"></div></div>
+                <footer class="wf-actions"><span class="wf-action-status" id="workflowSaveStatus" role="status"></span><button class="wf-btn" id="workflowReset" type="button"><i class="mdi mdi-refresh" aria-hidden="true"></i> Tải lại</button><button class="wf-btn wf-primary" id="workflowReview" type="button"><i class="mdi mdi-content-save-outline" aria-hidden="true"></i> Xem lại &amp; lưu phiên bản</button></footer>
+            </section>
+        </main>
+    </div>
+    <div class="wf-toast" id="workflowToast" role="status" hidden><span></span><button type="button" id="workflowUndo" hidden>Hoàn tác</button><button type="button" id="workflowToastClose" aria-label="Đóng thông báo">×</button></div>
+    <dialog class="wf-modal" id="workflowPublishDialog" aria-labelledby="workflowPublishTitle"><div class="wf-modal-body"><h2 id="workflowPublishTitle">Công bố phiên bản mới</h2><p id="workflowPublishSummary"></p><ol id="workflowReviewList" class="wf-review-list"></ol><div class="wf-notice"><i class="mdi mdi-shield-check-outline" aria-hidden="true"></i><div><strong>Chỉ áp dụng cho yêu cầu tạo sau khi lưu</strong><span id="workflowPublishScope"></span></div></div></div><div class="wf-modal-actions"><button type="button" class="wf-btn" id="workflowPublishCancel">Tiếp tục chỉnh sửa</button><button type="button" class="wf-btn wf-primary" id="workflowPublishConfirm">Lưu &amp; công bố</button></div></dialog>
+    <dialog class="wf-modal" id="workflowDiscardDialog" aria-labelledby="workflowDiscardTitle"><div class="wf-modal-body"><h2 id="workflowDiscardTitle">Bạn có thay đổi chưa lưu</h2><p>Tiếp tục sẽ bỏ các chỉnh sửa của form hiện tại.</p></div><div class="wf-modal-actions"><button type="button" class="wf-btn" id="workflowDiscardCancel">Tiếp tục chỉnh sửa</button><button type="button" class="wf-btn wf-primary" id="workflowDiscardConfirm">Bỏ thay đổi &amp; tiếp tục</button></div></dialog>
+</div>
+@section Scripts { <script src="~/js/workflow/workflows.js" asp-append-version="true"></script> }

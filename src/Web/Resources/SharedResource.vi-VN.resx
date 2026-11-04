@@ -1,0 +1,2886 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="common_all" xml:space="preserve">
+    <value>Tất cả</value>
+  </data>
+  <data name="home_birthday_greeting" xml:space="preserve">
+    <value>Chúc mừng sinh nhật</value>
+  </data>
+  <data name="home_birthday_ok" xml:space="preserve">
+    <value>Đóng</value>
+  </data>
+  <data name="home_birthday_wish_1" xml:space="preserve">
+    <value>Chúc bạn tuổi mới nhiều sức khỏe, nhiều niềm vui và nhiều thành công.</value>
+  </data>
+  <data name="home_birthday_wish_2" xml:space="preserve">
+    <value>Cảm ơn bạn đã đồng hành cùng Đại học Nam Việt.</value>
+  </data>
+  <data name="home_birthday_wish_3" xml:space="preserve">
+    <value>Chúc bạn có một sinh nhật thật vui và một năm mới thật nhiều điều tuyệt vời !</value>
+  </data>
+  <data name="common_department" xml:space="preserve">
+    <value>Phòng/Khoa/Trung tâm</value>
+  </data>
+  <data name="home_welcome_title" xml:space="preserve">
+    <value>Chào mừng đến Đại học Nam Việt</value>
+  </data>
+  <data name="home_web_portal" xml:space="preserve">
+    <value>Web Portal</value>
+  </data>
+  <data name="home_workflow" xml:space="preserve">
+    <value>Workflow</value>
+  </data>
+  <data name="home_total_request_wait_approval" xml:space="preserve">
+    <value>Yêu cầu mới chờ duyệt</value>
+  </data>
+  <data name="home_total_request_on_going" xml:space="preserve">
+    <value>Yêu cầu đang xử lý</value>
+  </data>
+  <data name="home_total_kaizen_request_wait_approval" xml:space="preserve">
+    <value>Yêu cầu Kaizen mới chờ duyệt</value>
+  </data>
+  <data name="home_total_kaizen_request_on_going" xml:space="preserve">
+    <value>Yêu cầu Kaizen đang xử lý</value>
+  </data>
+  <data name="common_notification" xml:space="preserve">
+    <value>Thông báo nội bộ</value>
+  </data>
+  <data name="kaizen_manage" xml:space="preserve">
+    <value>Hệ thống quản lý Kaizen</value>
+  </data>
+  <data name="common_month" xml:space="preserve">
+    <value>Tháng</value>
+  </data>
+  <data name="kaizen_department" xml:space="preserve">
+    <value>Kaizen theo đơn vị</value>
+  </data>
+  <data name="kaizen_count" xml:space="preserve">
+    <value>Số Kaizen</value>
+  </data>
+  <data name="kaizen_number_of" xml:space="preserve">
+    <value>Số lượng Kaizen</value>
+  </data>
+  <data name="common_news" xml:space="preserve">
+    <value>Tin tức</value>
+  </data>
+  <data name="menu_hotline_helpline" xml:space="preserve">
+    <value>Hỗ trợ / Trợ giúp</value>
+  </data>
+  <data name="user_search_emp" xml:space="preserve">
+    <value>Tìm kiếm thông tin</value>
+  </data>
+  <data name="user_personal_info" xml:space="preserve">
+    <value>Thông tin cá nhân</value>
+  </data>
+  <data name="user_emp_id" xml:space="preserve">
+    <value>Mã cán bộ</value>
+  </data>
+  <data name="user_emp_name" xml:space="preserve">
+    <value>Tên đăng nhập</value>
+  </data>
+  <data name="user_emp_fullName" xml:space="preserve">
+    <value>Họ và tên</value>
+  </data>
+  <data name="user_emp_phone" xml:space="preserve">
+    <value>Số điện thoại</value>
+  </data>
+  <data name="user_emp_dob" xml:space="preserve">
+    <value>Ngày sinh</value>
+  </data>
+  <data name="work_info" xml:space="preserve">
+    <value>Thông tin công việc</value>
+  </data>
+  <data name="common_site" xml:space="preserve">
+    <value>Cơ sở</value>
+  </data>
+  <data name="user_emp_position" xml:space="preserve">
+    <value>Chức vụ</value>
+  </data>
+  <data name="user_emp_email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="common_setting" xml:space="preserve">
+    <value>Cài đặt</value>
+  </data>
+  <data name="common_logout" xml:space="preserve">
+    <value>Đăng xuất</value>
+  </data>
+  <data name="menu_web_admin" xml:space="preserve">
+    <value>Quản trị web</value>
+  </data>
+  <data name="menu_administration" xml:space="preserve">
+    <value>Quản trị hệ thống</value>
+  </data>
+  <data name="menu_user" xml:space="preserve">
+    <value>Người dùng</value>
+  </data>
+  <data name="menu_department" xml:space="preserve">
+    <value>Phòng/Khoa/Trung tâm</value>
+  </data>
+  <data name="menu_section" xml:space="preserve">
+    <value>Bộ phận/Bộ môn</value>
+  </data>
+  <data name="menu_kimsen_sys" xml:space="preserve">
+    <value>Hệ thống Đại học Nam Việt</value>
+  </data>
+  <data name="menu_workflow_manage" xml:space="preserve">
+    <value>Quản lý quy trình</value>
+  </data>
+  <data name="menu_kaizen" xml:space="preserve">
+    <value>Hệ thống cải tiến</value>
+  </data>
+  <data name="menu_3s_erp" xml:space="preserve">
+    <value>Hệ thống 3S-ERP</value>
+  </data>
+  <data name="menu_iot_sys" xml:space="preserve">
+    <value>Hệ thống IoT</value>
+  </data>
+  <data name="menu_booking_meet_room" xml:space="preserve">
+    <value>Hệ thống Đặt phòng họp</value>
+  </data>
+  <data name="menu_machine_manage" xml:space="preserve">
+    <value>Hệ thống Quản lý máy móc</value>
+  </data>
+  <data name="menu_vision_mission" xml:space="preserve">
+    <value>Tầm nhìn và sứ mệnh</value>
+  </data>
+  <data name="menu_core_values" xml:space="preserve">
+    <value>Giá trị cốt lõi</value>
+  </data>
+  <data name="menu_organization_chart" xml:space="preserve">
+    <value>Sơ đồ tổ chức</value>
+  </data>
+  <data name="menu_kimsen_culture" xml:space="preserve">
+    <value>Văn hóa Đại học Nam Việt</value>
+  </data>
+  <data name="menu_policy_strategies" xml:space="preserve">
+    <value>Chính Sách &amp; Mục Tiêu Chất Lượng</value>
+  </data>
+  <data name="common_section" xml:space="preserve">
+    <value>Bộ phận/Bộ môn</value>
+  </data>
+  <data name="common_view" xml:space="preserve">
+    <value>Xem</value>
+  </data>
+  <data name="common_update" xml:space="preserve">
+    <value>Cập nhật</value>
+  </data>
+  <data name="workflow_submission_date" xml:space="preserve">
+    <value>Ngày gửi</value>
+  </data>
+  <data name="workflow_request_name" xml:space="preserve">
+    <value>Tên yêu cầu</value>
+  </data>
+  <data name="workflow_urgency_level" xml:space="preserve">
+    <value>Mức độ quan trọng</value>
+  </data>
+  <data name="workflow_urgent" xml:space="preserve">
+    <value>Gấp</value>
+  </data>
+  <data name="workflow_normal" xml:space="preserve">
+    <value>Bình thường</value>
+  </data>
+  <data name="workflow_application_no" xml:space="preserve">
+    <value>Mã phiếu</value>
+  </data>
+  <data name="workflow_submit_date" xml:space="preserve">
+    <value>Ngày gửi</value>
+  </data>
+  <data name="workflow_requester_information" xml:space="preserve">
+    <value>Thông tin người tạo yêu cầu</value>
+  </data>
+  <data name="workflow_fullname" xml:space="preserve">
+    <value>Họ và tên</value>
+  </data>
+  <data name="workflow_position" xml:space="preserve">
+    <value>Chức vụ</value>
+  </data>
+  <data name="workflow_section_name" xml:space="preserve">
+    <value>Bộ phận/Bộ môn</value>
+  </data>
+  <data name="workflow_department_name" xml:space="preserve">
+    <value>Phòng/Khoa/Trung tâm</value>
+  </data>
+  <data name="workflow_request_detail_label" xml:space="preserve">
+    <value>Chi tiết yêu cầu</value>
+  </data>
+  <data name="login_title" xml:space="preserve">
+    <value>Đăng nhập</value>
+  </data>
+  <data name="login_subtitle" xml:space="preserve">
+    <value>Đăng nhập hệ thống quản lý yêu cầu và phê duyệt của nhà trường.</value>
+  </data>
+  <data name="login_username_placeholder" xml:space="preserve">
+    <value>Tài khoản</value>
+  </data>
+  <data name="login_password_placeholder" xml:space="preserve">
+    <value>Mật khẩu</value>
+  </data>
+  <data name="login_remember_me" xml:space="preserve">
+    <value>Ghi nhớ đăng nhập</value>
+  </data>
+  <data name="login_btn" xml:space="preserve">
+    <value>Đăng nhập</value>
+  </data>
+  <data name="login_forgot_password" xml:space="preserve">
+    <value>Quên mật khẩu?</value>
+  </data>
+  <data name="login_forgot_click_here" xml:space="preserve">
+    <value>Nhấn vào đây</value>
+  </data>
+  <data name="upd_pass_title" xml:space="preserve">
+    <value>Đổi Mật Khẩu</value>
+  </data>
+  <data name="upd_pass_subtitle" xml:space="preserve">
+    <value>Nhập tài khoản, mật khẩu hiện tại và mật khẩu mới để đổi mật khẩu</value>
+  </data>
+  <data name="upd_pass_username_label" xml:space="preserve">
+    <value>Tài khoản</value>
+  </data>
+  <data name="upd_pass_current_label" xml:space="preserve">
+    <value>Mật khẩu hiện tại</value>
+  </data>
+  <data name="upd_pass_current_placeholder" xml:space="preserve">
+    <value>Mật khẩu hiện tại</value>
+  </data>
+  <data name="upd_pass_new_label" xml:space="preserve">
+    <value>Mật khẩu mới</value>
+  </data>
+  <data name="upd_pass_new_placeholder" xml:space="preserve">
+    <value>Mật khẩu mới</value>
+  </data>
+  <data name="upd_pass_confirm_label" xml:space="preserve">
+    <value>Xác nhận mật khẩu mới</value>
+  </data>
+  <data name="upd_pass_confirm_placeholder" xml:space="preserve">
+    <value>Xác nhận mật khẩu</value>
+  </data>
+  <data name="upd_pass_btn" xml:space="preserve">
+    <value>Xác nhận</value>
+  </data>
+  <data name="noti_page_title" xml:space="preserve">
+    <value>Thông báo nội bộ</value>
+  </data>
+  <data name="noti_col_no" xml:space="preserve">
+    <value>STT</value>
+  </data>
+  <data name="noti_col_file" xml:space="preserve">
+    <value>Tệp</value>
+  </data>
+  <data name="noti_col_title" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="noti_col_created_by" xml:space="preserve">
+    <value>Người tạo</value>
+  </data>
+  <data name="noti_col_created_at" xml:space="preserve">
+    <value>Ngày tạo</value>
+  </data>
+  <data name="noti_col_publisher" xml:space="preserve">
+    <value>Đơn vị phát hành</value>
+  </data>
+  <data name="noti_col_assignee" xml:space="preserve">
+    <value>Cơ sở nhận</value>
+  </data>
+  <data name="noti_btn_create" xml:space="preserve">
+    <value>Tạo mới</value>
+  </data>
+  <data name="noti_btn_view" xml:space="preserve">
+    <value>Xem</value>
+  </data>
+  <data name="noti_btn_edit" xml:space="preserve">
+    <value>Chỉnh sửa</value>
+  </data>
+  <data name="noti_btn_remove" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="noti_remove_confirm_title" xml:space="preserve">
+    <value>Xóa thông báo</value>
+  </data>
+  <data name="noti_remove_confirm_text" xml:space="preserve">
+    <value>Mục này sẽ bị vô hiệu hóa và ẩn khỏi danh sách. Tiếp tục?</value>
+  </data>
+  <data name="noti_created_success" xml:space="preserve">
+    <value>Tạo thông báo thành công.</value>
+  </data>
+  <data name="noti_updated_success" xml:space="preserve">
+    <value>Cập nhật thông báo thành công.</value>
+  </data>
+  <data name="noti_removed_success" xml:space="preserve">
+    <value>Xóa thành công.</value>
+  </data>
+  <data name="noti_detail_title" xml:space="preserve">
+    <value>Chi tiết thông báo</value>
+  </data>
+  <data name="noti_btn_back" xml:space="preserve">
+    <value>Quay lại</value>
+  </data>
+  <data name="noti_col_note" xml:space="preserve">
+    <value>Ghi chú</value>
+  </data>
+  <data name="noti_field_issue_site" xml:space="preserve">
+    <value>Đơn vị phát hành</value>
+  </data>
+  <data name="noti_field_issue_section" xml:space="preserve">
+    <value>Bộ phận phát hành</value>
+  </data>
+  <data name="noti_field_assign_sites" xml:space="preserve">
+    <value>Đơn vị nhận</value>
+  </data>
+  <data name="noti_field_from" xml:space="preserve">
+    <value>Từ ngày</value>
+  </data>
+  <data name="noti_field_to" xml:space="preserve">
+    <value>Đến ngày</value>
+  </data>
+  <data name="noti_section_content" xml:space="preserve">
+    <value>Nội dung</value>
+  </data>
+  <data name="noti_section_attachments" xml:space="preserve">
+    <value>Tệp đính kèm</value>
+  </data>
+  <data name="workflow_grid_approval_name" xml:space="preserve">
+    <value>Tên phê duyệt</value>
+  </data>
+  <data name="workflow_grid_full_name" xml:space="preserve">
+    <value>Họ và tên</value>
+  </data>
+  <data name="workflow_grid_section" xml:space="preserve">
+    <value>Tên phòng</value>
+  </data>
+  <data name="workflow_grid_position" xml:space="preserve">
+    <value>Chức vụ</value>
+  </data>
+  <data name="workflow_grid_phone" xml:space="preserve">
+    <value>Số điện thoại</value>
+  </data>
+  <data name="workflow_grid_confirmation" xml:space="preserve">
+    <value>Kiểu phê duyệt</value>
+  </data>
+  <data name="workflow_grid_status" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="workflow_grid_approval_date" xml:space="preserve">
+    <value>Ngày duyệt</value>
+  </data>
+  <data name="workflow_grid_comment" xml:space="preserve">
+    <value>Ghi chú</value>
+  </data>
+  <data name="workflow_status_waiting_approval" xml:space="preserve">
+    <value>Chờ phê duyệt</value>
+  </data>
+  <data name="workflow_status_waiting_confirm" xml:space="preserve">
+    <value>Chờ xác nhận</value>
+  </data>
+  <data name="workflow_status_approved" xml:space="preserve">
+    <value>Đã phê duyệt</value>
+  </data>
+  <data name="workflow_status_confirmed" xml:space="preserve">
+    <value>Đã xác nhận</value>
+  </data>
+  <data name="workflow_status_returned" xml:space="preserve">
+    <value>Bị trả về</value>
+  </data>
+  <data name="workflow_status_rejected" xml:space="preserve">
+    <value>Bị từ chối</value>
+  </data>
+  <data name="workflow_approval_type_approval" xml:space="preserve">
+    <value>Phê duyệt</value>
+  </data>
+  <data name="workflow_approval_type_confirm" xml:space="preserve">
+    <value>Xác nhận</value>
+  </data>
+  <data name="workflow_submit" xml:space="preserve">
+    <value>Gửi</value>
+  </data>
+  <data name="workflow_cancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="workflow_back_to_lists" xml:space="preserve">
+    <value>Quay lại danh sách</value>
+  </data>
+  <data name="workflow_btn_approve" xml:space="preserve">
+    <value>Phê duyệt</value>
+  </data>
+  <data name="workflow_btn_reject" xml:space="preserve">
+    <value>Từ chối</value>
+  </data>
+  <data name="workflow_btn_return" xml:space="preserve">
+    <value>Trả lại</value>
+  </data>
+  <data name="workflow_btn_confirm" xml:space="preserve">
+    <value>Xác nhận</value>
+  </data>
+  <data name="workflow_btn_export" xml:space="preserve">
+    <value>Xuất file</value>
+  </data>
+  <data name="workflow_export_button" xml:space="preserve">
+    <value>Xuất file</value>
+  </data>
+  <data name="workflow_swal_export_title" xml:space="preserve">
+    <value>Chọn kiểu xuất:</value>
+  </data>
+  <data name="workflow_export_pdf" xml:space="preserve">
+    <value>Xuất Request (PDF)</value>
+  </data>
+  <data name="workflow_export_zip" xml:space="preserve">
+    <value>Xuất Request và Tệp đính kèm</value>
+  </data>
+  <data name="workflow_rejected_message" xml:space="preserve">
+    <value>Yêu cầu đã bị từ chối bởi</value>
+  </data>
+  <data name="workflow_grid_no" xml:space="preserve">
+    <value>STT</value>
+  </data>
+  <data name="workflow_grid_email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="workflow_swal_validation_title" xml:space="preserve">
+    <value>Vui lòng kiểm tra lại các mục sau</value>
+  </data>
+  <data name="workflow_swal_ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="workflow_swal_loading" xml:space="preserve">
+    <value>Vui lòng đợi</value>
+  </data>
+  <data name="workflow_swal_failed" xml:space="preserve">
+    <value>Thất bại!</value>
+  </data>
+  <data name="workflow_swal_failed_text" xml:space="preserve">
+    <value>Đã xảy ra lỗi</value>
+  </data>
+  <data name="workflow_swal_success" xml:space="preserve">
+    <value>Thành công!</value>
+  </data>
+  <data name="workflow_swal_create_success" xml:space="preserve">
+    <value>Tạo yêu cầu mới thành công!</value>
+  </data>
+  <data name="workflow_swal_comment_prompt" xml:space="preserve">
+    <value>Vui lòng nhập ghi chú!</value>
+  </data>
+  <data name="workflow_swal_comment_placeholder" xml:space="preserve">
+    <value>Nhập ghi chú của bạn</value>
+  </data>
+  <data name="workflow_swal_validation_error" xml:space="preserve">
+    <value>Lỗi xác thực</value>
+  </data>
+  <data name="workflow_swal_action_success" xml:space="preserve">
+    <value>Yêu cầu thành công</value>
+  </data>
+  <data name="workflow_swal_approve_success" xml:space="preserve">
+    <value>Phê duyệt yêu cầu thành công</value>
+  </data>
+  <data name="workflow_swal_return_success" xml:space="preserve">
+    <value>Trả lại yêu cầu thành công</value>
+  </data>
+  <data name="workflow_swal_reject_success" xml:space="preserve">
+    <value>Từ chối yêu cầu thành công</value>
+  </data>
+  <data name="workflow_swal_confirm_success" xml:space="preserve">
+    <value>Xác nhận yêu cầu thành công</value>
+  </data>
+  <data name="workflow_swal_save_success" xml:space="preserve">
+    <value>Lưu yêu cầu thành công.</value>
+  </data>
+  <data name="workflow_swal_error" xml:space="preserve">
+    <value>Lỗi!</value>
+  </data>
+  <data name="workflow_swal_investigate_required" xml:space="preserve">
+    <value>Phân tích nguyên nhân bắt buộc nhập.</value>
+  </data>
+  <data name="workflow_swal_counter_required" xml:space="preserve">
+    <value>Giải pháp &amp; hành động bắt buộc nhập.</value>
+  </data>
+  <data name="workflow_swal_next_action_required" xml:space="preserve">
+    <value>Kế hoạch tiếp theo bắt buộc nhập.</value>
+  </data>
+  <data name="workflow_swal_actual_date_required" xml:space="preserve">
+    <value>Ngày thực tế bắt buộc nhập.</value>
+  </data>
+  <data name="workflow_swal_attachment_required" xml:space="preserve">
+    <value>Cần đính kèm ít nhất một tệp ở mục Giải pháp &amp; hành động.</value>
+  </data>
+  <data name="workflow_swal_comment_required" xml:space="preserve">
+    <value>Vui lòng nhập ghi chú</value>
+  </data>
+  <data name="workflow_grid_username" xml:space="preserve">
+    <value>Tên đăng nhập</value>
+  </data>
+  <data name="workflow_judgement_label" xml:space="preserve">
+    <value>Đánh giá</value>
+  </data>
+  <data name="workflow_conclusion_label" xml:space="preserve">
+    <value>Kết luận</value>
+  </data>
+  <data name="workflow_noty_submitted" xml:space="preserve">
+    <value>{0} đã gửi yêu cầu {1}</value>
+  </data>
+  <data name="workflow_noty_finished" xml:space="preserve">
+    <value>Yêu cầu của bạn {0} đã phê duyệt xong</value>
+  </data>
+  <data name="workflow_noty_returned" xml:space="preserve">
+    <value>Yêu cầu của bạn {0} đã bị trả lại</value>
+  </data>
+  <data name="workflow_noty_rejected" xml:space="preserve">
+    <value>Yêu cầu của bạn {0} đã bị từ chối</value>
+  </data>
+  <data name="visitor_display_card_arrived" xml:space="preserve">
+    <value>Đã tới</value>
+  </data>
+  <data name="visitor_display_card_not_arrived" xml:space="preserve">
+    <value>Chưa tới</value>
+  </data>
+  <data name="visitor_display_card_left" xml:space="preserve">
+    <value>Đã về</value>
+  </data>
+  <data name="visitor_display_card_total" xml:space="preserve">
+    <value>Tổng số lượt</value>
+  </data>
+  <data name="visitor_display_refresh_in" xml:space="preserve">
+    <value>Làm mới sau 60s</value>
+  </data>
+  <data name="visitor_display_title" xml:space="preserve">
+    <value>Danh sách khách ra vào</value>
+  </data>
+  <data name="visitor_display_updated_at" xml:space="preserve">
+    <value>Cập nhật lúc:</value>
+  </data>
+  <data name="visitor_display_status_checkedin" xml:space="preserve">
+    <value>Đã vào khuôn viên</value>
+  </data>
+  <data name="visitor_display_status_checkedout" xml:space="preserve">
+    <value>Đã ra khuôn viên</value>
+  </data>
+  <data name="visitor_display_col_no" xml:space="preserve">
+    <value>STT</value>
+  </data>
+  <data name="visitor_display_col_application_code" xml:space="preserve">
+    <value>Mã phiếu</value>
+  </data>
+  <data name="visitor_display_col_fax_code" xml:space="preserve">
+    <value>Mã NV</value>
+  </data>
+  <data name="visitor_display_col_requester" xml:space="preserve">
+    <value>Người yêu cầu</value>
+  </data>
+  <data name="visitor_display_col_section" xml:space="preserve">
+    <value>Phòng/Khoa/Trung tâm</value>
+  </data>
+  <data name="visitor_display_col_department" xml:space="preserve">
+    <value>Bộ phận/Bộ môn</value>
+  </data>
+  <data name="visitor_display_col_reception_section" xml:space="preserve">
+    <value>Bộ phận/Bộ môn tiếp đón</value>
+  </data>
+  <data name="visitor_display_col_subject" xml:space="preserve">
+    <value>Nhóm khách</value>
+  </data>
+  <data name="visitor_display_col_total_visitor" xml:space="preserve">
+    <value>Tổng khách</value>
+  </data>
+  <data name="visitor_display_col_expected_in" xml:space="preserve">
+    <value>Giờ vào</value>
+  </data>
+  <data name="visitor_display_col_expected_out" xml:space="preserve">
+    <value>Giờ ra</value>
+  </data>
+  <data name="wfr_btn_export_png" xml:space="preserve">
+    <value>Xuất PNG</value>
+  </data>
+  <data name="wfr_btn_filtering" xml:space="preserve">
+    <value>Lọc</value>
+  </data>
+  <data name="wfr_card_complete" xml:space="preserve">
+    <value>Đã hoàn thành</value>
+  </data>
+  <data name="wfr_card_complete_tip" xml:space="preserve">
+    <value>Xem yêu cầu hoàn thành</value>
+  </data>
+  <data name="wfr_card_ongoing" xml:space="preserve">
+    <value>Đang xử lý</value>
+  </data>
+  <data name="wfr_card_ongoing_tip" xml:space="preserve">
+    <value>Xem yêu cầu đang xử lý</value>
+  </data>
+  <data name="wfr_card_rejected" xml:space="preserve">
+    <value>Bị từ chối</value>
+  </data>
+  <data name="wfr_card_rejected_tip" xml:space="preserve">
+    <value>Xem yêu cầu bị từ chối</value>
+  </data>
+  <data name="wfr_card_total" xml:space="preserve">
+    <value>Tổng yêu cầu</value>
+  </data>
+  <data name="wfr_card_total_tip" xml:space="preserve">
+    <value>Xem tất cả yêu cầu</value>
+  </data>
+  <data name="wfr_chart_by_prefix" xml:space="preserve">
+    <value>Theo</value>
+  </data>
+  <data name="wfr_chart_by_section" xml:space="preserve">
+    <value>Yêu cầu theo Bộ phận / Bộ môn</value>
+  </data>
+  <data name="wfr_chart_by_section_sub" xml:space="preserve">
+    <value>Tổng yêu cầu gửi theo từng phòng</value>
+  </data>
+  <data name="wfr_chart_count" xml:space="preserve">
+    <value>Số lượng</value>
+  </data>
+  <data name="wfr_chart_follow_by" xml:space="preserve">
+    <value>Theo</value>
+  </data>
+  <data name="wfr_chart_num_requests" xml:space="preserve">
+    <value>Số yêu cầu</value>
+  </data>
+  <data name="wfr_chart_options_label" xml:space="preserve">
+    <value>Tùy chọn biểu đồ</value>
+  </data>
+  <data name="wfr_chart_order_by" xml:space="preserve">
+    <value>Sắp xếp theo</value>
+  </data>
+  <data name="wfr_chart_req_overall" xml:space="preserve">
+    <value>Tổng quan yêu cầu</value>
+  </data>
+  <data name="wfr_chart_req_overall_sub" xml:space="preserve">
+    <value>Báo cáo tuyển dụng / Khách / Đặt xe</value>
+  </data>
+  <data name="wfr_chart_request_summary" xml:space="preserve">
+    <value>Tóm tắt yêu cầu</value>
+  </data>
+  <data name="wfr_chart_select_top" xml:space="preserve">
+    <value>Chọn top</value>
+  </data>
+  <data name="wfr_chart_status_ratio" xml:space="preserve">
+    <value>Tỷ lệ trạng thái</value>
+  </data>
+  <data name="wfr_chart_status_ratio_sub" xml:space="preserve">
+    <value>Phân bố theo trạng thái yêu cầu</value>
+  </data>
+  <data name="wfr_chart_summary_ratio" xml:space="preserve">
+    <value>Tỷ lệ tổng quan</value>
+  </data>
+  <data name="wfr_chart_theme" xml:space="preserve">
+    <value>Giao diện</value>
+  </data>
+  <data name="wfr_col_app_no" xml:space="preserve">
+    <value>Mã phiếu</value>
+  </data>
+  <data name="wfr_col_approver" xml:space="preserve">
+    <value>Người phê duyệt</value>
+  </data>
+  <data name="wfr_col_car_no" xml:space="preserve">
+    <value>Số xe</value>
+  </data>
+  <data name="wfr_col_contact_person" xml:space="preserve">
+    <value>Người tiếp đón</value>
+  </data>
+  <data name="wfr_col_department" xml:space="preserve">
+    <value>Phòng/Khoa/Trung tâm</value>
+  </data>
+  <data name="wfr_col_departure_date" xml:space="preserve">
+    <value>Ngày đi</value>
+  </data>
+  <data name="wfr_col_departure_time" xml:space="preserve">
+    <value>Giờ đi</value>
+  </data>
+  <data name="wfr_col_destination" xml:space="preserve">
+    <value>Điểm đến</value>
+  </data>
+  <data name="wfr_col_driver" xml:space="preserve">
+    <value>Tài xế</value>
+  </data>
+  <data name="wfr_col_email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="wfr_col_current_approver" xml:space="preserve">
+    <value>Người duyệt hiện tại</value>
+  </data>
+  <data name="wfr_col_employment_type" xml:space="preserve">
+    <value>Loại hợp đồng</value>
+  </data>
+  <data name="wfr_col_fax_code" xml:space="preserve">
+    <value>Faxcode</value>
+  </data>
+  <data name="wfr_col_gate" xml:space="preserve">
+    <value>Cổng</value>
+  </data>
+  <data name="wfr_col_no" xml:space="preserve">
+    <value>STT</value>
+  </data>
+  <data name="wfr_col_passengers" xml:space="preserve">
+    <value>Số HK</value>
+  </data>
+  <data name="wfr_col_phone" xml:space="preserve">
+    <value>Điện thoại</value>
+  </data>
+  <data name="wfr_col_position" xml:space="preserve">
+    <value>Vị trí tuyển dụng</value>
+  </data>
+  <data name="wfr_col_process" xml:space="preserve">
+    <value>Tiến trình</value>
+  </data>
+  <data name="wfr_col_progress" xml:space="preserve">
+    <value>Tiến trình</value>
+  </data>
+  <data name="wfr_col_purpose" xml:space="preserve">
+    <value>Nội dung/Lý do tạo yêu cầu</value>
+  </data>
+  <data name="wfr_col_quantity" xml:space="preserve">
+    <value>Số lượng</value>
+  </data>
+  <data name="wfr_col_reason" xml:space="preserve">
+    <value>Lý do</value>
+  </data>
+  <data name="wfr_col_request_name" xml:space="preserve">
+    <value>Tên yêu cầu</value>
+  </data>
+  <data name="wfr_col_requester" xml:space="preserve">
+    <value>Người yêu cầu</value>
+  </data>
+  <data name="wfr_col_required_date" xml:space="preserve">
+    <value>Ngày cần</value>
+  </data>
+  <data name="wfr_col_return_date" xml:space="preserve">
+    <value>Ngày về</value>
+  </data>
+  <data name="wfr_col_return_time" xml:space="preserve">
+    <value>Giờ về</value>
+  </data>
+  <data name="wfr_col_section" xml:space="preserve">
+    <value>Bộ phận/Bộ môn</value>
+  </data>
+  <data name="wfr_col_status" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="wfr_col_submit_date" xml:space="preserve">
+    <value>Ngày nộp</value>
+  </data>
+  <data name="wfr_col_urgency" xml:space="preserve">
+    <value>Mức độ</value>
+  </data>
+  <data name="wfr_col_visit_date" xml:space="preserve">
+    <value>Ngày thăm</value>
+  </data>
+  <data name="wfr_col_visit_time" xml:space="preserve">
+    <value>Giờ thăm</value>
+  </data>
+  <data name="wfr_col_visitor_company" xml:space="preserve">
+    <value>Công ty khách</value>
+  </data>
+  <data name="wfr_col_visitor_name" xml:space="preserve">
+    <value>Tên khách</value>
+  </data>
+  <data name="wfr_export_creating" xml:space="preserve">
+    <value>Đang tạo ảnh…</value>
+  </data>
+  <data name="wfr_export_failed" xml:space="preserve">
+    <value>Xuất thất bại</value>
+  </data>
+  <data name="wfr_export_lib_missing" xml:space="preserve">
+    <value>Thư viện html2canvas chưa tải</value>
+  </data>
+  <data name="wfr_export_lib_missing_text" xml:space="preserve">
+    <value>Không tải được thư viện xuất PNG. Vui lòng kiểm tra kết nối mạng và thử lại.</value>
+  </data>
+  <data name="wfr_export_title" xml:space="preserve">
+    <value>Báo cáo quy trình — Tổng kết</value>
+  </data>
+  <data name="wfr_filter_app_no" xml:space="preserve">
+    <value>Mã phiếu</value>
+  </data>
+  <data name="wfr_filter_end_date" xml:space="preserve">
+    <value>Ngày kết thúc</value>
+  </data>
+  <data name="wfr_filter_fax_code" xml:space="preserve">
+    <value>Faxcode người tạo yêu cầu</value>
+  </data>
+  <data name="wfr_filter_approver_fax_code" xml:space="preserve">
+    <value>Faxcode người phê duyệt</value>
+  </data>
+  <data name="wfr_filter_label" xml:space="preserve">
+    <value>Bộ lọc</value>
+  </data>
+  <data name="wfr_filter_request_name" xml:space="preserve">
+    <value>Tên yêu cầu</value>
+  </data>
+  <data name="wfr_filter_start_date" xml:space="preserve">
+    <value>Ngày bắt đầu</value>
+  </data>
+  <data name="wfr_filter_user_name" xml:space="preserve">
+    <value>Tên người dùng</value>
+  </data>
+  <data name="wfr_status_complete" xml:space="preserve">
+    <value>Đã hoàn thành</value>
+  </data>
+  <data name="wfr_status_ongoing" xml:space="preserve">
+    <value>Đang phê duyệt</value>
+  </data>
+  <data name="wfr_status_rejected" xml:space="preserve">
+    <value>Từ chối</value>
+  </data>
+  <data name="wfr_status_returned" xml:space="preserve">
+    <value>Trả lại</value>
+  </data>
+  <data name="wfr_tab_details" xml:space="preserve">
+    <value>Chi tiết yêu cầu</value>
+  </data>
+  <data name="wfr_tab_overall" xml:space="preserve">
+    <value>Tổng quan</value>
+  </data>
+  <data name="wfr_tab_requests" xml:space="preserve">
+    <value>Danh sách yêu cầu</value>
+  </data>
+  <data name="wfr_title" xml:space="preserve">
+    <value>Báo cáo quy trình</value>
+  </data>
+  <data name="wfd_title" xml:space="preserve">
+    <value>Workflow</value>
+  </data>
+  <data name="wfd_tab_sent" xml:space="preserve">
+    <value>Yêu cầu đã gửi</value>
+  </data>
+  <data name="wfd_tab_received" xml:space="preserve">
+    <value>Yêu cầu nhận được</value>
+  </data>
+  <data name="wfd_card_total" xml:space="preserve">
+    <value>Tổng yêu cầu</value>
+  </data>
+  <data name="wfd_card_ongoing" xml:space="preserve">
+    <value>Đang thực hiện</value>
+  </data>
+  <data name="wfd_card_completed" xml:space="preserve">
+    <value>Đã hoàn thành</value>
+  </data>
+  <data name="wfd_card_rejected" xml:space="preserve">
+    <value>Từ chối</value>
+  </data>
+  <data name="wfd_card_approved_by_you" xml:space="preserve">
+    <value>Đã phê duyệt bởi bạn</value>
+  </data>
+  <data name="wfd_card_pending_your_approval" xml:space="preserve">
+    <value>Chờ bạn phê duyệt</value>
+  </data>
+  <data name="wfd_col_importance" xml:space="preserve">
+    <value>Mức độ quan trọng</value>
+  </data>
+  <data name="wfd_col_account_name" xml:space="preserve">
+    <value>Tên tài khoản</value>
+  </data>
+  <data name="wfd_col_current_approver" xml:space="preserve">
+    <value>Phê duyệt hiện tại</value>
+  </data>
+  <data name="wfd_badge_ongoing" xml:space="preserve">
+    <value>Đang phê duyệt</value>
+  </data>
+  <data name="wfd_badge_completed" xml:space="preserve">
+    <value>Đã hoàn thành</value>
+  </data>
+  <data name="wfd_badge_rejected" xml:space="preserve">
+    <value>Bị từ chối</value>
+  </data>
+  <data name="wfd_badge_returned" xml:space="preserve">
+    <value>Trả lại</value>
+  </data>
+  <data name="wfd_badge_urgent" xml:space="preserve">
+    <value>Khẩn</value>
+  </data>
+  <data name="wfd_badge_normal" xml:space="preserve">
+    <value>Bình thường</value>
+  </data>
+  <data name="wfd_process_waiting_format" xml:space="preserve">
+    <value>Đang phê duyệt {0}/{1}</value>
+  </data>
+  <data name="wfd_pager_info" xml:space="preserve">
+    <value>Tổng {2} | Trang {0}/{1}</value>
+  </data>
+  <data name="common_date" xml:space="preserve">
+    <value>Ngày</value>
+  </data>
+  <data name="common_status" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="common_email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="common_filter" xml:space="preserve">
+    <value>Lọc</value>
+  </data>
+  <data name="common_reset" xml:space="preserve">
+    <value>Đặt lại</value>
+  </data>
+  <data name="common_yes" xml:space="preserve">
+    <value>Có</value>
+  </data>
+  <data name="common_no" xml:space="preserve">
+    <value>Không</value>
+  </data>
+  <data name="kaizen_total_top10" xml:space="preserve">
+    <value>Tổng số top 10</value>
+  </data>
+  <data name="kaizen_total_company" xml:space="preserve">
+    <value>Tổng số toàn công ty</value>
+  </data>
+  <data name="kaizen_all" xml:space="preserve">
+    <value>Toàn bộ</value>
+  </data>
+  <data name="kaizen_sort_label" xml:space="preserve">
+    <value>Sắp xếp</value>
+  </data>
+  <data name="kaizen_sort_none" xml:space="preserve">
+    <value>Mặc định</value>
+  </data>
+  <data name="kaizen_sort_asc" xml:space="preserve">
+    <value>Tăng dần</value>
+  </data>
+  <data name="kaizen_sort_desc" xml:space="preserve">
+    <value>Giảm dần</value>
+  </data>
+  <data name="common_save" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="common_cancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="common_confirm" xml:space="preserve">
+    <value>Xác nhận</value>
+  </data>
+  <data name="common_field_invalid" xml:space="preserve">
+    <value>{0} không hợp lệ.</value>
+  </data>
+  <data name="common_field_value_invalid" xml:space="preserve">
+    <value>{0} '{1}' không hợp lệ.</value>
+  </data>
+  <data name="wf_import_popup_title" xml:space="preserve">
+    <value>Nhập danh sách từ Excel</value>
+  </data>
+  <data name="wf_import_popup_select_file_label" xml:space="preserve">
+    <value>Chọn file Excel (.xlsx):</value>
+  </data>
+  <data name="wf_import_popup_select_file_button" xml:space="preserve">
+    <value>Chọn file</value>
+  </data>
+  <data name="wf_import_popup_drop_hint" xml:space="preserve">
+    <value>hoặc kéo thả vào đây</value>
+  </data>
+  <data name="wf_import_popup_button" xml:space="preserve">
+    <value>Nhập</value>
+  </data>
+  <data name="wf_import_popup_select_file_required" xml:space="preserve">
+    <value>Vui lòng chọn file Excel.</value>
+  </data>
+  <data name="wf_import_popup_excel_only" xml:space="preserve">
+    <value>Chỉ chấp nhận file Excel (.xlsx, .xls).</value>
+  </data>
+  <data name="wf_import_popup_no_data" xml:space="preserve">
+    <value>Tập tin không có dữ liệu hợp lệ.</value>
+  </data>
+  <data name="wf_import_popup_success" xml:space="preserve">
+    <value>Đã import {0} dòng.</value>
+  </data>
+  <data name="wf_import_popup_read_error" xml:space="preserve">
+    <value>Lỗi đọc file: {0}</value>
+  </data>
+  <data name="wf_import_popup_failed" xml:space="preserve">
+    <value>Nhập thất bại</value>
+  </data>
+  <data name="wf_import_popup_error_summary" xml:space="preserve">
+    <value>Phát hiện {0} lỗi, vui lòng kiểm tra lại file:</value>
+  </data>
+  <data name="wf_import_popup_error_row" xml:space="preserve">
+    <value>Dòng</value>
+  </data>
+  <data name="common_search_placeholder" xml:space="preserve">
+    <value>Tìm kiếm...</value>
+  </data>
+  <data name="common_add_new" xml:space="preserve">
+    <value>Thêm mới</value>
+  </data>
+  <data name="common_col_no" xml:space="preserve">
+    <value>STT</value>
+  </data>
+  <data name="common_col_actions" xml:space="preserve">
+    <value>Thao tác</value>
+  </data>
+  <data name="approver_page_title" xml:space="preserve">
+    <value>Thiết lập phê duyệt</value>
+  </data>
+  <data name="approver_form_code" xml:space="preserve">
+    <value>Mã form</value>
+  </data>
+  <data name="approver_col_title" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="approver_col_display_title" xml:space="preserve">
+    <value>Tiêu đề hiển thị</value>
+  </data>
+  <data name="approver_col_approvers" xml:space="preserve">
+    <value>Người phê duyệt</value>
+  </data>
+  <data name="approver_popup_add" xml:space="preserve">
+    <value>Thêm thiết lập phê duyệt</value>
+  </data>
+  <data name="approver_popup_edit" xml:space="preserve">
+    <value>Sửa thiết lập phê duyệt</value>
+  </data>
+  <data name="approver_field_users" xml:space="preserve">
+    <value>Người dùng phê duyệt</value>
+  </data>
+  <data name="approver_btn_browse" xml:space="preserve">
+    <value>Chọn</value>
+  </data>
+  <data name="approver_placeholder_users" xml:space="preserve">
+    <value>Chọn người dùng...</value>
+  </data>
+  <data name="approver_picker_title" xml:space="preserve">
+    <value>Chọn người phê duyệt</value>
+  </data>
+  <data name="approver_picker_username" xml:space="preserve">
+    <value>Tên đăng nhập</value>
+  </data>
+  <data name="approver_picker_fullname" xml:space="preserve">
+    <value>Họ tên</value>
+  </data>
+  <data name="approver_picker_position" xml:space="preserve">
+    <value>Chức vụ</value>
+  </data>
+  <data name="approver_delete_confirm" xml:space="preserve">
+    <value>Xóa thiết lập phê duyệt '{0}'?</value>
+  </data>
+  <data name="approver_deleted" xml:space="preserve">
+    <value>Xóa thành công.</value>
+  </data>
+  <data name="approver_delete_failed" xml:space="preserve">
+    <value>Xóa thất bại.</value>
+  </data>
+  <data name="approver_updated" xml:space="preserve">
+    <value>Cập nhật thành công.</value>
+  </data>
+  <data name="approver_created" xml:space="preserve">
+    <value>Thêm mới thành công.</value>
+  </data>
+  <data name="approver_save_failed" xml:space="preserve">
+    <value>Lưu thất bại.</value>
+  </data>
+  <data name="approver_load_failed" xml:space="preserve">
+    <value>Không thể tải dữ liệu.</value>
+  </data>
+  <data name="approver_load_users_failed" xml:space="preserve">
+    <value>Không thể tải danh sách người dùng.</value>
+  </data>
+  <data name="approver_formcode_required" xml:space="preserve">
+    <value>Mã form là bắt buộc.</value>
+  </data>
+  <data name="approver_title_required" xml:space="preserve">
+    <value>Tiêu đề là bắt buộc.</value>
+  </data>
+  <data name="approver_display_title_required" xml:space="preserve">
+    <value>Tiêu đề hiển thị là bắt buộc.</value>
+  </data>
+  <data name="approver_approver_required" xml:space="preserve">
+    <value>Vui lòng chọn ít nhất một người phê duyệt.</value>
+  </data>
+  <data name="elm_page_title" xml:space="preserve">
+    <value>Giám sát email</value>
+  </data>
+  <data name="elm_refresh" xml:space="preserve">
+    <value>Làm mới</value>
+  </data>
+  <data name="elm_last_refresh" xml:space="preserve">
+    <value>Lần cuối:</value>
+  </data>
+  <data name="elm_no_attempts" xml:space="preserve">
+    <value>Chưa có lịch sử gửi.</value>
+  </data>
+  <data name="elm_col_status" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="elm_col_subject" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="elm_col_to" xml:space="preserve">
+    <value>Gửi đến</value>
+  </data>
+  <data name="elm_col_type" xml:space="preserve">
+    <value>Loại</value>
+  </data>
+  <data name="elm_col_action" xml:space="preserve">
+    <value>Hành động</value>
+  </data>
+  <data name="elm_col_attempts" xml:space="preserve">
+    <value>Số lần thử</value>
+  </data>
+  <data name="elm_col_created" xml:space="preserve">
+    <value>Tạo lúc</value>
+  </data>
+  <data name="elm_col_sent_at" xml:space="preserve">
+    <value>Đã gửi lúc</value>
+  </data>
+  <data name="elm_col_retry_at" xml:space="preserve">
+    <value>Thử lại lúc</value>
+  </data>
+  <data name="elm_col_last_error" xml:space="preserve">
+    <value>Lỗi cuối</value>
+  </data>
+  <data name="elm_detail_result" xml:space="preserve">
+    <value>Kết quả</value>
+  </data>
+  <data name="elm_detail_time" xml:space="preserve">
+    <value>Thời gian</value>
+  </data>
+  <data name="elm_detail_error" xml:space="preserve">
+    <value>Lỗi</value>
+  </data>
+  <data name="elm_detail_success" xml:space="preserve">
+    <value>Thành công</value>
+  </data>
+  <data name="elm_detail_failed" xml:space="preserve">
+    <value>Thất bại</value>
+  </data>
+  <data name="elm_badge_total" xml:space="preserve">
+    <value>Tổng</value>
+  </data>
+  <data name="elm_badge_sent" xml:space="preserve">
+    <value>Đã gửi</value>
+  </data>
+  <data name="elm_badge_pending" xml:space="preserve">
+    <value>Đang chờ</value>
+  </data>
+  <data name="elm_badge_failed" xml:space="preserve">
+    <value>Thất bại</value>
+  </data>
+  <data name="wfr_btn_export_xlsx" xml:space="preserve">
+    <value>Xuất XLSX</value>
+  </data>
+  <data name="wfr_col_computer_office" xml:space="preserve">
+    <value>Tin học VP</value>
+  </data>
+  <data name="wfr_col_computer_prog" xml:space="preserve">
+    <value>Lập trình</value>
+  </data>
+  <data name="wfr_col_current_count" xml:space="preserve">
+    <value>SL hiện có</value>
+  </data>
+  <data name="wfr_col_driver_phone" xml:space="preserve">
+    <value>SĐT tài xế</value>
+  </data>
+  <data name="wfr_col_experience" xml:space="preserve">
+    <value>Kinh nghiệm</value>
+  </data>
+  <data name="wfr_col_hr_quota" xml:space="preserve">
+    <value>Chỉ tiêu NS</value>
+  </data>
+  <data name="wfr_col_job_desc" xml:space="preserve">
+    <value>Mô tả công việc</value>
+  </data>
+  <data name="wfr_col_lang_english" xml:space="preserve">
+    <value>Tiếng Anh</value>
+  </data>
+  <data name="wfr_col_lang_japanese" xml:space="preserve">
+    <value>Tiếng Nhật</value>
+  </data>
+  <data name="wfr_col_passenger_name" xml:space="preserve">
+    <value>Tên hành khách</value>
+  </data>
+  <data name="wfr_col_recruit_from" xml:space="preserve">
+    <value>Từ ngày</value>
+  </data>
+  <data name="wfr_col_recruit_mode" xml:space="preserve">
+    <value>Chi tiết tuyển dụng</value>
+  </data>
+  <data name="wfr_col_recruit_to" xml:space="preserve">
+    <value>Đến ngày</value>
+  </data>
+  <data name="wfr_col_required_count" xml:space="preserve">
+    <value>SL cần tuyển</value>
+  </data>
+  <data name="wfr_col_vehicle_type" xml:space="preserve">
+    <value>Loại xe</value>
+  </data>
+  <data name="workflow_swal_warning" xml:space="preserve">
+    <value>Cảnh báo!</value>
+  </data>
+  <data name="menu_approver_setting" xml:space="preserve">
+    <value>Thiết lập phê duyệt</value>
+  </data>
+  <data name="menu_report_access_setting" xml:space="preserve">
+    <value>Thiết lập quyền truy cập báo cáo</value>
+  </data>
+  <data name="menu_worker_monitor" xml:space="preserve">
+    <value>Giám sát Subtask</value>
+  </data>
+  <data name="news_page_title" xml:space="preserve">
+    <value>Tin tức</value>
+  </data>
+  <data name="news_detail_page_title" xml:space="preserve">
+    <value>Chi tiết tin tức</value>
+  </data>
+  <data name="news_section_attachments" xml:space="preserve">
+    <value>File đính kèm</value>
+  </data>
+  <data name="news_col_no" xml:space="preserve">
+    <value>STT</value>
+  </data>
+  <data name="news_col_thumbnail" xml:space="preserve">
+    <value>Ảnh đại diện</value>
+  </data>
+  <data name="news_col_file" xml:space="preserve">
+    <value>Tệp</value>
+  </data>
+  <data name="news_col_title" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="news_col_created_by" xml:space="preserve">
+    <value>Người tạo</value>
+  </data>
+  <data name="news_col_created_at" xml:space="preserve">
+    <value>Ngày tạo</value>
+  </data>
+  <data name="news_col_publisher" xml:space="preserve">
+    <value>Đơn vị phát hành</value>
+  </data>
+  <data name="news_col_assign_site" xml:space="preserve">
+    <value>Cơ sở nhận</value>
+  </data>
+  <data name="news_col_note" xml:space="preserve">
+    <value>Ghi chú</value>
+  </data>
+  <data name="news_col_section" xml:space="preserve">
+    <value>Đơn vị</value>
+  </data>
+  <data name="news_col_full_name" xml:space="preserve">
+    <value>Họ và tên</value>
+  </data>
+  <data name="news_col_user_name" xml:space="preserve">
+    <value>Tên đăng nhập</value>
+  </data>
+  <data name="news_col_site" xml:space="preserve">
+    <value>Cơ sở</value>
+  </data>
+  <data name="news_col_allow_modify" xml:space="preserve">
+    <value>Được phép chỉnh sửa</value>
+  </data>
+  <data name="news_btn_create" xml:space="preserve">
+    <value>Tạo mới</value>
+  </data>
+  <data name="news_btn_edit" xml:space="preserve">
+    <value>Chỉnh sửa</value>
+  </data>
+  <data name="news_btn_remove" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="news_btn_back" xml:space="preserve">
+    <value>Quay lại</value>
+  </data>
+  <data name="news_remove_confirm_title" xml:space="preserve">
+    <value>Xóa tin tức</value>
+  </data>
+  <data name="news_remove_confirm_text" xml:space="preserve">
+    <value>Mục này sẽ bị vô hiệu hóa và ẩn khỏi danh sách. Tiếp tục?</value>
+  </data>
+  <data name="news_created_success" xml:space="preserve">
+    <value>Tạo tin tức thành công.</value>
+  </data>
+  <data name="news_updated_success" xml:space="preserve">
+    <value>Cập nhật tin tức thành công.</value>
+  </data>
+  <data name="news_removed_success" xml:space="preserve">
+    <value>Xóa thành công.</value>
+  </data>
+  <data name="news_create_failed" xml:space="preserve">
+    <value>Tạo thất bại.</value>
+  </data>
+  <data name="news_update_failed" xml:space="preserve">
+    <value>Cập nhật thất bại.</value>
+  </data>
+  <data name="news_remove_failed" xml:space="preserve">
+    <value>Xóa thất bại.</value>
+  </data>
+  <data name="news_err_updating" xml:space="preserve">
+    <value>Đã có lỗi xảy ra khi cập nhật.</value>
+  </data>
+  <data name="news_no_thumbnail" xml:space="preserve">
+    <value>Không có ảnh đại diện</value>
+  </data>
+  <data name="news_invalid_id" xml:space="preserve">
+    <value>ID tin tức không hợp lệ.</value>
+  </data>
+  <data name="news_meta_belong_site" xml:space="preserve">
+    <value>Đơn vị phát hành</value>
+  </data>
+  <data name="news_meta_publisher" xml:space="preserve">
+    <value>Đơn vị phát hành</value>
+  </data>
+  <data name="news_meta_created_by" xml:space="preserve">
+    <value>Người tạo</value>
+  </data>
+  <data name="news_meta_created_at" xml:space="preserve">
+    <value>Ngày tạo</value>
+  </data>
+  <data name="news_carousel_no_news" xml:space="preserve">
+    <value>Không có tin tức</value>
+  </data>
+  <data name="news_carousel_untitled" xml:space="preserve">
+    <value>Không có tiêu đề</value>
+  </data>
+  <data name="news_popup_create_title" xml:space="preserve">
+    <value>Tạo tin tức</value>
+  </data>
+  <data name="news_popup_update_title" xml:space="preserve">
+    <value>Cập nhật tin tức</value>
+  </data>
+  <data name="news_popup_btn_cancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="news_popup_btn_save" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="news_popup_required_hint" xml:space="preserve">
+    <value>Trường có * là bắt buộc</value>
+  </data>
+  <data name="news_field_title" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="news_field_thumbnail" xml:space="preserve">
+    <value>Ảnh đại diện</value>
+  </data>
+  <data name="news_field_thumbnail_update" xml:space="preserve">
+    <value>Ảnh đại diện (tùy chọn)</value>
+  </data>
+  <data name="news_field_show_on_home" xml:space="preserve">
+    <value>Hiển thị trang chủ</value>
+  </data>
+  <data name="news_field_belong_site" xml:space="preserve">
+    <value>Đơn vị phát hành</value>
+  </data>
+  <data name="news_field_assign_section" xml:space="preserve">
+    <value>Đơn vị phát hành</value>
+  </data>
+  <data name="news_field_assign_sites" xml:space="preserve">
+    <value>Cơ sở nhận</value>
+  </data>
+  <data name="news_field_assign_members" xml:space="preserve">
+    <value>Thành viên phân công</value>
+  </data>
+  <data name="news_field_brief" xml:space="preserve">
+    <value>Tóm tắt / Nội dung</value>
+  </data>
+  <data name="news_field_files" xml:space="preserve">
+    <value>Tệp đính kèm</value>
+  </data>
+  <data name="news_field_existing_files" xml:space="preserve">
+    <value>File hiện có (chọn để xóa)</value>
+  </data>
+  <data name="news_field_files_add" xml:space="preserve">
+    <value>Đính kèm thêm file</value>
+  </data>
+  <data name="news_field_file_desc" xml:space="preserve">
+    <value>Mô tả file (khi đính kèm)</value>
+  </data>
+  <data name="news_val_title_req" xml:space="preserve">
+    <value>Vui lòng nhập tiêu đề.</value>
+  </data>
+  <data name="news_val_thumb_req" xml:space="preserve">
+    <value>Vui lòng chọn ảnh đại diện.</value>
+  </data>
+  <data name="news_val_file_desc_req" xml:space="preserve">
+    <value>Vui lòng nhập mô tả khi đính kèm file.</value>
+  </data>
+  <data name="news_val_brief_req" xml:space="preserve">
+    <value>Vui lòng nhập tóm tắt.</value>
+  </data>
+  <data name="news_val_belong_site_req" xml:space="preserve">
+    <value>Vui lòng chọn đơn vị phát hành.</value>
+  </data>
+  <data name="news_val_assign_sites_req" xml:space="preserve">
+    <value>Vui lòng chọn cơ sở nhận.</value>
+  </data>
+  <data name="news_val_section_req" xml:space="preserve">
+    <value>Vui lòng chọn đơn vị.</value>
+  </data>
+  <data name="news_ph_title" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="news_ph_file_desc" xml:space="preserve">
+    <value>Mô tả file đính kèm</value>
+  </data>
+  <data name="news_ph_brief" xml:space="preserve">
+    <value>Tóm tắt / Nội dung</value>
+  </data>
+  <data name="news_ph_belong_site" xml:space="preserve">
+    <value>Đơn vị phát hành…</value>
+  </data>
+  <data name="news_ph_no_data_load" xml:space="preserve">
+    <value>Mở danh sách để tải</value>
+  </data>
+  <data name="news_ph_no_data_no_match" xml:space="preserve">
+    <value>Không tìm thấy</value>
+  </data>
+  <data name="news_ph_assign_sites" xml:space="preserve">
+    <value>Cơ sở nhận…</value>
+  </data>
+  <data name="news_ph_assign_section" xml:space="preserve">
+    <value>Chọn đơn vị</value>
+  </data>
+  <data name="news_ph_assign_members" xml:space="preserve">
+    <value>Thành viên…</value>
+  </data>
+  <data name="news_ph_search_users" xml:space="preserve">
+    <value>Tìm kiếm thành viên...</value>
+  </data>
+  <data name="news_err_load_sites" xml:space="preserve">
+    <value>Không thể tải danh sách cơ sở.</value>
+  </data>
+  <data name="news_err_load_sections" xml:space="preserve">
+    <value>Không thể tải danh sách đơn vị.</value>
+  </data>
+  <data name="news_err_save" xml:space="preserve">
+    <value>Không thể lưu tin tức.</value>
+  </data>
+  <data name="news_err_update" xml:space="preserve">
+    <value>Không thể cập nhật tin tức.</value>
+  </data>
+  <data name="news_err_invalid_id" xml:space="preserve">
+    <value>ID không hợp lệ.</value>
+  </data>
+  <data name="noti_popup_create_title" xml:space="preserve">
+    <value>Tạo thông báo</value>
+  </data>
+  <data name="noti_popup_update_title" xml:space="preserve">
+    <value>Cập nhật thông báo</value>
+  </data>
+  <data name="noti_popup_btn_cancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="noti_popup_btn_save" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="noti_popup_required_hint" xml:space="preserve">
+    <value>Trường có * là bắt buộc</value>
+  </data>
+  <data name="noti_field_title" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="noti_field_from_date" xml:space="preserve">
+    <value>Từ ngày</value>
+  </data>
+  <data name="noti_field_to_date" xml:space="preserve">
+    <value>Đến ngày</value>
+  </data>
+  <data name="noti_field_content" xml:space="preserve">
+    <value>Nội dung</value>
+  </data>
+  <data name="noti_field_attach_files" xml:space="preserve">
+    <value>Tệp đính kèm</value>
+  </data>
+  <data name="noti_field_file_desc" xml:space="preserve">
+    <value>Mô tả file</value>
+  </data>
+  <data name="noti_field_file_desc_update" xml:space="preserve">
+    <value>Mô tả file (khi tải lên file mới)</value>
+  </data>
+  <data name="noti_field_existing_files" xml:space="preserve">
+    <value>File hiện có (chọn để xóa)</value>
+  </data>
+  <data name="noti_field_upload_more" xml:space="preserve">
+    <value>Tải lên thêm file</value>
+  </data>
+  <data name="noti_col_section" xml:space="preserve">
+    <value>Đơn vị</value>
+  </data>
+  <data name="noti_val_title_req" xml:space="preserve">
+    <value>Vui lòng nhập tiêu đề.</value>
+  </data>
+  <data name="noti_val_file_desc_req" xml:space="preserve">
+    <value>Vui lòng nhập mô tả file.</value>
+  </data>
+  <data name="noti_val_from_req" xml:space="preserve">
+    <value>Vui lòng chọn ngày bắt đầu.</value>
+  </data>
+  <data name="noti_val_to_req" xml:space="preserve">
+    <value>Vui lòng chọn ngày kết thúc.</value>
+  </data>
+  <data name="noti_val_to_after_from" xml:space="preserve">
+    <value>Ngày kết thúc phải sau ngày bắt đầu.</value>
+  </data>
+  <data name="noti_val_content_req" xml:space="preserve">
+    <value>Vui lòng nhập nội dung.</value>
+  </data>
+  <data name="noti_val_attach_req" xml:space="preserve">
+    <value>Vui lòng đính kèm ít nhất một file.</value>
+  </data>
+  <data name="noti_val_issue_site_req" xml:space="preserve">
+    <value>Vui lòng chọn đơn vị phát hành.</value>
+  </data>
+  <data name="noti_val_assign_sites_req" xml:space="preserve">
+    <value>Vui lòng chọn đơn vị nhận.</value>
+  </data>
+  <data name="noti_val_section_req" xml:space="preserve">
+    <value>Vui lòng chọn đơn vị phát hành.</value>
+  </data>
+  <data name="noti_val_file_desc_upload_req" xml:space="preserve">
+    <value>Vui lòng nhập mô tả khi tải lên file.</value>
+  </data>
+  <data name="noti_ph_title" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="noti_ph_file_desc" xml:space="preserve">
+    <value>Mô tả file</value>
+  </data>
+  <data name="noti_ph_content" xml:space="preserve">
+    <value>Nội dung</value>
+  </data>
+  <data name="noti_ph_issue_site" xml:space="preserve">
+    <value>Mở danh sách để tải…</value>
+  </data>
+  <data name="noti_ph_assign_sites" xml:space="preserve">
+    <value>Chọn đơn vị nhận…</value>
+  </data>
+  <data name="noti_ph_section" xml:space="preserve">
+    <value>Chọn đơn vị</value>
+  </data>
+  <data name="noti_no_data_load_sites" xml:space="preserve">
+    <value>Mở danh sách để tải</value>
+  </data>
+  <data name="noti_no_data_no_match" xml:space="preserve">
+    <value>Không tìm thấy</value>
+  </data>
+  <data name="noti_err_load_sites" xml:space="preserve">
+    <value>Không thể tải danh sách cơ sở.</value>
+  </data>
+  <data name="noti_err_load_sections" xml:space="preserve">
+    <value>Không thể tải danh sách đơn vị.</value>
+  </data>
+  <data name="noti_err_save" xml:space="preserve">
+    <value>Không thể lưu thông báo.</value>
+  </data>
+  <data name="noti_err_update" xml:space="preserve">
+    <value>Không thể cập nhật thông báo.</value>
+  </data>
+  <data name="noti_err_invalid_id" xml:space="preserve">
+    <value>ID không hợp lệ.</value>
+  </data>
+  <data name="notitoast_offline_notice" xml:space="preserve">
+    <value>Người phê duyệt chính {0} ({1}) sẽ không hoạt động từ {2} đến {3}</value>
+  </data>
+  <data name="um_page_title" xml:space="preserve">
+    <value>Quản lý người dùng</value>
+  </data>
+  <data name="um_col_no" xml:space="preserve">
+    <value>STT</value>
+  </data>
+  <data name="um_col_username" xml:space="preserve">
+    <value>Tên đăng nhập</value>
+  </data>
+  <data name="um_col_empid" xml:space="preserve">
+    <value>Mã NV</value>
+  </data>
+  <data name="um_col_fullname" xml:space="preserve">
+    <value>Họ và tên</value>
+  </data>
+  <data name="um_col_email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="um_col_phone" xml:space="preserve">
+    <value>Điện thoại</value>
+  </data>
+  <data name="um_col_site" xml:space="preserve">
+    <value>Cơ sở</value>
+  </data>
+  <data name="um_col_dept" xml:space="preserve">
+    <value>Phòng/Khoa/Trung tâm</value>
+  </data>
+  <data name="um_col_section" xml:space="preserve">
+    <value>Bộ phận/Bộ môn</value>
+  </data>
+  <data name="um_col_position" xml:space="preserve">
+    <value>Chức vụ</value>
+  </data>
+  <data name="um_col_dob" xml:space="preserve">
+    <value>Ngày sinh</value>
+  </data>
+  <data name="um_col_status" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="um_status_active" xml:space="preserve">
+    <value>Đang hoạt động</value>
+  </data>
+  <data name="um_status_inactive" xml:space="preserve">
+    <value>Đã khoá</value>
+  </data>
+  <data name="um_action_edit" xml:space="preserve">
+    <value>Chỉnh sửa</value>
+  </data>
+  <data name="um_action_reset_pwd" xml:space="preserve">
+    <value>Đặt lại mật khẩu</value>
+  </data>
+  <data name="um_action_edit_perm" xml:space="preserve">
+    <value>Phân quyền</value>
+  </data>
+  <data name="um_action_lock" xml:space="preserve">
+    <value>Khoá tài khoản</value>
+  </data>
+  <data name="um_action_unlock" xml:space="preserve">
+    <value>Mở khoá tài khoản</value>
+  </data>
+  <data name="um_btn_create" xml:space="preserve">
+    <value>Tạo người dùng</value>
+  </data>
+  <data name="um_btn_import" xml:space="preserve">
+    <value>Nhập Excel</value>
+  </data>
+  <data name="um_import_title" xml:space="preserve">
+    <value>Nhập người dùng từ Excel</value>
+  </data>
+  <data name="um_import_select_file" xml:space="preserve">
+    <value>Chọn file Excel (.xlsx)</value>
+  </data>
+  <data name="um_btn_cancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="um_btn_import_do" xml:space="preserve">
+    <value>Nhập</value>
+  </data>
+  <data name="um_msg_no_file" xml:space="preserve">
+    <value>Vui lòng chọn file Excel.</value>
+  </data>
+  <data name="um_msg_importing" xml:space="preserve">
+    <value>Đang nhập dữ liệu...</value>
+  </data>
+  <data name="um_msg_import_fail" xml:space="preserve">
+    <value>Nhập dữ liệu thất bại.</value>
+  </data>
+  <data name="um_msg_import_completed" xml:space="preserve">
+    <value>Nhập hoàn tất.</value>
+  </data>
+  <data name="um_msg_total" xml:space="preserve">
+    <value>Tổng: </value>
+  </data>
+  <data name="um_msg_succeeded" xml:space="preserve">
+    <value>, Thành công: </value>
+  </data>
+  <data name="um_msg_failed_count" xml:space="preserve">
+    <value>, Thất bại: </value>
+  </data>
+  <data name="umf_create_title" xml:space="preserve">
+    <value>Tạo người dùng</value>
+  </data>
+  <data name="umf_edit_title" xml:space="preserve">
+    <value>Chỉnh sửa người dùng</value>
+  </data>
+  <data name="umf_lbl_faxcode" xml:space="preserve">
+    <value>Faxcode</value>
+  </data>
+  <data name="umf_lbl_empid" xml:space="preserve">
+    <value>Mã NV</value>
+  </data>
+  <data name="umf_lbl_fullname" xml:space="preserve">
+    <value>Họ và tên</value>
+  </data>
+  <data name="umf_lbl_email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="umf_lbl_phone" xml:space="preserve">
+    <value>Điện thoại</value>
+  </data>
+  <data name="umf_lbl_position" xml:space="preserve">
+    <value>Chức vụ</value>
+  </data>
+  <data name="umf_lbl_dob" xml:space="preserve">
+    <value>Ngày sinh</value>
+  </data>
+  <data name="umf_lbl_site" xml:space="preserve">
+    <value>Cơ sở</value>
+  </data>
+  <data name="umf_lbl_dept" xml:space="preserve">
+    <value>Phòng/Khoa/Trung tâm</value>
+  </data>
+  <data name="umf_lbl_section" xml:space="preserve">
+    <value>Bộ phận/Bộ môn</value>
+  </data>
+  <data name="umf_lbl_password" xml:space="preserve">
+    <value>Mật khẩu</value>
+  </data>
+  <data name="umf_lbl_confirm_pwd" xml:space="preserve">
+    <value>Xác nhận mật khẩu</value>
+  </data>
+  <data name="umf_lbl_avatar" xml:space="preserve">
+    <value>Ảnh đại diện</value>
+  </data>
+  <data name="umf_pwd_rules" xml:space="preserve">
+    <value>Tối thiểu 7 ký tự, 1 hoa, 1 thường, 1 số, 1 ký tự đặc biệt</value>
+  </data>
+  <data name="umf_pwd_mismatch" xml:space="preserve">
+    <value>Mật khẩu không khớp</value>
+  </data>
+  <data name="umf_btn_cancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="umf_btn_create" xml:space="preserve">
+    <value>Tạo</value>
+  </data>
+  <data name="umf_btn_save" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="umf_msg_saving" xml:space="preserve">
+    <value>Đang lưu...</value>
+  </data>
+  <data name="umf_msg_save_fail" xml:space="preserve">
+    <value>Lưu thất bại.</value>
+  </data>
+  <data name="umf_msg_created" xml:space="preserve">
+    <value>Tạo người dùng thành công.</value>
+  </data>
+  <data name="umf_msg_updated" xml:space="preserve">
+    <value>Cập nhật người dùng thành công.</value>
+  </data>
+  <data name="uma_reset_title" xml:space="preserve">
+    <value>Đặt lại mật khẩu</value>
+  </data>
+  <data name="uma_reset_confirm" xml:space="preserve">
+    <value>Bạn có chắc muốn đặt lại mật khẩu cho người dùng</value>
+  </data>
+  <data name="uma_new_pwd_title" xml:space="preserve">
+    <value>Mật khẩu mới</value>
+  </data>
+  <data name="uma_new_pwd_warning" xml:space="preserve">
+    <value>Vui lòng sao chép mật khẩu bên dưới. Sau khi đóng, mật khẩu sẽ &lt;b&gt;không thể khôi phục&lt;/b&gt;.</value>
+  </data>
+  <data name="uma_btn_copy" xml:space="preserve">
+    <value>Sao chép</value>
+  </data>
+  <data name="uma_copied" xml:space="preserve">
+    <value>Đã sao chép mật khẩu.</value>
+  </data>
+  <data name="uma_reset_failed" xml:space="preserve">
+    <value>Đặt lại thất bại.</value>
+  </data>
+  <data name="uma_error" xml:space="preserve">
+    <value>Có lỗi xảy ra.</value>
+  </data>
+  <data name="uma_lock_title" xml:space="preserve">
+    <value>Khoá tài khoản</value>
+  </data>
+  <data name="uma_unlock_title" xml:space="preserve">
+    <value>Mở khoá tài khoản</value>
+  </data>
+  <data name="uma_lock_confirm" xml:space="preserve">
+    <value>Bạn có chắc muốn khoá tài khoản người dùng</value>
+  </data>
+  <data name="uma_unlock_confirm" xml:space="preserve">
+    <value>Bạn có chắc muốn mở khoá tài khoản người dùng</value>
+  </data>
+  <data name="uma_op_failed" xml:space="preserve">
+    <value>Thao tác thất bại.</value>
+  </data>
+  <data name="uma_status_changed" xml:space="preserve">
+    <value>Thay đổi trạng thái thành công.</value>
+  </data>
+  <data name="um_copied" xml:space="preserve">
+    <value>Đã sao chép tên người dùng.</value>
+  </data>
+  <data name="um_copy_failed" xml:space="preserve">
+    <value>Không thể sao chép tên người dùng.</value>
+  </data>
+  <data name="import_result_title" xml:space="preserve">
+    <value>Kết quả nhập dữ liệu</value>
+  </data>
+  <data name="import_error_row" xml:space="preserve">
+    <value>Dòng</value>
+  </data>
+  <data name="import_error_issuer" xml:space="preserve">
+    <value>Người tạo</value>
+  </data>
+  <data name="import_error_message" xml:space="preserve">
+    <value>Lỗi</value>
+  </data>
+  <data name="urp_user_account" xml:space="preserve">
+    <value>Tài khoản người dùng</value>
+  </data>
+  <data name="urp_group" xml:space="preserve">
+    <value>Nhóm</value>
+  </data>
+  <data name="urp_group_toggle_hint" xml:space="preserve">
+    <value>Bật hoặc tắt toàn bộ quyền trong nhóm này</value>
+  </data>
+  <data name="urp_permission" xml:space="preserve">
+    <value>Quyền</value>
+  </data>
+  <data name="urp_super_user" xml:space="preserve">
+    <value>Super User</value>
+  </data>
+  <data name="urp_super_user_hint" xml:space="preserve">
+    <value>Super User - toàn bộ quyền hệ thống</value>
+  </data>
+  <data name="urp_msg_save_failed" xml:space="preserve">
+    <value>Không thể lưu phân quyền.</value>
+  </data>
+  <data name="urp_msg_saved" xml:space="preserve">
+    <value>Đã lưu phân quyền thành công.</value>
+  </data>
+  <data name="urp_msg_missing_user" xml:space="preserve">
+    <value>Thiếu thông tin người dùng.</value>
+  </data>
+  <data name="urp_msg_load_failed" xml:space="preserve">
+    <value>Không tải được danh sách quyền.</value>
+  </data>
+  <data name="us_page_title" xml:space="preserve">
+    <value>Thông tin cá nhân</value>
+  </data>
+  <data name="us_photo_click" xml:space="preserve">
+    <value>Ảnh đại diện (nhấp để thay đổi)</value>
+  </data>
+  <data name="us_photo_label" xml:space="preserve">
+    <value>Ảnh đại diện</value>
+  </data>
+  <data name="us_grp_personal" xml:space="preserve">
+    <value>Thông tin cá nhân</value>
+  </data>
+  <data name="us_grp_work" xml:space="preserve">
+    <value>Thông tin công việc</value>
+  </data>
+  <data name="us_grp_online" xml:space="preserve">
+    <value>Cài đặt trực tuyến</value>
+  </data>
+  <data name="us_lbl_empid" xml:space="preserve">
+    <value>Mã cán bộ</value>
+  </data>
+  <data name="us_lbl_username" xml:space="preserve">
+    <value>Tên đăng nhập</value>
+  </data>
+  <data name="us_lbl_fullname" xml:space="preserve">
+    <value>Họ và tên</value>
+  </data>
+  <data name="us_lbl_phone" xml:space="preserve">
+    <value>Số điện thoại</value>
+  </data>
+  <data name="us_lbl_dob" xml:space="preserve">
+    <value>Ngày sinh</value>
+  </data>
+  <data name="us_lbl_change_pwd" xml:space="preserve">
+    <value>Đổi mật khẩu</value>
+  </data>
+  <data name="us_lbl_current_pwd" xml:space="preserve">
+    <value>Mật khẩu hiện tại</value>
+  </data>
+  <data name="us_lbl_new_pwd" xml:space="preserve">
+    <value>Mật khẩu mới</value>
+  </data>
+  <data name="us_lbl_confirm_pwd" xml:space="preserve">
+    <value>Xác nhận mật khẩu</value>
+  </data>
+  <data name="us_lbl_site" xml:space="preserve">
+    <value>Cơ sở / Khu vực</value>
+  </data>
+  <data name="us_lbl_dept" xml:space="preserve">
+    <value>Phòng/Khoa/Trung tâm</value>
+  </data>
+  <data name="us_lbl_section" xml:space="preserve">
+    <value>Bộ phận/Bộ môn</value>
+  </data>
+  <data name="us_lbl_position" xml:space="preserve">
+    <value>Chức vụ</value>
+  </data>
+  <data name="us_lbl_email" xml:space="preserve">
+    <value>Email liên hệ</value>
+  </data>
+  <data name="us_lbl_online" xml:space="preserve">
+    <value>Trực tuyến</value>
+  </data>
+  <data name="us_lbl_offline_from" xml:space="preserve">
+    <value>Ngoại tuyến từ</value>
+  </data>
+  <data name="us_lbl_offline_to" xml:space="preserve">
+    <value>Ngoại tuyến đến</value>
+  </data>
+  <data name="us_lbl_offline_comment" xml:space="preserve">
+    <value>Ghi chú ngoại tuyến</value>
+  </data>
+  <data name="us_btn_save" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="us_swal_warning" xml:space="preserve">
+    <value>Cảnh báo</value>
+  </data>
+  <data name="us_swal_success" xml:space="preserve">
+    <value>Thành công</value>
+  </data>
+  <data name="us_swal_error" xml:space="preserve">
+    <value>Lỗi</value>
+  </data>
+  <data name="us_pwd_mismatch" xml:space="preserve">
+    <value>Mật khẩu mới và xác nhận không khớp.</value>
+  </data>
+  <data name="us_pwd_required" xml:space="preserve">
+    <value>Vui lòng nhập mật khẩu hiện tại và mật khẩu mới.</value>
+  </data>
+  <data name="us_change_pwd_failed" xml:space="preserve">
+    <value>Đổi mật khẩu thất bại.</value>
+  </data>
+  <data name="us_save_success" xml:space="preserve">
+    <value>Dữ liệu đã được lưu.</value>
+  </data>
+  <data name="us_save_error" xml:space="preserve">
+    <value>Có lỗi xảy ra khi lưu thông tin.</value>
+  </data>
+  <data name="us_offline_required" xml:space="preserve">
+    <value>Vui lòng điền đầy đủ thời gian và ghi chú khi đặt tài khoản ngoại tuyến.</value>
+  </data>
+  <data name="us_offline_invalid_range" xml:space="preserve">
+    <value>Thời gian bắt đầu ngoại tuyến phải trước thời gian kết thúc.</value>
+  </data>
+  <data name="us_offline_future" xml:space="preserve">
+    <value>Thời gian kết thúc ngoại tuyến phải trong tương lai.</value>
+  </data>
+  <data name="us_status_error" xml:space="preserve">
+    <value>Không thể cập nhật trạng thái. Vui lòng thử lại.</value>
+  </data>
+  <data name="us_status_error2" xml:space="preserve">
+    <value>Có lỗi xảy ra khi cập nhật trạng thái.</value>
+  </data>
+  <data name="sm_page_title" xml:space="preserve">
+    <value>Quản lý Bộ phận/Bộ môn</value>
+  </data>
+  <data name="sm_col_no" xml:space="preserve">
+    <value>STT</value>
+  </data>
+  <data name="sm_col_name" xml:space="preserve">
+    <value>Tên Bộ phận/Bộ môn</value>
+  </data>
+  <data name="sm_col_short_name" xml:space="preserve">
+    <value>Tên viết tắt</value>
+  </data>
+  <data name="sm_col_site" xml:space="preserve">
+    <value>Cơ sở</value>
+  </data>
+  <data name="sm_col_dept" xml:space="preserve">
+    <value>Phòng/Khoa/Trung tâm</value>
+  </data>
+  <data name="sm_col_main_approver" xml:space="preserve">
+    <value>Người duyệt chính</value>
+  </data>
+  <data name="sm_col_backup_approver" xml:space="preserve">
+    <value>Người duyệt phụ</value>
+  </data>
+  <data name="sm_col_section_pic" xml:space="preserve">
+    <value>Người phụ trách</value>
+  </data>
+  <data name="sm_col_section_deputy" xml:space="preserve">
+    <value>Cấp phó phụ trách</value>
+  </data>
+  <data name="sm_col_action" xml:space="preserve">
+    <value>Thao tác</value>
+  </data>
+  <data name="sm_col_status" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="sm_col_created" xml:space="preserve">
+    <value>Ngày tạo</value>
+  </data>
+  <data name="sm_status_active" xml:space="preserve">
+    <value>Hoạt động</value>
+  </data>
+  <data name="sm_status_inactive" xml:space="preserve">
+    <value>Ngưng hoạt động</value>
+  </data>
+  <data name="sm_action_edit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="sm_action_copy" xml:space="preserve">
+    <value>Sao chép tên Bộ phận/Bộ môn</value>
+  </data>
+  <data name="sm_copied" xml:space="preserve">
+    <value>Đã sao chép tên Bộ phận/Bộ môn.</value>
+  </data>
+  <data name="sm_copy_failed" xml:space="preserve">
+    <value>Sao chép thất bại.</value>
+  </data>
+  <data name="sm_btn_create" xml:space="preserve">
+    <value>Tạo Bộ phận/Bộ môn mới</value>
+  </data>
+  <data name="sm_btn_import" xml:space="preserve">
+    <value>Nhập từ Excel</value>
+  </data>
+  <data name="sm_import_title" xml:space="preserve">
+    <value>Nhập Bộ phận/Bộ môn từ Excel</value>
+  </data>
+  <data name="sm_import_select_file" xml:space="preserve">
+    <value>Chọn file Excel (.xlsx)</value>
+  </data>
+  <data name="sm_btn_cancel" xml:space="preserve">
+    <value>Huỷ</value>
+  </data>
+  <data name="sm_btn_import_do" xml:space="preserve">
+    <value>Nhập</value>
+  </data>
+  <data name="sm_msg_no_file" xml:space="preserve">
+    <value>Vui lòng chọn file Excel.</value>
+  </data>
+  <data name="sm_msg_importing" xml:space="preserve">
+    <value>Đang nhập...</value>
+  </data>
+  <data name="sm_msg_import_fail" xml:space="preserve">
+    <value>Nhập thất bại.</value>
+  </data>
+  <data name="sm_msg_import_completed" xml:space="preserve">
+    <value>Nhập hoàn tất.</value>
+  </data>
+  <data name="sm_msg_total" xml:space="preserve">
+    <value>Tổng:</value>
+  </data>
+  <data name="sm_msg_succeeded" xml:space="preserve">
+    <value>Thành công:</value>
+  </data>
+  <data name="sm_msg_failed_count" xml:space="preserve">
+    <value>Thất bại:</value>
+  </data>
+  <data name="smf_lbl_name" xml:space="preserve">
+    <value>Tên Bộ phận/Bộ môn</value>
+  </data>
+  <data name="smf_lbl_eng_name" xml:space="preserve">
+    <value>Tên tiếng Anh</value>
+  </data>
+  <data name="smf_lbl_short_name" xml:space="preserve">
+    <value>Tên viết tắt</value>
+  </data>
+  <data name="smf_lbl_site" xml:space="preserve">
+    <value>Cơ sở</value>
+  </data>
+  <data name="smf_lbl_dept" xml:space="preserve">
+    <value>Phòng/Khoa/Trung tâm</value>
+  </data>
+  <data name="smf_lbl_main_approver" xml:space="preserve">
+    <value>Người duyệt chính</value>
+  </data>
+  <data name="smf_lbl_backup_approver" xml:space="preserve">
+    <value>Người duyệt phụ</value>
+  </data>
+  <data name="smf_lbl_main_lead" xml:space="preserve">
+    <value>Người phụ trách</value>
+  </data>
+  <data name="smf_lbl_backup_lead" xml:space="preserve">
+    <value>Cấp phó phụ trách</value>
+  </data>
+  <data name="smf_lbl_note" xml:space="preserve">
+    <value>Ghi chú</value>
+  </data>
+  <data name="smf_create_title" xml:space="preserve">
+    <value>Tạo Bộ phận/Bộ môn mới</value>
+  </data>
+  <data name="smf_edit_title" xml:space="preserve">
+    <value>Sửa thông tin Bộ phận/Bộ môn</value>
+  </data>
+  <data name="smf_btn_cancel" xml:space="preserve">
+    <value>Huỷ</value>
+  </data>
+  <data name="smf_btn_create" xml:space="preserve">
+    <value>Tạo</value>
+  </data>
+  <data name="smf_btn_save" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="smf_msg_saving" xml:space="preserve">
+    <value>Đang lưu...</value>
+  </data>
+  <data name="smf_msg_save_fail" xml:space="preserve">
+    <value>Lưu thất bại.</value>
+  </data>
+  <data name="smf_msg_created" xml:space="preserve">
+    <value>Bộ phận/Bộ môn đã được tạo thành công.</value>
+  </data>
+  <data name="smf_msg_updated" xml:space="preserve">
+    <value>Bộ phận/Bộ môn đã được cập nhật thành công.</value>
+  </data>
+  <data name="smf_msg_error" xml:space="preserve">
+    <value>Có lỗi xảy ra.</value>
+  </data>
+  <data name="dm_page_title" xml:space="preserve">
+    <value>Quản lý Phòng/Khoa/Trung tâm</value>
+  </data>
+  <data name="dm_col_no" xml:space="preserve">
+    <value>STT</value>
+  </data>
+  <data name="dm_col_name" xml:space="preserve">
+    <value>Tên Phòng/Khoa/Trung tâm</value>
+  </data>
+  <data name="dm_col_short_name" xml:space="preserve">
+    <value>Tên viết tắt</value>
+  </data>
+  <data name="dm_col_site" xml:space="preserve">
+    <value>Cơ sở</value>
+  </data>
+  <data name="dm_col_main_approver" xml:space="preserve">
+    <value>Người duyệt chính</value>
+  </data>
+  <data name="dm_col_backup_approver" xml:space="preserve">
+    <value>Người duyệt phụ</value>
+  </data>
+  <data name="dm_col_description" xml:space="preserve">
+    <value>Mô tả</value>
+  </data>
+  <data name="dm_col_action" xml:space="preserve">
+    <value>Thao tác</value>
+  </data>
+  <data name="dm_col_status" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="dm_col_created" xml:space="preserve">
+    <value>Ngày tạo</value>
+  </data>
+  <data name="dm_status_active" xml:space="preserve">
+    <value>Hoạt động</value>
+  </data>
+  <data name="dm_status_inactive" xml:space="preserve">
+    <value>Ngưng hoạt động</value>
+  </data>
+  <data name="dm_action_edit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="dm_action_copy" xml:space="preserve">
+    <value>Sao chép tên Phòng/Khoa/Trung tâm</value>
+  </data>
+  <data name="dm_copied" xml:space="preserve">
+    <value>Đã sao chép tên Phòng/Khoa/Trung tâm.</value>
+  </data>
+  <data name="dm_copy_failed" xml:space="preserve">
+    <value>Sao chép thất bại.</value>
+  </data>
+  <data name="dm_btn_create" xml:space="preserve">
+    <value>Tạo Phòng/Khoa/Trung tâm mới</value>
+  </data>
+  <data name="dm_btn_import" xml:space="preserve">
+    <value>Nhập từ Excel</value>
+  </data>
+  <data name="dm_import_title" xml:space="preserve">
+    <value>Nhập Phòng/Khoa/Trung tâm từ Excel</value>
+  </data>
+  <data name="dm_import_select_file" xml:space="preserve">
+    <value>Chọn file Excel (.xlsx)</value>
+  </data>
+  <data name="dm_btn_cancel" xml:space="preserve">
+    <value>Huỷ</value>
+  </data>
+  <data name="dm_btn_import_do" xml:space="preserve">
+    <value>Nhập</value>
+  </data>
+  <data name="dm_msg_no_file" xml:space="preserve">
+    <value>Vui lòng chọn file Excel.</value>
+  </data>
+  <data name="dm_msg_importing" xml:space="preserve">
+    <value>Đang nhập...</value>
+  </data>
+  <data name="dm_msg_import_fail" xml:space="preserve">
+    <value>Nhập thất bại.</value>
+  </data>
+  <data name="dm_msg_import_completed" xml:space="preserve">
+    <value>Nhập hoàn tất.</value>
+  </data>
+  <data name="dm_msg_total" xml:space="preserve">
+    <value>Tổng:</value>
+  </data>
+  <data name="dm_msg_succeeded" xml:space="preserve">
+    <value>Thành công:</value>
+  </data>
+  <data name="dm_msg_failed_count" xml:space="preserve">
+    <value>Thất bại:</value>
+  </data>
+  <data name="dmf_lbl_name" xml:space="preserve">
+    <value>Tên Phòng/Khoa/Trung tâm</value>
+  </data>
+  <data name="dmf_lbl_short_name" xml:space="preserve">
+    <value>Tên viết tắt</value>
+  </data>
+  <data name="dmf_lbl_site" xml:space="preserve">
+    <value>Cơ sở</value>
+  </data>
+  <data name="dmf_lbl_main_approver" xml:space="preserve">
+    <value>Người duyệt chính</value>
+  </data>
+  <data name="dmf_lbl_backup_approver" xml:space="preserve">
+    <value>Người duyệt phụ</value>
+  </data>
+  <data name="dmf_lbl_description" xml:space="preserve">
+    <value>Mô tả</value>
+  </data>
+  <data name="dmf_create_title" xml:space="preserve">
+    <value>Tạo Phòng/Khoa/Trung tâm mới</value>
+  </data>
+  <data name="dmf_edit_title" xml:space="preserve">
+    <value>Sửa thông tin Phòng/Khoa/Trung tâm</value>
+  </data>
+  <data name="dmf_btn_cancel" xml:space="preserve">
+    <value>Huỷ</value>
+  </data>
+  <data name="dmf_btn_create" xml:space="preserve">
+    <value>Tạo</value>
+  </data>
+  <data name="dmf_btn_save" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="dmf_msg_saving" xml:space="preserve">
+    <value>Đang lưu...</value>
+  </data>
+  <data name="dmf_msg_save_fail" xml:space="preserve">
+    <value>Lưu thất bại.</value>
+  </data>
+  <data name="dmf_msg_created" xml:space="preserve">
+    <value>Phòng/Khoa/Trung tâm đã được tạo thành công.</value>
+  </data>
+  <data name="dmf_msg_updated" xml:space="preserve">
+    <value>Phòng/Khoa/Trung tâm đã được cập nhật thành công.</value>
+  </data>
+  <data name="dmf_msg_error" xml:space="preserve">
+    <value>Có lỗi xảy ra.</value>
+  </data>
+  <data name="wfr_progress_step" xml:space="preserve">
+    <value>bước</value>
+  </data>
+  <data name="wfr_active_filters" xml:space="preserve">
+    <value>Bộ lọc:</value>
+  </data>
+  <data name="wfr_chart_no_data" xml:space="preserve">
+    <value>Không có dữ liệu</value>
+  </data>
+  <data name="wfr_chart_ratio" xml:space="preserve">
+    <value>Tỷ lệ</value>
+  </data>
+  <data name="wfr_chart_y_requests" xml:space="preserve">
+    <value>Yêu cầu</value>
+  </data>
+  <data name="wfr_grid_search" xml:space="preserve">
+    <value>Tìm kiếm...</value>
+  </data>
+  <data name="wfr_highcharts_missing" xml:space="preserve">
+    <value>Chưa tải thư viện Highcharts.</value>
+  </data>
+  <data name="wfr_no_data_filtered" xml:space="preserve">
+    <value>Không tìm thấy dữ liệu theo bộ lọc đã chọn.</value>
+  </data>
+  <data name="wfr_requests_export_title" xml:space="preserve">
+    <value>Báo cáo danh sách yêu cầu</value>
+  </data>
+  <data name="wfr_theme_dark_moon" xml:space="preserve">
+    <value>Nền tối</value>
+  </data>
+  <data name="admin_btn_export_excel" xml:space="preserve">
+    <value>Xuất sang Excel</value>
+  </data>
+  <data name="admin_msg_exporting" xml:space="preserve">
+    <value>Đang xuất sang Excel...</value>
+  </data>
+  <data name="admin_msg_export_fail" xml:space="preserve">
+    <value>Xuất sang Excel thất bại.</value>
+  </data>
+  <data name="not_access_title" xml:space="preserve">
+    <value>Không có quyền truy cập</value>
+  </data>
+  <data name="not_access_message_1" xml:space="preserve">
+    <value>Bạn chưa có quyền truy cập vào chức năng này.</value>
+  </data>
+  <data name="not_access_message_2" xml:space="preserve">
+    <value>Vui lòng liên hệ quản trị viên hoặc bộ phận MIS để được hỗ trợ cấp quyền.</value>
+  </data>
+  <data name="not_access_btn_back" xml:space="preserve">
+    <value>Quay lại</value>
+  </data>
+  <data name="not_access_btn_home" xml:space="preserve">
+    <value>Về trang chủ</value>
+  </data>
+  <data name="not_access_note" xml:space="preserve">
+    <value>Employee Access · Yêu cầu cấp quyền</value>
+  </data>
+  <data name="ot_lines_title" xml:space="preserve">
+    <value>Chi tiết yêu cầu</value>
+  </data>
+  <data name="grid_btn_add" xml:space="preserve">
+    <value>Thêm dòng</value>
+  </data>
+  <data name="grid_btn_download_template" xml:space="preserve">
+    <value>Tải mẫu</value>
+  </data>
+  <data name="grid_btn_import_excel" xml:space="preserve">
+    <value>Nhập Excel</value>
+  </data>
+  <data name="grid_col_no" xml:space="preserve">
+    <value>STT</value>
+  </data>
+  <data name="ot_col_emp_id" xml:space="preserve">
+    <value>Mã NV</value>
+  </data>
+  <data name="ot_col_fullname" xml:space="preserve">
+    <value>Họ và tên</value>
+  </data>
+  <data name="ot_col_request_type" xml:space="preserve">
+    <value>Loại yêu cầu</value>
+  </data>
+  <data name="ot_col_shift" xml:space="preserve">
+    <value>Ca-Kíp</value>
+  </data>
+  <data name="ot_col_start_time" xml:space="preserve">
+    <value>Từ giờ</value>
+  </data>
+  <data name="ot_col_end_time" xml:space="preserve">
+    <value>Đến giờ</value>
+  </data>
+  <data name="ot_col_cross_shift" xml:space="preserve">
+    <value>Thông ca</value>
+  </data>
+  <data name="ot_col_work_hours" xml:space="preserve">
+    <value>Số giờ</value>
+  </data>
+  <data name="ot_work_hours_must_positive" xml:space="preserve">
+    <value>Số giờ phải lớn hơn 0.</value>
+  </data>
+  <data name="ot_overlap_current" xml:space="preserve">
+    <value>Dòng {0}: Mã NV '{1}' bị trùng với dòng {3} cho yêu cầu {2} từ {4} đến {5}.</value>
+  </data>
+  <data name="ot_overlap_existing" xml:space="preserve">
+    <value>Dòng {0}: Mã NV '{1}' đã có yêu cầu {2} từ {3} đến {4} trong phiếu {5}.</value>
+  </data>
+  <data name="ot_col_reason" xml:space="preserve">
+    <value>Lý do</value>
+  </data>
+  <data name="ot_time_range_invalid" xml:space="preserve">
+    <value>Đến giờ phải lớn hơn Từ giờ.</value>
+  </data>
+  <data name="ot_reason_required" xml:space="preserve">
+    <value>Chưa nhập lý do.</value>
+  </data>
+  <data name="ot_line_required" xml:space="preserve">
+    <value>Vui lòng nhập ít nhất 1 dòng làm thêm giờ.</value>
+  </data>
+  <data name="ot_summary_format" xml:space="preserve">
+    <value>Tổng: {0} dòng</value>
+  </data>
+  <data name="ot_validate_required" xml:space="preserve">
+    <value>Vui lòng nhập thông tin.</value>
+  </data>
+  <data name="ot_request_type_overtime" xml:space="preserve">
+    <value>Chấm công tăng ca</value>
+  </data>
+  <data name="ot_request_type_additional_attendance" xml:space="preserve">
+    <value>Chấm công bổ sung</value>
+  </data>
+  <data name="ot_shift_type_shift" xml:space="preserve">
+    <value>Ca</value>
+  </data>
+  <data name="ot_shift_type_kip" xml:space="preserve">
+    <value>Kíp</value>
+  </data>
+  <data name="ot_ref_col_shift" xml:space="preserve">
+    <value>Ca</value>
+  </data>
+  <data name="ot_ref_col_shift_code" xml:space="preserve">
+    <value>Mã ca</value>
+  </data>
+  <data name="ot_ref_col_working_hours" xml:space="preserve">
+    <value>Giờ làm</value>
+  </data>
+  <data name="ot_ref_col_break_times" xml:space="preserve">
+    <value>Giờ nghỉ</value>
+  </data>
+  <data name="ot_ref_col_type" xml:space="preserve">
+    <value>Loại</value>
+  </data>
+  <data name="ot_shift_ref_title" xml:space="preserve">
+    <value>Bảng giờ ca tham khảo</value>
+  </data>
+  <data name="ot_shift_ref_search" xml:space="preserve">
+    <value>Tìm ca...</value>
+  </data>
+  <data name="ot_invalid_approval_setup" xml:space="preserve">
+    <value>Người phê duyệt chưa được thiết lập đầy đủ.</value>
+  </data>
+  <data name="ot_submit_success" xml:space="preserve">
+    <value>Tạo phiếu làm thêm giờ thành công.</value>
+  </data>
+  <data name="ot_update_success" xml:space="preserve">
+    <value>Cập nhật phiếu làm thêm giờ thành công.</value>
+  </data>
+  <data name="common_approval_flow_warning" xml:space="preserve">
+    <value>Chưa đủ thông tin cấu hình cho luồng phê duyệt. Vui lòng liên hệ quản trị viên.</value>
+  </data>
+  <data name="ot_grid_validation_failed" xml:space="preserve">
+    <value>Vui lòng điền đầy đủ thông tin trong phần chi tiết yêu cầu.</value>
+  </data>
+  <data name="workflow_edit" xml:space="preserve">
+    <value>Chỉnh sửa</value>
+  </data>
+  <data name="common_remove" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="security_display_title" xml:space="preserve">
+    <value>Danh sách nhân viên ra vào</value>
+  </data>
+  <data name="security_display_page_info" xml:space="preserve">
+    <value>Trang {0}/{1} ({2} dòng)</value>
+  </data>
+  <data name="home_security_status_confirmed" xml:space="preserve">
+    <value>Đã xác nhận</value>
+  </data>
+  <data name="home_security_status_pending" xml:space="preserve">
+    <value>Chờ phê duyệt ở tầng khác</value>
+  </data>
+  <data name="home_security_status_total" xml:space="preserve">
+    <value>Tổng</value>
+  </data>
+  <data name="home_security_status_waiting" xml:space="preserve">
+    <value>Chờ xác nhận</value>
+  </data>
+  <data name="vis_visitor_report_title" xml:space="preserve">
+    <value>BÁO CÁO ĐĂNG KÝ KHÁCH THAM QUAN</value>
+  </data>
+  <data name="ot_overtime_report_title" xml:space="preserve">
+    <value>BÁO CÁO YÊU CẦU CHẤM CÔNG TĂNG CA/BỔ SUNG</value>
+  </data>
+  <data name="wfr_export_sheet_creating" xml:space="preserve">
+    <value>Đang xuất file...</value>
+  </data>
+  <data name="wtr_col_from" xml:space="preserve">
+    <value>Điểm đi</value>
+  </data>
+  <data name="workflow_export_row" xml:space="preserve">
+    <value>dòng</value>
+  </data>
+  <data name="wfr_follow_by_detail" xml:space="preserve">
+    <value>Chi tiết năm</value>
+  </data>
+  <data name="wfr_chart_title_by_dept" xml:space="preserve">
+    <value>Thống kê Request theo Đơn vị/Bộ phận</value>
+  </data>
+  <data name="wfr_chart_title_by_issuer" xml:space="preserve">
+    <value>Thống kê Request theo Người tạo</value>
+  </data>
+  <data name="wfr_chart_title_by_status" xml:space="preserve">
+    <value>Thống kê Request theo Trạng thái</value>
+  </data>
+  <data name="wfr_chart_title_by_type" xml:space="preserve">
+    <value>Thống kê Request theo Loại</value>
+  </data>
+  <data name="wfr_chart_title_by_approver" xml:space="preserve">
+    <value>Thống kê Request theo Người phê duyệt</value>
+  </data>
+  <data name="wfr_chart_title_dept_prefix" xml:space="preserve">
+    <value>Thống kê Request – </value>
+  </data>
+  <data name="wfr_chart_title_approval_prefix" xml:space="preserve">
+    <value>Thống kê phê duyệt của</value>
+  </data>
+  <data name="wfr_chart_y_approvals" xml:space="preserve">
+    <value>Phê duyệt</value>
+  </data>
+  <data name="wfr_chart_total_requests" xml:space="preserve">
+    <value>Tổng yêu cầu</value>
+  </data>
+  <data name="wfr_chart_btn_back" xml:space="preserve">
+    <value>Quay lại</value>
+  </data>
+  <data name="wfr_filter_placeholder_requester" xml:space="preserve">
+    <value>Tên người yêu cầu</value>
+  </data>
+  <data name="wfr_filter_placeholder_user_name" xml:space="preserve">
+    <value>Tên người dùng</value>
+  </data>
+  <data name="wfr_filter_placeholder_all_sections" xml:space="preserve">
+    <value>Tất cả bộ phận</value>
+  </data>
+  <data name="wfr_filter_placeholder_all_types" xml:space="preserve">
+    <value>Tất cả loại</value>
+  </data>
+  <data name="wfr_filter_placeholder_all_cases" xml:space="preserve">
+    <value>Tất cả trường hợp</value>
+  </data>
+  <data name="wfr_filter_placeholder_all_depts" xml:space="preserve">
+    <value>Tất cả đơn vị</value>
+  </data>
+  <data name="wfr_filter_placeholder_approver" xml:space="preserve">
+    <value>e.g. VNAL</value>
+  </data>
+  <data name="wfr_grid_export_excel" xml:space="preserve">
+    <value>Xuất Excel</value>
+  </data>
+  <data name="wfr_grid_export_excel_hint" xml:space="preserve">
+    <value>Xuất tất cả dữ liệu ra Excel</value>
+  </data>
+  <data name="wfr_chip_from" xml:space="preserve">
+    <value>Từ ngày</value>
+  </data>
+  <data name="wfr_chip_to" xml:space="preserve">
+    <value>Đến ngày</value>
+  </data>
+  <data name="wfr_chip_user" xml:space="preserve">
+    <value>Người dùng</value>
+  </data>
+  <data name="wfr_chip_approver_status" xml:space="preserve">
+    <value>Thao tác phê duyệt</value>
+  </data>
+  <data name="security_display_clear_filters" xml:space="preserve">
+    <value>Xóa bộ lọc</value>
+  </data>
+  <data name="leave_balance_setting" xml:space="preserve">
+    <value>Cài đặt phép tồn</value>
+  </data>
+  <data name="machine_setting" xml:space="preserve">
+    <value>Cấu hình thiết bị</value>
+  </data>
+  <data name="ms_import_title" xml:space="preserve">
+    <value>Import cấu hình thiết bị từ Excel</value>
+  </data>
+  <data name="ms_col_machine_code" xml:space="preserve">
+    <value>Mã thiết bị</value>
+  </data>
+  <data name="ms_col_machine_name" xml:space="preserve">
+    <value>Tên thiết bị</value>
+  </data>
+  <data name="ms_col_serial_no" xml:space="preserve">
+    <value>Số serial</value>
+  </data>
+  <data name="ms_col_current_name" xml:space="preserve">
+    <value>Tên hiện tại</value>
+  </data>
+  <data name="ms_col_current_serial_no" xml:space="preserve">
+    <value>Số serial hiện tại</value>
+  </data>
+  <data name="ms_col_current_note" xml:space="preserve">
+    <value>Ghi chú hiện tại</value>
+  </data>
+  <data name="ms_err_no_rows" xml:space="preserve">
+    <value>Không tìm thấy dòng thiết bị trong file.</value>
+  </data>
+  <data name="ms_err_code_required" xml:space="preserve">
+    <value>Mã thiết bị là bắt buộc.</value>
+  </data>
+  <data name="ms_err_code_max" xml:space="preserve">
+    <value>Mã thiết bị tối đa 200 ký tự.</value>
+  </data>
+  <data name="ms_err_action_required" xml:space="preserve">
+    <value>Action là bắt buộc.</value>
+  </data>
+  <data name="ms_err_action_invalid" xml:space="preserve">
+    <value>Thao tác phải là C, U hoặc D.</value>
+  </data>
+  <data name="ms_err_name_required" xml:space="preserve">
+    <value>Tên thiết bị là bắt buộc.</value>
+  </data>
+  <data name="ms_err_name_max" xml:space="preserve">
+    <value>Tên thiết bị tối đa 500 ký tự.</value>
+  </data>
+  <data name="ms_err_serial_max" xml:space="preserve">
+    <value>Số serial tối đa 200 ký tự.</value>
+  </data>
+  <data name="ms_err_note_max" xml:space="preserve">
+    <value>Ghi chú tối đa 1000 ký tự.</value>
+  </data>
+  <data name="ms_err_duplicate_code" xml:space="preserve">
+    <value>Mã thiết bị '{0}' bị trùng trong file.</value>
+  </data>
+  <data name="ms_err_duplicate_code_serial" xml:space="preserve">
+    <value>Mã thiết bị '{0}' và số serial '{1}' bị trùng trong file.</value>
+  </data>
+  <data name="ms_err_code_exists" xml:space="preserve">
+    <value>Mã thiết bị '{0}' đã tồn tại.</value>
+  </data>
+  <data name="ms_err_code_serial_exists" xml:space="preserve">
+    <value>Mã thiết bị '{0}' và số serial '{1}' đã tồn tại.</value>
+  </data>
+  <data name="ms_err_code_update_not_found" xml:space="preserve">
+    <value>Không tìm thấy mã thiết bị '{0}' để cập nhật.</value>
+  </data>
+  <data name="ms_err_serial_update_invalid" xml:space="preserve">
+    <value>Mã thiết bị '{0}' tồn tại nhưng số serial '{1}' không đúng để cập nhật.</value>
+  </data>
+  <data name="ms_err_code_delete_not_found" xml:space="preserve">
+    <value>Không tìm thấy mã thiết bị '{0}' để xóa.</value>
+  </data>
+  <data name="ms_err_code_serial_delete_invalid" xml:space="preserve">
+    <value>Mã thiết bị '{0}' hoặc số serial '{1}' không đúng để xóa.</value>
+  </data>
+  <data name="ms_err_code_or_serial_delete_invalid" xml:space="preserve">
+    <value>Mã thiết bị '{0}' hoặc số serial không đúng để xóa.</value>
+  </data>
+  <data name="upload_invalid_files_title" xml:space="preserve">
+    <value>Một số file không hợp lệ</value>
+  </data>
+  <data name="upload_empty_file" xml:space="preserve">
+    <value>Tệp "{fileName}" rỗng (0 byte).</value>
+  </data>
+  <data name="upload_file_too_large" xml:space="preserve">
+    <value>Tệp "{fileName}" vượt quá giới hạn {maxSize}.</value>
+  </data>
+  <data name="upload_invalid_clipboard_files_title" xml:space="preserve">
+    <value>Một số tệp từ clipboard không hợp lệ</value>
+  </data>
+  <data name="upload_invalid_file" xml:space="preserve">
+    <value>Tệp "{fileName}" không hợp lệ.</value>
+  </data>
+  <data name="upload_max_files_exceeded" xml:space="preserve">
+    <value>Bạn chỉ có thể chọn tối đa {maxFiles} tệp.</value>
+  </data>
+  <data name="upload_unnamed_file" xml:space="preserve">
+    <value>không tên</value>
+  </data>
+  <data name="upload_unsupported_type" xml:space="preserve">
+    <value>Định dạng tệp này không được hỗ trợ.</value>
+  </data>
+  <data name="wfr_col_lang_chinese" xml:space="preserve">
+    <value>Tiếng Trung</value>
+  </data>
+  <data name="calendar_menu" xml:space="preserve">
+    <value>Lịch Đại học Nam Việt</value>
+  </data>
+  <data name="calendar_title" xml:space="preserve">
+    <value>Lịch làm việc</value>
+  </data>
+  <data name="grid_btn_export_excel" xml:space="preserve">
+    <value>Xuất Excel</value>
+  </data>
+  <data name="customer_setting" xml:space="preserve">
+    <value>Cấu hình khách hàng</value>
+  </data>
+  <data name="cs_import_title" xml:space="preserve">
+    <value>Import cấu hình khách hàng</value>
+  </data>
+  <data name="cs_col_customer_code" xml:space="preserve">
+    <value>Mã khách hàng</value>
+  </data>
+  <data name="cs_col_customer_name" xml:space="preserve">
+    <value>Tên khách hàng</value>
+  </data>
+  <data name="cs_err_code_required" xml:space="preserve">
+    <value>Mã khách hàng là bắt buộc.</value>
+  </data>
+  <data name="cs_err_code_max" xml:space="preserve">
+    <value>Mã khách hàng tối đa 200 ký tự.</value>
+  </data>
+  <data name="cs_err_name_required" xml:space="preserve">
+    <value>Tên khách hàng là bắt buộc.</value>
+  </data>
+  <data name="cs_err_name_max" xml:space="preserve">
+    <value>Tên khách hàng tối đa 200 ký tự.</value>
+  </data>
+  <data name="cs_err_duplicate_code" xml:space="preserve">
+    <value>Mã khách hàng '{0}' bị trùng trong file.</value>
+  </data>
+  <data name="cs_err_code_exists" xml:space="preserve">
+    <value>Mã khách hàng '{0}' đã tồn tại.</value>
+  </data>
+  <data name="cs_err_code_update_not_found" xml:space="preserve">
+    <value>Không tìm thấy mã khách hàng '{0}' để cập nhật.</value>
+  </data>
+  <data name="cs_err_code_delete_not_found" xml:space="preserve">
+    <value>Không tìm thấy mã khách hàng '{0}' để xóa.</value>
+  </data>
+  <data name="product_setting" xml:space="preserve">
+    <value>Cấu hình sản phẩm</value>
+  </data>
+  <data name="ps_import_title" xml:space="preserve">
+    <value>Import cấu hình sản phẩm</value>
+  </data>
+  <data name="ps_col_product_code" xml:space="preserve">
+    <value>Mã sản phẩm</value>
+  </data>
+  <data name="ps_col_product_name" xml:space="preserve">
+    <value>Tên sản phẩm</value>
+  </data>
+  <data name="ps_col_unit" xml:space="preserve">
+    <value>Đơn vị tính</value>
+  </data>
+  <data name="ps_err_code_required" xml:space="preserve">
+    <value>Mã sản phẩm là bắt buộc.</value>
+  </data>
+  <data name="ps_err_code_max" xml:space="preserve">
+    <value>Mã sản phẩm tối đa 200 ký tự.</value>
+  </data>
+  <data name="ps_err_name_required" xml:space="preserve">
+    <value>Tên sản phẩm là bắt buộc.</value>
+  </data>
+  <data name="ps_err_name_max" xml:space="preserve">
+    <value>Tên sản phẩm tối đa 500 ký tự.</value>
+  </data>
+  <data name="ps_err_unit_max" xml:space="preserve">
+    <value>Đơn vị tính tối đa 200 ký tự.</value>
+  </data>
+  <data name="ps_err_duplicate_code" xml:space="preserve">
+    <value>Mã sản phẩm '{0}' bị trùng trong file.</value>
+  </data>
+  <data name="ps_err_code_exists" xml:space="preserve">
+    <value>Mã sản phẩm '{0}' đã tồn tại.</value>
+  </data>
+  <data name="ps_err_code_update_not_found" xml:space="preserve">
+    <value>Không tìm thấy mã sản phẩm '{0}' để cập nhật.</value>
+  </data>
+  <data name="ps_err_code_delete_not_found" xml:space="preserve">
+    <value>Không tìm thấy mã sản phẩm '{0}' để xóa.</value>
+  </data>
+  <data name="ng_code_setting" xml:space="preserve">
+    <value>Cấu hình NG Code</value>
+  </data>
+  <data name="menu_iot_monitoring" xml:space="preserve">
+    <value>Giám sát IoT</value>
+  </data>
+  <data name="approver" xml:space="preserve">
+    <value>Người phê duyệt</value>
+  </data>
+  <data name="approval_status" xml:space="preserve">
+    <value>Trạng thái phê duyệt</value>
+  </data>
+  <data name="menu_booking_meeting_room" xml:space="preserve">
+    <value>Đặt phòng họp</value>
+  </data>
+  <data name="menu_machine_management_system" xml:space="preserve">
+    <value>Hệ thống quản lý máy móc</value>
+  </data>
+  <data name="menu_external_links" xml:space="preserve">
+    <value>Quản lý liên kết ngoài</value>
+  </data>
+  <data name="home_security_title" xml:space="preserve">
+    <value>Thống kê nhân viên ra vào</value>
+  </data>
+  <data name="home_security_chart_status" xml:space="preserve">
+    <value>TRẠNG THÁI</value>
+  </data>
+  <data name="home_security_chart_section" xml:space="preserve">
+    <value>BỘ PHẬN NHÂN VIÊN</value>
+  </data>
+  <data name="home_security_num_employees" xml:space="preserve">
+    <value>Nhân viên</value>
+  </data>
+  <data name="brand_university" xml:space="preserve">
+    <value>Đại học Nam Việt</value>
+  </data>
+  <data name="brand_portal" xml:space="preserve">
+    <value>Hệ thống phê duyệt</value>
+  </data>
+  <data name="brand_hero_title" xml:space="preserve">
+    <value>Kết nối tri thức. Đồng hành phát triển.</value>
+  </data>
+  <data name="brand_hero_subtitle" xml:space="preserve">
+    <value>Quản lý yêu cầu, kết nối các đơn vị và phê duyệt trên một nền tảng.</value>
+  </data>
+  <data name="brand_campus_alt" xml:space="preserve">
+    <value>Khuôn viên Đại học Nam Việt</value>
+  </data>
+  <data name="workflow_noty_submitted_detail" xml:space="preserve">
+    <value>{0} đã gửi yêu cầu “{1}” ({2})</value>
+  </data>
+  <data name="noti_clear_all" xml:space="preserve">
+    <value>Đánh dấu tất cả đã đọc</value>
+  </data>
+</root>

@@ -1,0 +1,31 @@
+@model Web.Models.Dtos.Workflow.RequestDetailsDto
+@using Web.Data.Enums.Workflow
+@{
+    string StatusName(RequestStatus s) => s switch { RequestStatus.Ongoing => "Đang xử lý", RequestStatus.Completed => "Đã hoàn thành", RequestStatus.Returned => "Yêu cầu bổ sung", RequestStatus.Rejected => "Đã từ chối", RequestStatus.Draft => "Bản nháp", RequestStatus.Cancelled => "Đã hủy", _ => "Chưa xác định" };
+    string ActionName(ApprovalAction a) => a switch { ApprovalAction.Created => "Tạo yêu cầu", ApprovalAction.Submitted => "Gửi phê duyệt", ApprovalAction.Approved => "Phê duyệt", ApprovalAction.Returned => "Trả lại / Yêu cầu bổ sung", ApprovalAction.Rejected => "Từ chối", ApprovalAction.Resubmitted => "Gửi lại yêu cầu", ApprovalAction.Cancelled => "Hủy yêu cầu", ApprovalAction.Updated => "Cập nhật yêu cầu", _ => a.ToString() };
+}
+@if (Model.Histories.Count == 0)
+{
+    <div class="wf-empty"><i class="mdi mdi-history" aria-hidden="true"></i><h3>Chưa có lịch sử xử lý</h3></div>
+}
+else
+{
+    <div class="wf-table-scroll" role="region" aria-label="Lịch sử xử lý yêu cầu" tabindex="0">
+        <table class="wf-history-table">
+            <thead><tr><th scope="col">Thời gian</th><th scope="col">Người thao tác</th><th scope="col">Tầng phê duyệt</th><th scope="col">Hành động</th><th scope="col">Trạng thái</th><th scope="col">Ý kiến</th></tr></thead>
+            <tbody>
+                @foreach (var h in Model.Histories.OrderByDescending(x => x.ActionAt).ThenByDescending(x => x.Id))
+                {
+                    <tr class="@(h.Action == ApprovalAction.Returned ? "wf-history-returned" : null)">
+                        <td><time datetime="@h.ActionAt.ToUniversalTime().ToString("O")">@h.ActionAt.ToLocalTime().ToString("dd/MM/yyyy HH:mm")</time></td>
+                        <td>@h.ActionBy</td>
+                        <td>@if (h.StepOrder.HasValue) { <span>Tầng @h.StepOrder</span>@if (!string.IsNullOrWhiteSpace(h.StepName)) { <div>@h.StepName</div> } } else { <span>—</span> }</td>
+                        <td>@ActionName(h.Action)</td>
+                        <td>@StatusName(h.PreviousStatus) → @StatusName(h.NewStatus)</td>
+                        <td class="wf-multiline">@(string.IsNullOrWhiteSpace(h.Comment) ? "—" : h.Comment)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}

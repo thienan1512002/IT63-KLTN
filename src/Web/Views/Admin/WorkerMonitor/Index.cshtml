@@ -1,0 +1,56 @@
+@{
+    ViewData["Title"] = Lang.GetKey("elm_page_title");
+}
+
+<div class="card h-100">
+    <div class="card-body">
+        <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+            <h4 class="font-weight-bold mb-0">@Lang.GetKey("elm_page_title")</h4>
+            <div class="d-flex align-items-center gap-2">
+                <span id="elm-last-refresh" class="text-muted small mr-4"></span>
+                <div id="elm-auto-refresh-toggle"></div>
+                <div id="elm-refresh-btn"></div>
+            </div>
+        </div>
+
+        <!-- Status summary badges -->
+        <div id="elm-summary" class="mb-3 flex-wrap d-none">
+            <span class="badge badge-secondary px-3 py-2 mr-2 font-weight-bold" id="elm-badge-total">@Lang.GetKey("elm_badge_total"): –</span>
+            <span class="badge badge-success px-3 py-2 mr-2 font-weight-bold" id="elm-badge-sent">@Lang.GetKey("elm_badge_sent"): –</span>
+            <span class="badge badge-warning px-3 py-2 mr-2 font-weight-bold" id="elm-badge-pending">@Lang.GetKey("elm_badge_pending"): –</span>
+            <span class="badge badge-danger px-3 py-2 font-weight-bold" id="elm-badge-failed">@Lang.GetKey("elm_badge_failed"): –</span>
+        </div>
+
+        <div id="elm-grid" style="min-height: 400px;"></div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        window.elmI18n = {
+            refresh: '@Html.Raw(Lang.GetKey("elm_refresh"))',
+            last_refresh: '@Html.Raw(Lang.GetKey("elm_last_refresh"))',
+            no_attempts: '@Html.Raw(Lang.GetKey("elm_no_attempts"))',
+            col_status: '@Html.Raw(Lang.GetKey("elm_col_status"))',
+            col_subject: '@Html.Raw(Lang.GetKey("elm_col_subject"))',
+            col_to: '@Html.Raw(Lang.GetKey("elm_col_to"))',
+            col_type: '@Html.Raw(Lang.GetKey("elm_col_type"))',
+            col_action: '@Html.Raw(Lang.GetKey("elm_col_action"))',
+            col_attempts: '@Html.Raw(Lang.GetKey("elm_col_attempts"))',
+            col_created: '@Html.Raw(Lang.GetKey("elm_col_created"))',
+            col_sent_at: '@Html.Raw(Lang.GetKey("elm_col_sent_at"))',
+            col_retry_at: '@Html.Raw(Lang.GetKey("elm_col_retry_at"))',
+            col_last_error: '@Html.Raw(Lang.GetKey("elm_col_last_error"))',
+            detail_result: '@Html.Raw(Lang.GetKey("elm_detail_result"))',
+            detail_time: '@Html.Raw(Lang.GetKey("elm_detail_time"))',
+            detail_error: '@Html.Raw(Lang.GetKey("elm_detail_error"))',
+            detail_success: '@Html.Raw(Lang.GetKey("elm_detail_success"))',
+            detail_failed: '@Html.Raw(Lang.GetKey("elm_detail_failed"))',
+            badge_total: '@Html.Raw(Lang.GetKey("elm_badge_total"))',
+            badge_sent: '@Html.Raw(Lang.GetKey("elm_badge_sent"))',
+            badge_pending: '@Html.Raw(Lang.GetKey("elm_badge_pending"))',
+            badge_failed: '@Html.Raw(Lang.GetKey("elm_badge_failed"))',
+        };
+    </script>
+    <script type="module" src="~/js/admin/email-log-monitor.js" asp-append-version="true"></script>
+}

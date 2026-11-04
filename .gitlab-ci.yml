@@ -1,0 +1,77 @@
+variables:
+  publish_path: 'D:\Publish\BeforeDeploy\Kimsen_iWorkspace\publish\$CI_PIPELINE_ID\'
+  deploy_window_directory: 'D:\Deploy\Kimsen\iWorkspace'
+  application_pool_name: 'Kimsen_iWorkspace'
+
+stages:          # List of stages for jobs, and their order of execution
+  - build
+  - test
+  - deploy
+
+default:
+  before_script:
+    - cd "src/Web"
+
+build:       # This job runs in the build stage, which runs first.
+  stage: build
+  script:
+    - echo "Restoring dependencies..."
+    - dotnet restore
+    - echo "Building the project..."
+    - dotnet build --no-restore
+    - echo "Publishing the application..."
+    - dotnet publish --configuration Release --output $publish_path
+  tags:
+    - dotnet
+  only:
+    - develop
+
+test:   # This job runs in the test stage.
+    stage: test
+    script:
+        - echo "Running tests..."
+        - dotnet test --no-build --verbosity normal
+    tags:
+        - dotnet
+    only:
+        - develop
+    needs: [build]
+
+deploy:      # This job runs in the deploy stage.
+  stage: deploy
+  script:
+    - echo "Stopping IIS site and application pool..."
+    - |
+      if((Get-WebSiteState -Name $application_pool_name).Value -ne 'Stopped'){
+      Write-Output ('Stopping WebSite: {0}' -f $application_pool_name)
+      Stop-WebSite -Name $application_pool_name
+      }
+    - |
+      if((Get-WebAppPoolState -Name $application_pool_name).Value -ne 'Stopped'){
+      Write-Output ('Stopping Application Pool: {0}' -f $application_pool_name)
+      Stop-WebAppPool -Name $application_pool_name
+      }
+    - echo "Cleaning destination and copying files..."
+    - Remove-Item -Path "$deploy_window_directory/*" -Recurse -Force -ErrorAction SilentlyContinue
+    - Copy-Item -Path "$publish_path/*" -Destination "$deploy_window_directory" -Recurse -Force
+    - echo "Starting IIS site and application pool..."
+    - |
+      if((Get-WebAppPoolState -Name $application_pool_name).Value -ne 'Started'){
+      Write-Output ('Starting Application Pool: {0}' -f $application_pool_name)
+      Start-WebAppPool -Name $application_pool_name
+      }
+    - |
+      if((Get-WebSiteState -Name $application_pool_name).Value -ne 'Started'){
+      Write-Output ('Starting WebSite: {0}' -f $application_pool_name)
+      Start-WebSite -Name $application_pool_name
+      }
+  only:
+    - develop
+  tags:
+    - dotnet
+  needs: [test, build]
+  when: manual
+  dependencies:
+    - build
+  retry: 2
+

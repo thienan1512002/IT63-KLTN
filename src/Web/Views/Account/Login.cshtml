@@ -1,0 +1,210 @@
+﻿@model Web.Models.ViewModels.Identity.LoginViewModel
+@{
+    Layout = null;
+    var currentUrl = $"{Context.Request.Path}{Context.Request.QueryString}";
+    var currentCulture = CultureInfo.CurrentUICulture.Name;
+    string currentFlag;
+    string currentLanguageName;
+    if (string.Equals(currentCulture, "en-US", StringComparison.OrdinalIgnoreCase))
+    {
+        currentFlag = Url.Content("~/images/flag/united-kingdom.png");
+        currentLanguageName = "ENG";
+    }
+    else
+    {
+        currentFlag = Url.Content("~/images/flag/vietnam.png");
+        currentLanguageName = "VNI";
+    }
+}
+<!DOCTYPE html>
+<html lang="@CultureInfo.CurrentUICulture.TwoLetterISOLanguageName">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/images/branding/nam-viet-mark.png">
+    <link rel="icon" type="image/png" href="~/images/branding/nam-viet-mark.png">
+    <title>@Lang.GetKey("login_title") - @Lang.GetKey("brand_university")</title>
+    <!--     Fonts and icons     -->
+    <!-- Font Awesome Icons -->
+    <script src="~/layout_assets/js/font-awesome.js"></script>
+    <!-- CSS Files -->
+    <link href="~/layout_assets/css/soft-ui-dashboard.min.css" rel="stylesheet" />
+    <link href="~/css/university-brand.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/layout_assets/sweetalert2/dist/sweetalert2.css" rel="stylesheet" />
+    <script src="~/layout_assets/sweetalert2/dist/sweetalert2.js"></script>
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            font-weight: bold;
+        }
+        ::-webkit-input-placeholder {
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+        .lang-switcher {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .password-wrapper {
+            position: relative;
+        }
+        .password-wrapper .toggle-password {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            color: #6c757d;
+            font-size: 1rem;
+            line-height: 1;
+        }
+        .password-wrapper .toggle-password:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 nvu-auth">
+    <main class="main-content mt-0">
+        <section>
+            <div class="page-header min-vh-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
+                            <div class="card">
+                                <div class="card-header pb-0">
+                                    <a class="nvu-auth-brand" href="/Account/Login" aria-label="@Lang.GetKey("brand_university")"><partial name="~/Views/Shared/Partials/_UniversityBrand.cshtml" /></a>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <h4 class="font-weight-bolder mb-0">@Lang.GetKey("login_title")</h4>
+                                        <!-- Language Switcher -->
+                                        <div class="lang-switcher dropdown">
+                                            <a class="btn btn-sm btn-white shadow-sm dropdown-toggle d-flex align-items-center gap-2"
+                                               href="#" id="loginLangDropdown" data-bs-toggle="dropdown" data-toggle="dropdown" role="button" aria-expanded="false"
+                                               style="background:#fff; border:1px solid #dee2e6; border-radius:8px; padding:6px 12px; text-decoration:none; color:#344767;">
+                                                <img src="@currentFlag" height="20" width="20" alt="@currentCulture" style="border-radius:3px;" />
+                                                <span style="font-size:0.85rem; margin-left:6px;">@(currentLanguageName == "Vietnamese" ? "Tiếng Việt" : currentLanguageName)</span>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-right" aria-labelledby="loginLangDropdown">
+                                                <a class="dropdown-item d-flex align-items-center gap-2"
+                                                   asp-action="SetLanguage" asp-controller="home" asp-route-culture="en-US" asp-route-returnUrl="@currentUrl">
+                                                    <img src="~/images/flag/united-kingdom.png" height="20" width="20" style="border-radius:3px;" />
+                                                    <span style="margin-left:6px;">ENG</span>
+                                                </a>
+                                                <a class="dropdown-item d-flex align-items-center gap-2"
+                                                   asp-action="SetLanguage" asp-controller="home" asp-route-culture="vi-VN" asp-route-returnUrl="@currentUrl">
+                                                    <img src="~/images/flag/vietnam.png" height="20" width="20" style="border-radius:3px;" />
+                                                    <span style="margin-left:6px;">VNI</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="mb-0 mt-1">@Lang.GetKey("login_subtitle")</p>
+                                </div>
+                                <div class="card-body">
+                                    <form id="account" method="post">
+                                        <input type="hidden" asp-for="ReturnUrl" />
+                                        <div asp-validation-summary="All" class="text-danger" id="validation-summary">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" class="form-control form-control-lg"
+                                                placeholder="@Lang.GetKey("login_username_placeholder")"
+                                                aria-label="@Lang.GetKey("login_username_placeholder")"
+                                                name="username" asp-for="UserName" required>
+                                            <span class="text-danger"></span>
+                                        </div>
+                                        <div class="mb-3 password-wrapper">
+                                            <input class="form-control form-control-lg" type="password"
+                                                id="passwordInput"
+                                                placeholder="@Lang.GetKey("login_password_placeholder")"
+                                                aria-label="@Lang.GetKey("login_password_placeholder")"
+                                                name="password" asp-for="Password" required
+                                                style="padding-right: 44px;">
+                                            <button type="button" class="toggle-password" id="togglePassword"
+                                                    aria-label="Toggle password visibility">
+                                                <i class="fas fa-eye" id="togglePasswordIcon"></i>
+                                            </button>
+                                            <span class="text-danger"></span>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="rememberMe"
+                                                asp-for="RememberMe">
+                                            <label class="form-check-label" for="rememberMe"
+                                                style="font-family: 'Be Vietnam Pro', sans-serif;">
+                                                @Lang.GetKey("login_remember_me")
+                                            </label>
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="submit"
+                                                    class="btn btn-lg w-100 mt-4 mb-0"
+                                                    >
+                                                @Lang.GetKey("login_btn")
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-footer text-center pt-0 px-lg-2 px-1">
+                                    <p class="mb-4 text-sm mx-auto">
+                                        @Lang.GetKey("login_forgot_password")
+                                        <a asp-action="ForgotPassword" asp-controller="Account">@Lang.GetKey("login_forgot_click_here")</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <partial name="~/Views/Shared/Partials/_UniversityAuthHero.cshtml" />
+                </div>
+            </div>
+        </section>
+       
+        
+    </main>
+    @* <script src="~/layout_assets/js/jquery.min.js"></script> *@
+    @* @await Component.InvokeAsync("NToastNotify") *@
+    @if (ViewContext.HttpContext.Items[LoginSessionNotice.ItemKey]?.ToString() == LoginSessionNotice.CookieValue)
+    {
+        <script>
+            Swal.fire({
+                icon: "info",
+                title: "Phiên đăng nhập không còn hiệu lực",
+                text: "Tài khoản của bạn có thể vừa được cập nhật phân quyền. Vui lòng đăng nhập lại.",
+                confirmButtonText: "Đã hiểu"
+            });
+        </script>
+    }
+    <script>
+        (function () {
+            var btn = document.getElementById('togglePassword');
+            var input = document.getElementById('passwordInput');
+            var icon = document.getElementById('togglePasswordIcon');
+            if (btn && input && icon) {
+                btn.addEventListener('click', function () {
+                    var isPassword = input.type === 'password';
+                    input.type = isPassword ? 'text' : 'password';
+                    icon.classList.toggle('fa-eye', !isPassword);
+                    icon.classList.toggle('fa-eye-slash', isPassword);
+                });
+            }
+            // Language dropdown toggle (for pages without Bootstrap JS)
+            var langToggle = document.getElementById('loginLangDropdown');
+            if (langToggle) {
+                langToggle.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    var menu = langToggle.nextElementSibling;
+                    if (menu) menu.classList.toggle('show');
+                });
+                document.addEventListener('click', function (e) {
+                    if (!langToggle.contains(e.target)) {
+                        var menu = langToggle.nextElementSibling;
+                        if (menu) menu.classList.remove('show');
+                    }
+                });
+            }
+        })();
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,3 @@
+@{ ViewData["Title"] = "Phê duyệt yêu cầu"; }
+<partial name="~/Views/Workflow/Request/_RequestList.cshtml" model="true" />
+@section Scripts { <script>window.requestGridUrl='/api/requests/pending';</script><script src="~/js/workflow/requests.js" asp-append-version="true"></script> }

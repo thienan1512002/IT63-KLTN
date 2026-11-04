@@ -1,0 +1,2832 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="common_all" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="home_birthday_greeting" xml:space="preserve">
+    <value>Happy Birthday</value>
+  </data>
+  <data name="home_birthday_ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="home_birthday_wish_1" xml:space="preserve">
+    <value>Wishing you a new year of age filled with good health, joy, and success.</value>
+  </data>
+  <data name="home_birthday_wish_2" xml:space="preserve">
+    <value>Thank you for being with Nam Viet University.</value>
+  </data>
+  <data name="home_birthday_wish_3" xml:space="preserve">
+    <value>Wishing you a wonderful birthday and a new year full of great things!</value>
+  </data>
+  <data name="common_department" xml:space="preserve">
+    <value>University Unit</value>
+  </data>
+  <data name="home_welcome_title" xml:space="preserve">
+    <value>Welcome to Nam Viet University</value>
+  </data>
+  <data name="home_web_portal" xml:space="preserve">
+    <value>Web Portal</value>
+  </data>
+  <data name="home_workflow" xml:space="preserve">
+    <value>Workflow</value>
+  </data>
+  <data name="home_total_request_wait_approval" xml:space="preserve">
+    <value>Total new Request waiting for Approval</value>
+  </data>
+  <data name="home_total_request_on_going" xml:space="preserve">
+    <value>Total Request submitted (On-Going)</value>
+  </data>
+  <data name="home_total_kaizen_request_wait_approval" xml:space="preserve">
+    <value>Total new Kaizen request waiting for Approval</value>
+  </data>
+  <data name="home_total_kaizen_request_on_going" xml:space="preserve">
+    <value>Total Kaizen Request submitted (On-Going)</value>
+  </data>
+  <data name="common_notification" xml:space="preserve">
+    <value>Notification</value>
+  </data>
+  <data name="kaizen_manage" xml:space="preserve">
+    <value>Kaizen Management System</value>
+  </data>
+  <data name="common_month" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="kaizen_department" xml:space="preserve">
+    <value>Kaizen By University Unit</value>
+  </data>
+  <data name="kaizen_count" xml:space="preserve">
+    <value>Kaizen Count</value>
+  </data>
+  <data name="kaizen_number_of" xml:space="preserve">
+    <value>Number of Kaizen</value>
+  </data>
+  <data name="common_news" xml:space="preserve">
+    <value>News</value>
+  </data>
+  <data name="menu_hotline_helpline" xml:space="preserve">
+    <value>Hotline/Helpline</value>
+  </data>
+  <data name="user_search_emp" xml:space="preserve">
+    <value>Search employee information</value>
+  </data>
+  <data name="user_personal_info" xml:space="preserve">
+    <value>Personal information</value>
+  </data>
+  <data name="user_emp_id" xml:space="preserve">
+    <value>Staff ID</value>
+  </data>
+  <data name="user_emp_name" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="user_emp_fullName" xml:space="preserve">
+    <value>Full name</value>
+  </data>
+  <data name="user_emp_phone" xml:space="preserve">
+    <value>Phone number</value>
+  </data>
+  <data name="user_emp_dob" xml:space="preserve">
+    <value>Date of birth</value>
+  </data>
+  <data name="work_info" xml:space="preserve">
+    <value>Work information</value>
+  </data>
+  <data name="common_site" xml:space="preserve">
+    <value>Campus</value>
+  </data>
+  <data name="user_emp_position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="user_emp_email" xml:space="preserve">
+    <value>Contact email</value>
+  </data>
+  <data name="common_setting" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="common_logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="menu_web_admin" xml:space="preserve">
+    <value>Web Admin</value>
+  </data>
+  <data name="menu_administration" xml:space="preserve">
+    <value>Administration</value>
+  </data>
+  <data name="menu_user" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="menu_department" xml:space="preserve">
+    <value>University Units</value>
+  </data>
+  <data name="menu_section" xml:space="preserve">
+    <value>Sections / Academic Divisions</value>
+  </data>
+  <data name="menu_kimsen_sys" xml:space="preserve">
+    <value>Nam Viet University System</value>
+  </data>
+  <data name="menu_workflow_manage" xml:space="preserve">
+    <value>Workflow Management</value>
+  </data>
+  <data name="menu_kaizen" xml:space="preserve">
+    <value>Kaizen Management System</value>
+  </data>
+  <data name="menu_3s_erp" xml:space="preserve">
+    <value>3S-ERP System</value>
+  </data>
+  <data name="menu_iot_sys" xml:space="preserve">
+    <value>Iot System</value>
+  </data>
+  <data name="menu_booking_meet_room" xml:space="preserve">
+    <value>Booking Meeting Room</value>
+  </data>
+  <data name="menu_machine_manage" xml:space="preserve">
+    <value>Machine Management System</value>
+  </data>
+  <data name="menu_vision_mission" xml:space="preserve">
+    <value>Vision and Mission</value>
+  </data>
+  <data name="menu_core_values" xml:space="preserve">
+    <value>Core Values</value>
+  </data>
+  <data name="menu_organization_chart" xml:space="preserve">
+    <value>Organization Chart</value>
+  </data>
+  <data name="menu_kimsen_culture" xml:space="preserve">
+    <value>Nam Viet University Culture</value>
+  </data>
+  <data name="menu_policy_strategies" xml:space="preserve">
+    <value>Policies and Strategies</value>
+  </data>
+  <data name="common_section" xml:space="preserve">
+    <value>Section / Academic Division</value>
+  </data>
+  <data name="common_view" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="common_update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="workflow_submission_date" xml:space="preserve">
+    <value>Submission Date</value>
+  </data>
+  <data name="workflow_request_name" xml:space="preserve">
+    <value>Request Name</value>
+  </data>
+  <data name="workflow_urgency_level" xml:space="preserve">
+    <value>Urgency Level</value>
+  </data>
+  <data name="workflow_urgent" xml:space="preserve">
+    <value>Urgent</value>
+  </data>
+  <data name="workflow_normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="workflow_application_no" xml:space="preserve">
+    <value>Application No</value>
+  </data>
+  <data name="workflow_submit_date" xml:space="preserve">
+    <value>Submit Date</value>
+  </data>
+  <data name="workflow_requester_information" xml:space="preserve">
+    <value>Requester Information</value>
+  </data>
+  <data name="workflow_fullname" xml:space="preserve">
+    <value>Fullname</value>
+  </data>
+  <data name="workflow_position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="workflow_section_name" xml:space="preserve">
+    <value>Section</value>
+  </data>
+  <data name="workflow_department_name" xml:space="preserve">
+    <value>University Unit</value>
+  </data>
+  <data name="workflow_request_detail_label" xml:space="preserve">
+    <value>RequestDetail</value>
+  </data>
+  <data name="login_title" xml:space="preserve">
+    <value>Sign In</value>
+  </data>
+  <data name="login_subtitle" xml:space="preserve">
+    <value>Sign in to the university request and approval system.</value>
+  </data>
+  <data name="login_username_placeholder" xml:space="preserve">
+    <value>User account</value>
+  </data>
+  <data name="login_password_placeholder" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="login_remember_me" xml:space="preserve">
+    <value>Remember me</value>
+  </data>
+  <data name="login_btn" xml:space="preserve">
+    <value>Sign in</value>
+  </data>
+  <data name="login_forgot_password" xml:space="preserve">
+    <value>Forget your password?</value>
+  </data>
+  <data name="login_forgot_click_here" xml:space="preserve">
+    <value>Click here</value>
+  </data>
+  <data name="upd_pass_title" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="upd_pass_subtitle" xml:space="preserve">
+    <value>Enter your username, current password and new password to change password</value>
+  </data>
+  <data name="upd_pass_username_label" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="upd_pass_current_label" xml:space="preserve">
+    <value>Current Password</value>
+  </data>
+  <data name="upd_pass_current_placeholder" xml:space="preserve">
+    <value>Current Password</value>
+  </data>
+  <data name="upd_pass_new_label" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="upd_pass_new_placeholder" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="upd_pass_confirm_label" xml:space="preserve">
+    <value>Confirm New Password</value>
+  </data>
+  <data name="upd_pass_confirm_placeholder" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="upd_pass_btn" xml:space="preserve">
+    <value>Create New Password</value>
+  </data>
+  <data name="noti_page_title" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="noti_col_no" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="noti_col_file" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="noti_col_title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="noti_col_created_by" xml:space="preserve">
+    <value>Created by</value>
+  </data>
+  <data name="noti_col_created_at" xml:space="preserve">
+    <value>Created at</value>
+  </data>
+  <data name="noti_col_publisher" xml:space="preserve">
+    <value>Publisher</value>
+  </data>
+  <data name="noti_col_assignee" xml:space="preserve">
+    <value>Assignee</value>
+  </data>
+  <data name="noti_btn_create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="noti_btn_view" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="noti_btn_edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="noti_btn_remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="noti_remove_confirm_title" xml:space="preserve">
+    <value>Remove notification</value>
+  </data>
+  <data name="noti_remove_confirm_text" xml:space="preserve">
+    <value>This item will be disabled and hidden from the list. Continue?</value>
+  </data>
+  <data name="noti_created_success" xml:space="preserve">
+    <value>Notification created successfully.</value>
+  </data>
+  <data name="noti_updated_success" xml:space="preserve">
+    <value>Notification updated successfully.</value>
+  </data>
+  <data name="noti_removed_success" xml:space="preserve">
+    <value>Removed successfully.</value>
+  </data>
+  <data name="noti_detail_title" xml:space="preserve">
+    <value>Notification detail</value>
+  </data>
+  <data name="noti_btn_back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="noti_col_note" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="noti_field_issue_site" xml:space="preserve">
+    <value>Issue campus</value>
+  </data>
+  <data name="noti_field_issue_section" xml:space="preserve">
+    <value>Issue section</value>
+  </data>
+  <data name="noti_field_assign_sites" xml:space="preserve">
+    <value>Assign campus(s)</value>
+  </data>
+  <data name="noti_field_from" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="noti_field_to" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="noti_section_content" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="noti_section_attachments" xml:space="preserve">
+    <value>Attachments</value>
+  </data>
+  <data name="workflow_grid_approval_name" xml:space="preserve">
+    <value>Approval Name</value>
+  </data>
+  <data name="workflow_grid_full_name" xml:space="preserve">
+    <value>FullName</value>
+  </data>
+  <data name="workflow_grid_section" xml:space="preserve">
+    <value>Section</value>
+  </data>
+  <data name="workflow_grid_position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="workflow_grid_phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="workflow_grid_confirmation" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="workflow_grid_status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="workflow_grid_approval_date" xml:space="preserve">
+    <value>Approval Date </value>
+  </data>
+  <data name="workflow_grid_comment" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="workflow_status_waiting_approval" xml:space="preserve">
+    <value>Waiting For Approval</value>
+  </data>
+  <data name="workflow_status_waiting_confirm" xml:space="preserve">
+    <value>Waiting For Confirm</value>
+  </data>
+  <data name="workflow_status_approved" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+  <data name="workflow_status_confirmed" xml:space="preserve">
+    <value>Confirmed</value>
+  </data>
+  <data name="workflow_status_returned" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="workflow_status_rejected" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+  <data name="workflow_approval_type_approval" xml:space="preserve">
+    <value>Approval</value>
+  </data>
+  <data name="workflow_approval_type_confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="workflow_submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="workflow_cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="workflow_back_to_lists" xml:space="preserve">
+    <value>Back to lists</value>
+  </data>
+  <data name="workflow_btn_approve" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="workflow_btn_reject" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="workflow_btn_return" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="workflow_btn_confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="workflow_btn_export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="workflow_export_button" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="workflow_swal_export_title" xml:space="preserve">
+    <value>Select an export mode:</value>
+  </data>
+  <data name="workflow_export_pdf" xml:space="preserve">
+    <value>Export Request</value>
+  </data>
+  <data name="workflow_export_zip" xml:space="preserve">
+    <value>Export Request and Attachments</value>
+  </data>
+  <data name="workflow_rejected_message" xml:space="preserve">
+    <value>Request has been rejected by</value>
+  </data>
+  <data name="workflow_grid_no" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="workflow_grid_email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="workflow_swal_validation_title" xml:space="preserve">
+    <value>Please fix the following</value>
+  </data>
+  <data name="workflow_swal_ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="workflow_swal_loading" xml:space="preserve">
+    <value>Please wait</value>
+  </data>
+  <data name="workflow_swal_failed" xml:space="preserve">
+    <value>Failed!</value>
+  </data>
+  <data name="workflow_swal_failed_text" xml:space="preserve">
+    <value>Something went wrong</value>
+  </data>
+  <data name="workflow_swal_success" xml:space="preserve">
+    <value>Success!</value>
+  </data>
+  <data name="workflow_swal_create_success" xml:space="preserve">
+    <value>Add new request success!</value>
+  </data>
+  <data name="workflow_swal_comment_prompt" xml:space="preserve">
+    <value>Please fill in your comment!</value>
+  </data>
+  <data name="workflow_swal_comment_placeholder" xml:space="preserve">
+    <value>Enter your comment</value>
+  </data>
+  <data name="workflow_swal_validation_error" xml:space="preserve">
+    <value>Validation Error</value>
+  </data>
+  <data name="workflow_swal_action_success" xml:space="preserve">
+    <value>Request successfully</value>
+  </data>
+  <data name="workflow_swal_approve_success" xml:space="preserve">
+    <value>Request approved successfully</value>
+  </data>
+  <data name="workflow_swal_return_success" xml:space="preserve">
+    <value>Request returned successfully</value>
+  </data>
+  <data name="workflow_swal_reject_success" xml:space="preserve">
+    <value>Request rejected successfully</value>
+  </data>
+  <data name="workflow_swal_confirm_success" xml:space="preserve">
+    <value>Request confirmed successfully</value>
+  </data>
+  <data name="workflow_swal_save_success" xml:space="preserve">
+    <value>Request saved successfully.</value>
+  </data>
+  <data name="workflow_swal_error" xml:space="preserve">
+    <value>Error!</value>
+  </data>
+  <data name="workflow_swal_investigate_required" xml:space="preserve">
+    <value>Investigate Issue is required.</value>
+  </data>
+  <data name="workflow_swal_counter_required" xml:space="preserve">
+    <value>Counter Measure is required.</value>
+  </data>
+  <data name="workflow_swal_next_action_required" xml:space="preserve">
+    <value>Next Action is required.</value>
+  </data>
+  <data name="workflow_swal_actual_date_required" xml:space="preserve">
+    <value>Actual Date is required.</value>
+  </data>
+  <data name="workflow_swal_attachment_required" xml:space="preserve">
+    <value>At least one attachment is required at Countermeasure tab.</value>
+  </data>
+  <data name="workflow_swal_comment_required" xml:space="preserve">
+    <value>Please fill in your comment</value>
+  </data>
+  <data name="workflow_grid_username" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="workflow_judgement_label" xml:space="preserve">
+    <value>Judgement</value>
+  </data>
+  <data name="workflow_conclusion_label" xml:space="preserve">
+    <value>Conclusion</value>
+  </data>
+  <data name="workflow_noty_submitted" xml:space="preserve">
+    <value>{0} submitted request {1}</value>
+  </data>
+  <data name="workflow_noty_finished" xml:space="preserve">
+    <value>Your request {0} has been finished</value>
+  </data>
+  <data name="workflow_noty_returned" xml:space="preserve">
+    <value>Your request {0} has been returned</value>
+  </data>
+  <data name="workflow_noty_rejected" xml:space="preserve">
+    <value>Your request {0} has been rejected</value>
+  </data>
+  <data name="visitor_display_card_arrived" xml:space="preserve">
+    <value>Arrived</value>
+  </data>
+  <data name="visitor_display_card_not_arrived" xml:space="preserve">
+    <value>Not Arrived</value>
+  </data>
+  <data name="visitor_display_card_left" xml:space="preserve">
+    <value>Left Yet</value>
+  </data>
+  <data name="visitor_display_card_total" xml:space="preserve">
+    <value>Total Visitors</value>
+  </data>
+  <data name="visitor_display_refresh_in" xml:space="preserve">
+    <value>Refresh in 60s</value>
+  </data>
+  <data name="visitor_display_updated_at" xml:space="preserve">
+    <value>Updated at:</value>
+  </data>
+  <data name="visitor_display_status_checkedin" xml:space="preserve">
+    <value>Entered Campus</value>
+  </data>
+  <data name="visitor_display_status_checkedout" xml:space="preserve">
+    <value>Exited Campus</value>
+  </data>
+  <data name="visitor_display_col_no" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="visitor_display_col_application_code" xml:space="preserve">
+    <value>Application Code</value>
+  </data>
+  <data name="visitor_display_col_fax_code" xml:space="preserve">
+    <value>FaxCode</value>
+  </data>
+  <data name="visitor_display_col_requester" xml:space="preserve">
+    <value>Requester</value>
+  </data>
+  <data name="visitor_display_col_section" xml:space="preserve">
+    <value>Section</value>
+  </data>
+  <data name="visitor_display_col_department" xml:space="preserve">
+    <value>University Unit</value>
+  </data>
+  <data name="visitor_display_col_reception_section" xml:space="preserve">
+    <value>Reception Section</value>
+  </data>
+  <data name="visitor_display_col_subject" xml:space="preserve">
+    <value>Guest Group</value>
+  </data>
+  <data name="visitor_display_col_total_visitor" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="visitor_display_col_expected_in" xml:space="preserve">
+    <value>In</value>
+  </data>
+  <data name="visitor_display_col_expected_out" xml:space="preserve">
+    <value>Out</value>
+  </data>
+  <data name="wfr_btn_export_png" xml:space="preserve">
+    <value>Export PNG</value>
+  </data>
+  <data name="wfr_btn_filtering" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="wfr_card_complete" xml:space="preserve">
+    <value>Completed Requests</value>
+  </data>
+  <data name="wfr_card_complete_tip" xml:space="preserve">
+    <value>Click to view complete requests</value>
+  </data>
+  <data name="wfr_card_ongoing" xml:space="preserve">
+    <value>Ongoing Requests</value>
+  </data>
+  <data name="wfr_card_ongoing_tip" xml:space="preserve">
+    <value>Click to view ongoing requests</value>
+  </data>
+  <data name="wfr_card_rejected" xml:space="preserve">
+    <value>Rejected Requests</value>
+  </data>
+  <data name="wfr_card_rejected_tip" xml:space="preserve">
+    <value>Click to view rejected requests</value>
+  </data>
+  <data name="wfr_card_total" xml:space="preserve">
+    <value>Total Requests</value>
+  </data>
+  <data name="wfr_card_total_tip" xml:space="preserve">
+    <value>Click to view all requests</value>
+  </data>
+  <data name="wfr_chart_by_prefix" xml:space="preserve">
+    <value>By</value>
+  </data>
+  <data name="wfr_chart_by_section" xml:space="preserve">
+    <value>Requests by University Unit / Section</value>
+  </data>
+  <data name="wfr_chart_by_section_sub" xml:space="preserve">
+    <value>Total number of requests submitted per section</value>
+  </data>
+  <data name="wfr_chart_count" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="wfr_chart_follow_by" xml:space="preserve">
+    <value>Follow by</value>
+  </data>
+  <data name="wfr_chart_num_requests" xml:space="preserve">
+    <value>Number of Requests</value>
+  </data>
+  <data name="wfr_chart_options_label" xml:space="preserve">
+    <value>Chart Options</value>
+  </data>
+  <data name="wfr_chart_order_by" xml:space="preserve">
+    <value>Order by</value>
+  </data>
+  <data name="wfr_chart_req_overall" xml:space="preserve">
+    <value>Request Overall</value>
+  </data>
+  <data name="wfr_chart_request_summary" xml:space="preserve">
+    <value>Request Summary</value>
+  </data>
+  <data name="wfr_chart_select_top" xml:space="preserve">
+    <value>Select top</value>
+  </data>
+  <data name="wfr_chart_status_ratio" xml:space="preserve">
+    <value>Status Ratio</value>
+  </data>
+  <data name="wfr_chart_status_ratio_sub" xml:space="preserve">
+    <value>Distribution by request status</value>
+  </data>
+  <data name="wfr_chart_summary_ratio" xml:space="preserve">
+    <value>Summary Ratio</value>
+  </data>
+  <data name="wfr_chart_theme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="wfr_col_app_no" xml:space="preserve">
+    <value>Application No</value>
+  </data>
+  <data name="wfr_col_approver" xml:space="preserve">
+    <value>Approver</value>
+  </data>
+  <data name="wfr_col_car_no" xml:space="preserve">
+    <value>Car No</value>
+  </data>
+  <data name="wfr_col_contact_person" xml:space="preserve">
+    <value>Contact Person</value>
+  </data>
+  <data name="wfr_col_department" xml:space="preserve">
+    <value>University Unit</value>
+  </data>
+  <data name="wfr_col_departure_date" xml:space="preserve">
+    <value>Dep. Date</value>
+  </data>
+  <data name="wfr_col_departure_time" xml:space="preserve">
+    <value>Dep. Time</value>
+  </data>
+  <data name="wfr_col_destination" xml:space="preserve">
+    <value>Destination</value>
+  </data>
+  <data name="wfr_col_driver" xml:space="preserve">
+    <value>Driver</value>
+  </data>
+  <data name="wfr_col_email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="wfr_col_current_approver" xml:space="preserve">
+    <value>Current Approver</value>
+  </data>
+  <data name="wfr_col_employment_type" xml:space="preserve">
+    <value>Employment Type</value>
+  </data>
+  <data name="wfr_col_fax_code" xml:space="preserve">
+    <value>Faxcode</value>
+  </data>
+  <data name="wfr_col_gate" xml:space="preserve">
+    <value>Gate</value>
+  </data>
+  <data name="wfr_col_no" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="wfr_col_passengers" xml:space="preserve">
+    <value>Passengers</value>
+  </data>
+  <data name="wfr_col_phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="wfr_col_position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="wfr_col_process" xml:space="preserve">
+    <value>Process</value>
+  </data>
+  <data name="wfr_col_progress" xml:space="preserve">
+    <value>Progress</value>
+  </data>
+  <data name="wfr_col_purpose" xml:space="preserve">
+    <value>Request Detail/ Purpose</value>
+  </data>
+  <data name="wfr_col_quantity" xml:space="preserve">
+    <value>Qty</value>
+  </data>
+  <data name="wfr_col_reason" xml:space="preserve">
+    <value>Reason</value>
+  </data>
+  <data name="wfr_col_request_name" xml:space="preserve">
+    <value>Request Name</value>
+  </data>
+  <data name="wfr_col_requester" xml:space="preserve">
+    <value>Requester</value>
+  </data>
+  <data name="wfr_col_required_date" xml:space="preserve">
+    <value>Required Date</value>
+  </data>
+  <data name="wfr_col_return_date" xml:space="preserve">
+    <value>Ret. Date</value>
+  </data>
+  <data name="wfr_col_return_time" xml:space="preserve">
+    <value>Ret. Time</value>
+  </data>
+  <data name="wfr_col_section" xml:space="preserve">
+    <value>Section</value>
+  </data>
+  <data name="wfr_col_status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="wfr_col_submit_date" xml:space="preserve">
+    <value>Submit Date</value>
+  </data>
+  <data name="wfr_col_urgency" xml:space="preserve">
+    <value>Urgency</value>
+  </data>
+  <data name="wfr_col_visit_date" xml:space="preserve">
+    <value>Visit Date</value>
+  </data>
+  <data name="wfr_col_visit_time" xml:space="preserve">
+    <value>Visit Time</value>
+  </data>
+  <data name="wfr_export_creating" xml:space="preserve">
+    <value>Creating image…</value>
+  </data>
+  <data name="wfr_export_failed" xml:space="preserve">
+    <value>Export failed</value>
+  </data>
+  <data name="wfr_export_lib_missing" xml:space="preserve">
+    <value>html2canvas not loaded</value>
+  </data>
+  <data name="wfr_export_lib_missing_text" xml:space="preserve">
+    <value>The PNG export library could not be loaded. Please check your internet connection and try again.</value>
+  </data>
+  <data name="wfr_export_title" xml:space="preserve">
+    <value>Workflow Report — Overall Summary</value>
+  </data>
+  <data name="wfr_filter_app_no" xml:space="preserve">
+    <value>Application No</value>
+  </data>
+  <data name="wfr_filter_end_date" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="wfr_filter_fax_code" xml:space="preserve">
+    <value>Requester Faxcode</value>
+  </data>
+  <data name="wfr_filter_approver_fax_code" xml:space="preserve">
+    <value>Approver Faxcode</value>
+  </data>
+  <data name="wfr_filter_label" xml:space="preserve">
+    <value>Filters</value>
+  </data>
+  <data name="wfr_filter_request_name" xml:space="preserve">
+    <value>Request Name</value>
+  </data>
+  <data name="wfr_filter_start_date" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="wfr_filter_user_name" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="wfr_status_complete" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="wfr_status_ongoing" xml:space="preserve">
+    <value>On going</value>
+  </data>
+  <data name="wfr_status_rejected" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+  <data name="wfr_status_returned" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="wfr_tab_details" xml:space="preserve">
+    <value>Details Request</value>
+  </data>
+  <data name="wfr_tab_overall" xml:space="preserve">
+    <value>Overall</value>
+  </data>
+  <data name="wfr_tab_requests" xml:space="preserve">
+    <value>Requests List</value>
+  </data>
+  <data name="wfr_title" xml:space="preserve">
+    <value>Workflow Report</value>
+  </data>
+  <data name="wfd_title" xml:space="preserve">
+    <value>Workflow</value>
+  </data>
+  <data name="wfd_tab_sent" xml:space="preserve">
+    <value>Sent Requests</value>
+  </data>
+  <data name="wfd_tab_received" xml:space="preserve">
+    <value>Received Requests</value>
+  </data>
+  <data name="wfd_card_total" xml:space="preserve">
+    <value>Total Requests</value>
+  </data>
+  <data name="wfd_card_ongoing" xml:space="preserve">
+    <value>On-going Approval</value>
+  </data>
+  <data name="wfd_card_completed" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="wfd_card_rejected" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+  <data name="wfd_card_approved_by_you" xml:space="preserve">
+    <value>Approved By You</value>
+  </data>
+  <data name="wfd_card_pending_your_approval" xml:space="preserve">
+    <value>Pending Your Approval</value>
+  </data>
+  <data name="wfd_col_importance" xml:space="preserve">
+    <value>Importance</value>
+  </data>
+  <data name="wfd_col_account_name" xml:space="preserve">
+    <value>Account Name</value>
+  </data>
+  <data name="wfd_col_current_approver" xml:space="preserve">
+    <value>Current Approver</value>
+  </data>
+  <data name="wfd_badge_ongoing" xml:space="preserve">
+    <value>On going</value>
+  </data>
+  <data name="wfd_badge_completed" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="wfd_badge_rejected" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+  <data name="wfd_badge_returned" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="wfd_badge_urgent" xml:space="preserve">
+    <value>Urgent</value>
+  </data>
+  <data name="wfd_badge_normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="wfd_process_waiting_format" xml:space="preserve">
+    <value>On going {0}/{1}</value>
+  </data>
+  <data name="wfd_pager_info" xml:space="preserve">
+    <value>Total {2} | Page {0}/{1}</value>
+  </data>
+  <data name="common_date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="common_status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="common_email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="common_filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="common_reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="common_yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="common_no" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="kaizen_total_top10" xml:space="preserve">
+    <value>Top 10 Total</value>
+  </data>
+  <data name="kaizen_total_company" xml:space="preserve">
+    <value>University Total</value>
+  </data>
+  <data name="kaizen_all" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="kaizen_sort_label" xml:space="preserve">
+    <value>Sort</value>
+  </data>
+  <data name="kaizen_sort_none" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="kaizen_sort_asc" xml:space="preserve">
+    <value>Ascending</value>
+  </data>
+  <data name="kaizen_sort_desc" xml:space="preserve">
+    <value>Descending</value>
+  </data>
+  <data name="common_save" xml:space="preserve">
+    <value>Lưu / Save</value>
+  </data>
+  <data name="common_cancel" xml:space="preserve">
+    <value>Hủy / Cancel</value>
+  </data>
+  <data name="common_confirm" xml:space="preserve">
+    <value>Xác nhận / Confirm</value>
+  </data>
+  <data name="common_field_invalid" xml:space="preserve">
+    <value>{0} không hợp lệ. / {0} is invalid.</value>
+  </data>
+  <data name="common_field_value_invalid" xml:space="preserve">
+    <value>{0} '{1}' không hợp lệ. / {0} '{1}' is invalid.</value>
+  </data>
+  <data name="wf_import_popup_title" xml:space="preserve">
+    <value>Import danh sách từ Excel / Import list from Excel</value>
+  </data>
+  <data name="wf_import_popup_select_file_label" xml:space="preserve">
+    <value>Chọn file Excel (.xlsx): / Select Excel file (.xlsx):</value>
+  </data>
+  <data name="wf_import_popup_select_file_button" xml:space="preserve">
+    <value>Chọn file / Select file</value>
+  </data>
+  <data name="wf_import_popup_drop_hint" xml:space="preserve">
+    <value>hoặc kéo thả vào đây / or drag and drop here</value>
+  </data>
+  <data name="wf_import_popup_button" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="wf_import_popup_select_file_required" xml:space="preserve">
+    <value>Vui lòng chọn file Excel. / Please select an Excel file.</value>
+  </data>
+  <data name="wf_import_popup_excel_only" xml:space="preserve">
+    <value>Chỉ chấp nhận file Excel (.xlsx, .xls). / Only Excel files (.xlsx, .xls) are accepted.</value>
+  </data>
+  <data name="wf_import_popup_no_data" xml:space="preserve">
+    <value>File không có dữ liệu. / File has no data.</value>
+  </data>
+  <data name="wf_import_popup_success" xml:space="preserve">
+    <value>Đã import {0} dòng. / Imported {0} row(s).</value>
+  </data>
+  <data name="wf_import_popup_read_error" xml:space="preserve">
+    <value>Lỗi đọc file: {0} / Error reading file: {0}</value>
+  </data>
+  <data name="wf_import_popup_failed" xml:space="preserve">
+    <value>Import thất bại / Import failed</value>
+  </data>
+  <data name="wf_import_popup_error_summary" xml:space="preserve">
+    <value>Phát hiện {0} lỗi, vui lòng kiểm tra lại file: / Found {0} error(s). Please check the file again:</value>
+  </data>
+  <data name="wf_import_popup_error_row" xml:space="preserve">
+    <value>Dòng / Row</value>
+  </data>
+  <data name="common_search_placeholder" xml:space="preserve">
+    <value>Tìm kiếm... / Search...</value>
+  </data>
+  <data name="common_add_new" xml:space="preserve">
+    <value>Thêm mới / Add New</value>
+  </data>
+  <data name="common_col_no" xml:space="preserve">
+    <value>STT / No.</value>
+  </data>
+  <data name="common_col_actions" xml:space="preserve">
+    <value>Thao tác / Actions</value>
+  </data>
+  <data name="approver_page_title" xml:space="preserve">
+    <value>Thiết lập phê duyệt / Form Approver Settings</value>
+  </data>
+  <data name="approver_form_code" xml:space="preserve">
+    <value>Mã form / Form Code</value>
+  </data>
+  <data name="approver_col_title" xml:space="preserve">
+    <value>Tiêu đề / Title</value>
+  </data>
+  <data name="approver_col_display_title" xml:space="preserve">
+    <value>Tiêu đề hiển thị / Display Title</value>
+  </data>
+  <data name="approver_col_approvers" xml:space="preserve">
+    <value>Người phê duyệt / Approvers</value>
+  </data>
+  <data name="approver_popup_add" xml:space="preserve">
+    <value>Thêm thiết lập phê duyệt / Add Approver Setting</value>
+  </data>
+  <data name="approver_popup_edit" xml:space="preserve">
+    <value>Sửa thiết lập phê duyệt / Edit Approver Setting</value>
+  </data>
+  <data name="approver_field_users" xml:space="preserve">
+    <value>Người dùng phê duyệt / Approver Users</value>
+  </data>
+  <data name="approver_btn_browse" xml:space="preserve">
+    <value>Chọn / Browse</value>
+  </data>
+  <data name="approver_placeholder_users" xml:space="preserve">
+    <value>Chọn người dùng... / Select users...</value>
+  </data>
+  <data name="approver_picker_title" xml:space="preserve">
+    <value>Chọn người phê duyệt / Select Approver Users</value>
+  </data>
+  <data name="approver_picker_username" xml:space="preserve">
+    <value>Tên đăng nhập / Username</value>
+  </data>
+  <data name="approver_picker_fullname" xml:space="preserve">
+    <value>Họ tên / Full Name</value>
+  </data>
+  <data name="approver_picker_position" xml:space="preserve">
+    <value>Chức vụ / Position</value>
+  </data>
+  <data name="approver_delete_confirm" xml:space="preserve">
+    <value>Xóa thiết lập phê duyệt '{0}'? / Delete approver setting '{0}'?</value>
+  </data>
+  <data name="approver_deleted" xml:space="preserve">
+    <value>Xóa thành công. / Deleted successfully.</value>
+  </data>
+  <data name="approver_delete_failed" xml:space="preserve">
+    <value>Xóa thất bại. / Delete failed.</value>
+  </data>
+  <data name="approver_updated" xml:space="preserve">
+    <value>Cập nhật thành công. / Updated successfully.</value>
+  </data>
+  <data name="approver_created" xml:space="preserve">
+    <value>Thêm mới thành công. / Created successfully.</value>
+  </data>
+  <data name="approver_save_failed" xml:space="preserve">
+    <value>Lưu thất bại. / Save failed.</value>
+  </data>
+  <data name="approver_load_failed" xml:space="preserve">
+    <value>Không thể tải dữ liệu. / Failed to load data.</value>
+  </data>
+  <data name="approver_load_users_failed" xml:space="preserve">
+    <value>Không thể tải danh sách người dùng. / Failed to load user list.</value>
+  </data>
+  <data name="approver_formcode_required" xml:space="preserve">
+    <value>Mã form là bắt buộc. / Form Code is required.</value>
+  </data>
+  <data name="approver_title_required" xml:space="preserve">
+    <value>Tiêu đề là bắt buộc. / Title is required.</value>
+  </data>
+  <data name="approver_display_title_required" xml:space="preserve">
+    <value>Tiêu đề hiển thị là bắt buộc. / Display Title is required.</value>
+  </data>
+  <data name="approver_approver_required" xml:space="preserve">
+    <value>Vui lòng chọn ít nhất một người phê duyệt. / At least one approver must be selected.</value>
+  </data>
+  <data name="elm_page_title" xml:space="preserve">
+    <value>Giám sát email / Email Log Monitor</value>
+  </data>
+  <data name="elm_refresh" xml:space="preserve">
+    <value>Làm mới / Refresh</value>
+  </data>
+  <data name="elm_last_refresh" xml:space="preserve">
+    <value>Lần cuối: / Last refresh:</value>
+  </data>
+  <data name="elm_no_attempts" xml:space="preserve">
+    <value>Chưa có lịch sử gửi. / No attempt logs recorded.</value>
+  </data>
+  <data name="elm_col_status" xml:space="preserve">
+    <value>Trạng thái / Status</value>
+  </data>
+  <data name="elm_col_subject" xml:space="preserve">
+    <value>Tiêu đề / Subject</value>
+  </data>
+  <data name="elm_col_to" xml:space="preserve">
+    <value>Gửi đến / To</value>
+  </data>
+  <data name="elm_col_type" xml:space="preserve">
+    <value>Loại / Type</value>
+  </data>
+  <data name="elm_col_action" xml:space="preserve">
+    <value>Hành động / Action</value>
+  </data>
+  <data name="elm_col_attempts" xml:space="preserve">
+    <value>Số lần thử / Attempts</value>
+  </data>
+  <data name="elm_col_created" xml:space="preserve">
+    <value>Tạo lúc / Created</value>
+  </data>
+  <data name="elm_col_sent_at" xml:space="preserve">
+    <value>Đã gửi lúc / Sent At</value>
+  </data>
+  <data name="elm_col_retry_at" xml:space="preserve">
+    <value>Thử lại lúc / Retry At</value>
+  </data>
+  <data name="elm_col_last_error" xml:space="preserve">
+    <value>Lỗi cuối / Last Error</value>
+  </data>
+  <data name="elm_detail_result" xml:space="preserve">
+    <value>Kết quả / Result</value>
+  </data>
+  <data name="elm_detail_time" xml:space="preserve">
+    <value>Thời gian / Time</value>
+  </data>
+  <data name="elm_detail_error" xml:space="preserve">
+    <value>Lỗi / Error</value>
+  </data>
+  <data name="elm_detail_success" xml:space="preserve">
+    <value>Thành công / Success</value>
+  </data>
+  <data name="elm_detail_failed" xml:space="preserve">
+    <value>Thất bại / Failed</value>
+  </data>
+  <data name="elm_badge_total" xml:space="preserve">
+    <value>Tổng / Total</value>
+  </data>
+  <data name="elm_badge_sent" xml:space="preserve">
+    <value>Đã gửi / Sent</value>
+  </data>
+  <data name="elm_badge_pending" xml:space="preserve">
+    <value>Đang chờ / Pending</value>
+  </data>
+  <data name="elm_badge_failed" xml:space="preserve">
+    <value>Thất bại / Failed</value>
+  </data>
+  <data name="wfr_btn_export_xlsx" xml:space="preserve">
+    <value>Export XLSX</value>
+  </data>
+  <data name="wfr_col_computer_office" xml:space="preserve">
+    <value>Computer (Office)</value>
+  </data>
+  <data name="wfr_col_computer_prog" xml:space="preserve">
+    <value>Computer (Programming)</value>
+  </data>
+  <data name="wfr_col_current_count" xml:space="preserve">
+    <value>Current</value>
+  </data>
+  <data name="wfr_col_driver_phone" xml:space="preserve">
+    <value>Driver Phone</value>
+  </data>
+  <data name="wfr_col_experience" xml:space="preserve">
+    <value>Experience</value>
+  </data>
+  <data name="wfr_col_hr_quota" xml:space="preserve">
+    <value>HR Quota</value>
+  </data>
+  <data name="wfr_col_job_desc" xml:space="preserve">
+    <value>Job Description</value>
+  </data>
+  <data name="wfr_col_lang_english" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="wfr_col_lang_japanese" xml:space="preserve">
+    <value>Japanese</value>
+  </data>
+  <data name="wfr_col_passenger_name" xml:space="preserve">
+    <value>Passenger Name</value>
+  </data>
+  <data name="wfr_col_recruit_from" xml:space="preserve">
+    <value>From Date</value>
+  </data>
+  <data name="wfr_col_recruit_to" xml:space="preserve">
+    <value>To Date</value>
+  </data>
+  <data name="wfr_col_required_count" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="wfr_col_vehicle_type" xml:space="preserve">
+    <value>Vehicle Type</value>
+  </data>
+  <data name="workflow_swal_warning" xml:space="preserve">
+    <value>Cảnh báo! / Warning!</value>
+  </data>
+  <data name="menu_approver_setting" xml:space="preserve">
+    <value>Approver Setting</value>
+  </data>
+  <data name="menu_report_access_setting" xml:space="preserve">
+    <value>Report Access Setting</value>
+  </data>
+  <data name="menu_worker_monitor" xml:space="preserve">
+    <value>Worker Monitor</value>
+  </data>
+  <data name="news_page_title" xml:space="preserve">
+    <value>News</value>
+  </data>
+  <data name="news_detail_page_title" xml:space="preserve">
+    <value>News detail</value>
+  </data>
+  <data name="news_section_attachments" xml:space="preserve">
+    <value>Attachments</value>
+  </data>
+  <data name="news_col_no" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="news_col_thumbnail" xml:space="preserve">
+    <value>Thumbnail</value>
+  </data>
+  <data name="news_col_file" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="news_col_title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="news_col_created_by" xml:space="preserve">
+    <value>Created by</value>
+  </data>
+  <data name="news_col_created_at" xml:space="preserve">
+    <value>Created at</value>
+  </data>
+  <data name="news_col_publisher" xml:space="preserve">
+    <value>Publisher</value>
+  </data>
+  <data name="news_col_assign_site" xml:space="preserve">
+    <value>Assign Campus</value>
+  </data>
+  <data name="news_col_note" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="news_col_section" xml:space="preserve">
+    <value>Section</value>
+  </data>
+  <data name="news_col_full_name" xml:space="preserve">
+    <value>Full name</value>
+  </data>
+  <data name="news_col_user_name" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="news_col_site" xml:space="preserve">
+    <value>Campus</value>
+  </data>
+  <data name="news_col_allow_modify" xml:space="preserve">
+    <value>Allow modify</value>
+  </data>
+  <data name="news_btn_create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="news_btn_edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="news_btn_remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="news_btn_back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="news_remove_confirm_title" xml:space="preserve">
+    <value>Remove news</value>
+  </data>
+  <data name="news_remove_confirm_text" xml:space="preserve">
+    <value>This item will be disabled and hidden from the list. Continue?</value>
+  </data>
+  <data name="news_created_success" xml:space="preserve">
+    <value>News created successfully.</value>
+  </data>
+  <data name="news_updated_success" xml:space="preserve">
+    <value>News updated successfully.</value>
+  </data>
+  <data name="news_removed_success" xml:space="preserve">
+    <value>Removed successfully.</value>
+  </data>
+  <data name="news_create_failed" xml:space="preserve">
+    <value>Create failed.</value>
+  </data>
+  <data name="news_update_failed" xml:space="preserve">
+    <value>Update failed.</value>
+  </data>
+  <data name="news_remove_failed" xml:space="preserve">
+    <value>Remove failed.</value>
+  </data>
+  <data name="news_err_updating" xml:space="preserve">
+    <value>An error occurred while updating.</value>
+  </data>
+  <data name="news_no_thumbnail" xml:space="preserve">
+    <value>No thumbnail</value>
+  </data>
+  <data name="news_invalid_id" xml:space="preserve">
+    <value>Invalid news id.</value>
+  </data>
+  <data name="news_meta_belong_site" xml:space="preserve">
+    <value>Campus</value>
+  </data>
+  <data name="news_meta_publisher" xml:space="preserve">
+    <value>Publisher</value>
+  </data>
+  <data name="news_meta_created_by" xml:space="preserve">
+    <value>Created by</value>
+  </data>
+  <data name="news_meta_created_at" xml:space="preserve">
+    <value>Created at</value>
+  </data>
+  <data name="news_carousel_no_news" xml:space="preserve">
+    <value>No news</value>
+  </data>
+  <data name="news_carousel_untitled" xml:space="preserve">
+    <value>Untitled</value>
+  </data>
+  <data name="news_popup_create_title" xml:space="preserve">
+    <value>Create news</value>
+  </data>
+  <data name="news_popup_update_title" xml:space="preserve">
+    <value>Update news</value>
+  </data>
+  <data name="news_popup_btn_cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="news_popup_btn_save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="news_popup_required_hint" xml:space="preserve">
+    <value>Field with * is required</value>
+  </data>
+  <data name="news_field_title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="news_field_thumbnail" xml:space="preserve">
+    <value>Thumbnail (image)</value>
+  </data>
+  <data name="news_field_thumbnail_update" xml:space="preserve">
+    <value>Thumbnail (image) (optional)</value>
+  </data>
+  <data name="news_field_show_on_home" xml:space="preserve">
+    <value>Show on homepage</value>
+  </data>
+  <data name="news_field_belong_site" xml:space="preserve">
+    <value>Campus</value>
+  </data>
+  <data name="news_field_assign_section" xml:space="preserve">
+    <value>Assign section</value>
+  </data>
+  <data name="news_field_assign_sites" xml:space="preserve">
+    <value>Assign campus(s)</value>
+  </data>
+  <data name="news_field_assign_members" xml:space="preserve">
+    <value>Assign member(s)</value>
+  </data>
+  <data name="news_field_brief" xml:space="preserve">
+    <value>Brief description / content</value>
+  </data>
+  <data name="news_field_files" xml:space="preserve">
+    <value>Attach file(s)</value>
+  </data>
+  <data name="news_field_existing_files" xml:space="preserve">
+    <value>Existing files (select to delete)</value>
+  </data>
+  <data name="news_field_files_add" xml:space="preserve">
+    <value>Attach file(s) (add more)</value>
+  </data>
+  <data name="news_field_file_desc" xml:space="preserve">
+    <value>File description (when attaching files)</value>
+  </data>
+  <data name="news_val_title_req" xml:space="preserve">
+    <value>Title is required.</value>
+  </data>
+  <data name="news_val_thumb_req" xml:space="preserve">
+    <value>Thumbnail image is required.</value>
+  </data>
+  <data name="news_val_file_desc_req" xml:space="preserve">
+    <value>File description is required when attaching files.</value>
+  </data>
+  <data name="news_val_brief_req" xml:space="preserve">
+    <value>Brief description is required.</value>
+  </data>
+  <data name="news_val_belong_site_req" xml:space="preserve">
+    <value>Campus is required.</value>
+  </data>
+  <data name="news_val_assign_sites_req" xml:space="preserve">
+    <value>Assign campus(s) is required.</value>
+  </data>
+  <data name="news_val_section_req" xml:space="preserve">
+    <value>Assign section is required.</value>
+  </data>
+  <data name="news_ph_title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="news_ph_file_desc" xml:space="preserve">
+    <value>File description (for attachments)</value>
+  </data>
+  <data name="news_ph_brief" xml:space="preserve">
+    <value>Brief description / content</value>
+  </data>
+  <data name="news_ph_belong_site" xml:space="preserve">
+    <value>Campus…</value>
+  </data>
+  <data name="news_ph_no_data_load" xml:space="preserve">
+    <value>Open dropdown to load campuses</value>
+  </data>
+  <data name="news_ph_no_data_no_match" xml:space="preserve">
+    <value>No matching campus</value>
+  </data>
+  <data name="news_ph_assign_sites" xml:space="preserve">
+    <value>Assign campus(s)…</value>
+  </data>
+  <data name="news_ph_assign_section" xml:space="preserve">
+    <value>Assign section</value>
+  </data>
+  <data name="news_ph_assign_members" xml:space="preserve">
+    <value>Assign member(s)…</value>
+  </data>
+  <data name="news_ph_search_users" xml:space="preserve">
+    <value>Search users...</value>
+  </data>
+  <data name="news_err_load_sites" xml:space="preserve">
+    <value>Could not load campuses.</value>
+  </data>
+  <data name="news_err_load_sections" xml:space="preserve">
+    <value>Could not load sections.</value>
+  </data>
+  <data name="news_err_save" xml:space="preserve">
+    <value>Could not save news.</value>
+  </data>
+  <data name="news_err_update" xml:space="preserve">
+    <value>Could not update news.</value>
+  </data>
+  <data name="news_err_invalid_id" xml:space="preserve">
+    <value>Invalid editing id.</value>
+  </data>
+  <data name="noti_popup_create_title" xml:space="preserve">
+    <value>Create notification</value>
+  </data>
+  <data name="noti_popup_update_title" xml:space="preserve">
+    <value>Update notification</value>
+  </data>
+  <data name="noti_popup_btn_cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="noti_popup_btn_save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="noti_popup_required_hint" xml:space="preserve">
+    <value>Field with * is required</value>
+  </data>
+  <data name="noti_field_title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="noti_field_from_date" xml:space="preserve">
+    <value>From date</value>
+  </data>
+  <data name="noti_field_to_date" xml:space="preserve">
+    <value>To date</value>
+  </data>
+  <data name="noti_field_content" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="noti_field_attach_files" xml:space="preserve">
+    <value>Attach file(s)</value>
+  </data>
+  <data name="noti_field_file_desc" xml:space="preserve">
+    <value>File description</value>
+  </data>
+  <data name="noti_field_file_desc_update" xml:space="preserve">
+    <value>File description (when uploading files)</value>
+  </data>
+  <data name="noti_field_existing_files" xml:space="preserve">
+    <value>Existing files (select to delete)</value>
+  </data>
+  <data name="noti_field_upload_more" xml:space="preserve">
+    <value>Upload more file(s)</value>
+  </data>
+  <data name="noti_col_section" xml:space="preserve">
+    <value>Section</value>
+  </data>
+  <data name="noti_val_title_req" xml:space="preserve">
+    <value>Title is required.</value>
+  </data>
+  <data name="noti_val_file_desc_req" xml:space="preserve">
+    <value>File description is required.</value>
+  </data>
+  <data name="noti_val_from_req" xml:space="preserve">
+    <value>From date is required.</value>
+  </data>
+  <data name="noti_val_to_req" xml:space="preserve">
+    <value>To date is required.</value>
+  </data>
+  <data name="noti_val_to_after_from" xml:space="preserve">
+    <value>To date must be on or after from date.</value>
+  </data>
+  <data name="noti_val_content_req" xml:space="preserve">
+    <value>Content is required.</value>
+  </data>
+  <data name="noti_val_attach_req" xml:space="preserve">
+    <value>Attach file is required.</value>
+  </data>
+  <data name="noti_val_issue_site_req" xml:space="preserve">
+    <value>Issue campus is required.</value>
+  </data>
+  <data name="noti_val_assign_sites_req" xml:space="preserve">
+    <value>Assign campuses is required.</value>
+  </data>
+  <data name="noti_val_section_req" xml:space="preserve">
+    <value>Issue section is required.</value>
+  </data>
+  <data name="noti_val_file_desc_upload_req" xml:space="preserve">
+    <value>File description is required when uploading files.</value>
+  </data>
+  <data name="noti_ph_title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="noti_ph_file_desc" xml:space="preserve">
+    <value>File description</value>
+  </data>
+  <data name="noti_ph_content" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="noti_ph_issue_site" xml:space="preserve">
+    <value>Open list to load campuses…</value>
+  </data>
+  <data name="noti_ph_assign_sites" xml:space="preserve">
+    <value>Select assign campuses…</value>
+  </data>
+  <data name="noti_ph_section" xml:space="preserve">
+    <value>Select section</value>
+  </data>
+  <data name="noti_no_data_load_sites" xml:space="preserve">
+    <value>Open dropdown to load campuses</value>
+  </data>
+  <data name="noti_no_data_no_match" xml:space="preserve">
+    <value>No matching campus</value>
+  </data>
+  <data name="noti_err_load_sites" xml:space="preserve">
+    <value>Could not load campuses.</value>
+  </data>
+  <data name="noti_err_load_sections" xml:space="preserve">
+    <value>Could not load sections.</value>
+  </data>
+  <data name="noti_err_save" xml:space="preserve">
+    <value>Could not save notification.</value>
+  </data>
+  <data name="noti_err_update" xml:space="preserve">
+    <value>Could not update notification.</value>
+  </data>
+  <data name="noti_err_invalid_id" xml:space="preserve">
+    <value>Invalid editing id.</value>
+  </data>
+  <data name="notitoast_offline_notice" xml:space="preserve">
+    <value>Main Approver {0} ({1}) will be inactive from {2} to {3}</value>
+  </data>
+  <data name="um_page_title" xml:space="preserve">
+    <value>User Management</value>
+  </data>
+  <data name="um_col_no" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="um_col_username" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="um_col_empid" xml:space="preserve">
+    <value>Emp ID</value>
+  </data>
+  <data name="um_col_fullname" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
+  <data name="um_col_email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="um_col_phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="um_col_site" xml:space="preserve">
+    <value>Campus</value>
+  </data>
+  <data name="um_col_dept" xml:space="preserve">
+    <value>University Unit</value>
+  </data>
+  <data name="um_col_section" xml:space="preserve">
+    <value>Section</value>
+  </data>
+  <data name="um_col_position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="um_col_dob" xml:space="preserve">
+    <value>DOB</value>
+  </data>
+  <data name="um_col_status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="um_status_active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="um_status_inactive" xml:space="preserve">
+    <value>Inactive</value>
+  </data>
+  <data name="um_action_edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="um_action_reset_pwd" xml:space="preserve">
+    <value>Reset Password</value>
+  </data>
+  <data name="um_action_edit_perm" xml:space="preserve">
+    <value>Edit permission</value>
+  </data>
+  <data name="um_action_lock" xml:space="preserve">
+    <value>Lock Account</value>
+  </data>
+  <data name="um_action_unlock" xml:space="preserve">
+    <value>Unlock Account</value>
+  </data>
+  <data name="um_btn_create" xml:space="preserve">
+    <value>Create User</value>
+  </data>
+  <data name="um_btn_import" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="um_import_title" xml:space="preserve">
+    <value>Import Users from Excel</value>
+  </data>
+  <data name="um_import_select_file" xml:space="preserve">
+    <value>Select Excel file (.xlsx)</value>
+  </data>
+  <data name="um_btn_cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="um_btn_import_do" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="um_msg_no_file" xml:space="preserve">
+    <value>Please select an Excel file.</value>
+  </data>
+  <data name="um_msg_importing" xml:space="preserve">
+    <value>Importing...</value>
+  </data>
+  <data name="um_msg_import_fail" xml:space="preserve">
+    <value>Import failed.</value>
+  </data>
+  <data name="um_msg_import_completed" xml:space="preserve">
+    <value>Import completed.</value>
+  </data>
+  <data name="um_msg_total" xml:space="preserve">
+    <value>Total: </value>
+  </data>
+  <data name="um_msg_succeeded" xml:space="preserve">
+    <value>, Succeeded: </value>
+  </data>
+  <data name="um_msg_failed_count" xml:space="preserve">
+    <value>, Failed: </value>
+  </data>
+  <data name="umf_create_title" xml:space="preserve">
+    <value>Create User</value>
+  </data>
+  <data name="umf_edit_title" xml:space="preserve">
+    <value>Edit User</value>
+  </data>
+  <data name="umf_lbl_faxcode" xml:space="preserve">
+    <value>Faxcode</value>
+  </data>
+  <data name="umf_lbl_empid" xml:space="preserve">
+    <value>EmpID</value>
+  </data>
+  <data name="umf_lbl_fullname" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
+  <data name="umf_lbl_email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="umf_lbl_phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="umf_lbl_position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="umf_lbl_dob" xml:space="preserve">
+    <value>Date of Birth</value>
+  </data>
+  <data name="umf_lbl_site" xml:space="preserve">
+    <value>Campus</value>
+  </data>
+  <data name="umf_lbl_dept" xml:space="preserve">
+    <value>University Unit</value>
+  </data>
+  <data name="umf_lbl_section" xml:space="preserve">
+    <value>Section</value>
+  </data>
+  <data name="umf_lbl_password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="umf_lbl_confirm_pwd" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="umf_lbl_avatar" xml:space="preserve">
+    <value>Avatar</value>
+  </data>
+  <data name="umf_pwd_rules" xml:space="preserve">
+    <value>Min 7 chars, 1 upper, 1 lower, 1 digit, 1 special</value>
+  </data>
+  <data name="umf_pwd_mismatch" xml:space="preserve">
+    <value>Passwords do not match</value>
+  </data>
+  <data name="umf_btn_cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="umf_btn_create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="umf_btn_save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="umf_msg_saving" xml:space="preserve">
+    <value>Saving...</value>
+  </data>
+  <data name="umf_msg_save_fail" xml:space="preserve">
+    <value>Save failed.</value>
+  </data>
+  <data name="umf_msg_created" xml:space="preserve">
+    <value>User created successfully.</value>
+  </data>
+  <data name="umf_msg_updated" xml:space="preserve">
+    <value>User updated successfully.</value>
+  </data>
+  <data name="uma_reset_title" xml:space="preserve">
+    <value>Reset Password</value>
+  </data>
+  <data name="uma_reset_confirm" xml:space="preserve">
+    <value>Are you sure you want to reset password for user</value>
+  </data>
+  <data name="uma_new_pwd_title" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="uma_new_pwd_warning" xml:space="preserve">
+    <value>Please copy the password below. Once you close this dialog, the password &lt;b&gt;cannot be recovered&lt;/b&gt;.</value>
+  </data>
+  <data name="uma_btn_copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="uma_copied" xml:space="preserve">
+    <value>Password copied to clipboard.</value>
+  </data>
+  <data name="uma_reset_failed" xml:space="preserve">
+    <value>Reset failed.</value>
+  </data>
+  <data name="uma_error" xml:space="preserve">
+    <value>An error occurred.</value>
+  </data>
+  <data name="uma_lock_title" xml:space="preserve">
+    <value>Lock Account</value>
+  </data>
+  <data name="uma_unlock_title" xml:space="preserve">
+    <value>Unlock Account</value>
+  </data>
+  <data name="uma_lock_confirm" xml:space="preserve">
+    <value>Are you sure you want to deactivate user</value>
+  </data>
+  <data name="uma_unlock_confirm" xml:space="preserve">
+    <value>Are you sure you want to activate user</value>
+  </data>
+  <data name="uma_op_failed" xml:space="preserve">
+    <value>Operation failed.</value>
+  </data>
+  <data name="uma_status_changed" xml:space="preserve">
+    <value>Status changed successfully.</value>
+  </data>
+  <data name="um_copied" xml:space="preserve">
+    <value>User name copied to clipboard.</value>
+  </data>
+  <data name="um_copy_failed" xml:space="preserve">
+    <value>Failed to copy user name.</value>
+  </data>
+  <data name="import_result_title" xml:space="preserve">
+    <value>Import Result</value>
+  </data>
+  <data name="import_error_row" xml:space="preserve">
+    <value>Row</value>
+  </data>
+  <data name="import_error_issuer" xml:space="preserve">
+    <value>Issuer</value>
+  </data>
+  <data name="import_error_message" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="urp_user_account" xml:space="preserve">
+    <value>User account</value>
+  </data>
+  <data name="urp_group" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="urp_group_toggle_hint" xml:space="preserve">
+    <value>Toggle all permissions in this group</value>
+  </data>
+  <data name="urp_permission" xml:space="preserve">
+    <value>Permission</value>
+  </data>
+  <data name="urp_super_user" xml:space="preserve">
+    <value>Super User</value>
+  </data>
+  <data name="urp_super_user_hint" xml:space="preserve">
+    <value>Super User - full system permissions</value>
+  </data>
+  <data name="urp_msg_save_failed" xml:space="preserve">
+    <value>Unable to save permissions.</value>
+  </data>
+  <data name="urp_msg_saved" xml:space="preserve">
+    <value>Permissions saved successfully.</value>
+  </data>
+  <data name="urp_msg_missing_user" xml:space="preserve">
+    <value>Missing user information.</value>
+  </data>
+  <data name="urp_msg_load_failed" xml:space="preserve">
+    <value>Unable to load permission list.</value>
+  </data>
+  <data name="us_page_title" xml:space="preserve">
+    <value>User detail</value>
+  </data>
+  <data name="us_photo_click" xml:space="preserve">
+    <value>Profile photo (click to change)</value>
+  </data>
+  <data name="us_photo_label" xml:space="preserve">
+    <value>Profile photo</value>
+  </data>
+  <data name="us_grp_personal" xml:space="preserve">
+    <value>Personal information</value>
+  </data>
+  <data name="us_grp_work" xml:space="preserve">
+    <value>Work information</value>
+  </data>
+  <data name="us_grp_online" xml:space="preserve">
+    <value>Online/Offline Settings</value>
+  </data>
+  <data name="us_lbl_empid" xml:space="preserve">
+    <value>Staff ID</value>
+  </data>
+  <data name="us_lbl_username" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="us_lbl_fullname" xml:space="preserve">
+    <value>Full name</value>
+  </data>
+  <data name="us_lbl_phone" xml:space="preserve">
+    <value>Phone number</value>
+  </data>
+  <data name="us_lbl_dob" xml:space="preserve">
+    <value>Date of birth</value>
+  </data>
+  <data name="us_lbl_change_pwd" xml:space="preserve">
+    <value>Change password</value>
+  </data>
+  <data name="us_lbl_current_pwd" xml:space="preserve">
+    <value>Current password</value>
+  </data>
+  <data name="us_lbl_new_pwd" xml:space="preserve">
+    <value>New password</value>
+  </data>
+  <data name="us_lbl_confirm_pwd" xml:space="preserve">
+    <value>Confirm password</value>
+  </data>
+  <data name="us_lbl_site" xml:space="preserve">
+    <value>Campus / area</value>
+  </data>
+  <data name="us_lbl_dept" xml:space="preserve">
+    <value>University Unit</value>
+  </data>
+  <data name="us_lbl_section" xml:space="preserve">
+    <value>Section</value>
+  </data>
+  <data name="us_lbl_position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="us_lbl_email" xml:space="preserve">
+    <value>Contact email</value>
+  </data>
+  <data name="us_lbl_online" xml:space="preserve">
+    <value>Online</value>
+  </data>
+  <data name="us_lbl_offline_from" xml:space="preserve">
+    <value>Offline from</value>
+  </data>
+  <data name="us_lbl_offline_to" xml:space="preserve">
+    <value>Offline to</value>
+  </data>
+  <data name="us_lbl_offline_comment" xml:space="preserve">
+    <value>Offline comment</value>
+  </data>
+  <data name="us_btn_save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="us_swal_warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="us_swal_success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="us_swal_error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="us_pwd_mismatch" xml:space="preserve">
+    <value>New password and confirmation do not match.</value>
+  </data>
+  <data name="us_pwd_required" xml:space="preserve">
+    <value>Please enter both current password and new password.</value>
+  </data>
+  <data name="us_change_pwd_failed" xml:space="preserve">
+    <value>Failed to change password.</value>
+  </data>
+  <data name="us_save_success" xml:space="preserve">
+    <value>Your data has been saved.</value>
+  </data>
+  <data name="us_save_error" xml:space="preserve">
+    <value>An error occurred while saving your profile.</value>
+  </data>
+  <data name="us_offline_required" xml:space="preserve">
+    <value>Please fill in both offline period and comment when setting the account offline.</value>
+  </data>
+  <data name="us_offline_invalid_range" xml:space="preserve">
+    <value>Offline 'from' time must be before 'to' time.</value>
+  </data>
+  <data name="us_offline_future" xml:space="preserve">
+    <value>Offline 'to' time must be in the future.</value>
+  </data>
+  <data name="us_status_error" xml:space="preserve">
+    <value>Can't update user status. Please try again.</value>
+  </data>
+  <data name="us_status_error2" xml:space="preserve">
+    <value>An error occurred while updating user status.</value>
+  </data>
+  <data name="sm_page_title" xml:space="preserve">
+    <value>Section Management</value>
+  </data>
+  <data name="sm_col_no" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="sm_col_name" xml:space="preserve">
+    <value>Section / Academic Division Name</value>
+  </data>
+  <data name="sm_col_short_name" xml:space="preserve">
+    <value>Short Name</value>
+  </data>
+  <data name="sm_col_site" xml:space="preserve">
+    <value>Campus</value>
+  </data>
+  <data name="sm_col_dept" xml:space="preserve">
+    <value>University Unit</value>
+  </data>
+  <data name="sm_col_main_approver" xml:space="preserve">
+    <value>Main Approver</value>
+  </data>
+  <data name="sm_col_backup_approver" xml:space="preserve">
+    <value>Backup Approver</value>
+  </data>
+  <data name="sm_col_section_pic" xml:space="preserve">
+    <value>Person in Charge</value>
+  </data>
+  <data name="sm_col_section_deputy" xml:space="preserve">
+    <value>Deputy Head</value>
+  </data>
+  <data name="sm_col_action" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="sm_col_status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="sm_col_created" xml:space="preserve">
+    <value>Created</value>
+  </data>
+  <data name="sm_status_active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="sm_status_inactive" xml:space="preserve">
+    <value>Inactive</value>
+  </data>
+  <data name="sm_action_edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="sm_action_copy" xml:space="preserve">
+    <value>Copy Section Name</value>
+  </data>
+  <data name="sm_copied" xml:space="preserve">
+    <value>Section name copied to clipboard.</value>
+  </data>
+  <data name="sm_copy_failed" xml:space="preserve">
+    <value>Failed to copy section name.</value>
+  </data>
+  <data name="sm_btn_create" xml:space="preserve">
+    <value>Create Section</value>
+  </data>
+  <data name="sm_btn_import" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="sm_import_title" xml:space="preserve">
+    <value>Import Sections from Excel</value>
+  </data>
+  <data name="sm_import_select_file" xml:space="preserve">
+    <value>Select Excel file (.xlsx)</value>
+  </data>
+  <data name="sm_btn_cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="sm_btn_import_do" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="sm_msg_no_file" xml:space="preserve">
+    <value>Please select an Excel file.</value>
+  </data>
+  <data name="sm_msg_importing" xml:space="preserve">
+    <value>Importing...</value>
+  </data>
+  <data name="sm_msg_import_fail" xml:space="preserve">
+    <value>Import failed.</value>
+  </data>
+  <data name="sm_msg_import_completed" xml:space="preserve">
+    <value>Import completed.</value>
+  </data>
+  <data name="sm_msg_total" xml:space="preserve">
+    <value>Total:</value>
+  </data>
+  <data name="sm_msg_succeeded" xml:space="preserve">
+    <value>Succeeded:</value>
+  </data>
+  <data name="sm_msg_failed_count" xml:space="preserve">
+    <value>Failed:</value>
+  </data>
+  <data name="smf_lbl_name" xml:space="preserve">
+    <value>Section / Academic Division Name</value>
+  </data>
+  <data name="smf_lbl_eng_name" xml:space="preserve">
+    <value>English Name</value>
+  </data>
+  <data name="smf_lbl_short_name" xml:space="preserve">
+    <value>Short Name</value>
+  </data>
+  <data name="smf_lbl_site" xml:space="preserve">
+    <value>Campus</value>
+  </data>
+  <data name="smf_lbl_dept" xml:space="preserve">
+    <value>University Unit</value>
+  </data>
+  <data name="smf_lbl_main_approver" xml:space="preserve">
+    <value>Main Approver</value>
+  </data>
+  <data name="smf_lbl_backup_approver" xml:space="preserve">
+    <value>Backup Approver</value>
+  </data>
+  <data name="smf_lbl_main_lead" xml:space="preserve">
+    <value>Person in Charge</value>
+  </data>
+  <data name="smf_lbl_backup_lead" xml:space="preserve">
+    <value>Deputy Head</value>
+  </data>
+  <data name="smf_lbl_note" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="smf_create_title" xml:space="preserve">
+    <value>Create Section</value>
+  </data>
+  <data name="smf_edit_title" xml:space="preserve">
+    <value>Edit Section</value>
+  </data>
+  <data name="smf_btn_cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="smf_btn_create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="smf_btn_save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="smf_msg_saving" xml:space="preserve">
+    <value>Saving...</value>
+  </data>
+  <data name="smf_msg_save_fail" xml:space="preserve">
+    <value>Save failed.</value>
+  </data>
+  <data name="smf_msg_created" xml:space="preserve">
+    <value>Section created successfully.</value>
+  </data>
+  <data name="smf_msg_updated" xml:space="preserve">
+    <value>Section updated successfully.</value>
+  </data>
+  <data name="smf_msg_error" xml:space="preserve">
+    <value>An error occurred.</value>
+  </data>
+  <data name="dm_page_title" xml:space="preserve">
+    <value>University Unit Management</value>
+  </data>
+  <data name="dm_col_no" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="dm_col_name" xml:space="preserve">
+    <value>University Unit Name</value>
+  </data>
+  <data name="dm_col_short_name" xml:space="preserve">
+    <value>Short Name</value>
+  </data>
+  <data name="dm_col_site" xml:space="preserve">
+    <value>Campus</value>
+  </data>
+  <data name="dm_col_main_approver" xml:space="preserve">
+    <value>Main Approver</value>
+  </data>
+  <data name="dm_col_backup_approver" xml:space="preserve">
+    <value>Backup Approver</value>
+  </data>
+  <data name="dm_col_description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="dm_col_action" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="dm_col_status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="dm_col_created" xml:space="preserve">
+    <value>Created</value>
+  </data>
+  <data name="dm_status_active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="dm_status_inactive" xml:space="preserve">
+    <value>Inactive</value>
+  </data>
+  <data name="dm_action_edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="dm_action_copy" xml:space="preserve">
+    <value>Copy University Unit Name</value>
+  </data>
+  <data name="dm_copied" xml:space="preserve">
+    <value>University Unit name copied to clipboard.</value>
+  </data>
+  <data name="dm_copy_failed" xml:space="preserve">
+    <value>Failed to copy university unit name.</value>
+  </data>
+  <data name="dm_btn_create" xml:space="preserve">
+    <value>Create University Unit</value>
+  </data>
+  <data name="dm_btn_import" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="dm_import_title" xml:space="preserve">
+    <value>Import University Units from Excel</value>
+  </data>
+  <data name="dm_import_select_file" xml:space="preserve">
+    <value>Select Excel file (.xlsx)</value>
+  </data>
+  <data name="dm_btn_cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="dm_btn_import_do" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="dm_msg_no_file" xml:space="preserve">
+    <value>Please select an Excel file.</value>
+  </data>
+  <data name="dm_msg_importing" xml:space="preserve">
+    <value>Importing...</value>
+  </data>
+  <data name="dm_msg_import_fail" xml:space="preserve">
+    <value>Import failed.</value>
+  </data>
+  <data name="dm_msg_import_completed" xml:space="preserve">
+    <value>Import completed.</value>
+  </data>
+  <data name="dm_msg_total" xml:space="preserve">
+    <value>Total:</value>
+  </data>
+  <data name="dm_msg_succeeded" xml:space="preserve">
+    <value>Succeeded:</value>
+  </data>
+  <data name="dm_msg_failed_count" xml:space="preserve">
+    <value>Failed:</value>
+  </data>
+  <data name="dmf_lbl_name" xml:space="preserve">
+    <value>University Unit Name</value>
+  </data>
+  <data name="dmf_lbl_short_name" xml:space="preserve">
+    <value>Short Name</value>
+  </data>
+  <data name="dmf_lbl_site" xml:space="preserve">
+    <value>Campus</value>
+  </data>
+  <data name="dmf_lbl_main_approver" xml:space="preserve">
+    <value>Main Approver</value>
+  </data>
+  <data name="dmf_lbl_backup_approver" xml:space="preserve">
+    <value>Backup Approver</value>
+  </data>
+  <data name="dmf_lbl_description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="dmf_create_title" xml:space="preserve">
+    <value>Create University Unit</value>
+  </data>
+  <data name="dmf_edit_title" xml:space="preserve">
+    <value>Edit University Unit</value>
+  </data>
+  <data name="dmf_btn_cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="dmf_btn_create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="dmf_btn_save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="dmf_msg_saving" xml:space="preserve">
+    <value>Saving...</value>
+  </data>
+  <data name="dmf_msg_save_fail" xml:space="preserve">
+    <value>Save failed.</value>
+  </data>
+  <data name="dmf_msg_created" xml:space="preserve">
+    <value>University Unit created successfully.</value>
+  </data>
+  <data name="dmf_msg_updated" xml:space="preserve">
+    <value>University Unit updated successfully.</value>
+  </data>
+  <data name="dmf_msg_error" xml:space="preserve">
+    <value>An error occurred.</value>
+  </data>
+  <data name="wfr_progress_step" xml:space="preserve">
+    <value>Steps</value>
+  </data>
+  <data name="wfr_active_filters" xml:space="preserve">
+    <value>Active filters:</value>
+  </data>
+  <data name="wfr_chart_no_data" xml:space="preserve">
+    <value>No data available</value>
+  </data>
+  <data name="wfr_chart_ratio" xml:space="preserve">
+    <value>Ratio</value>
+  </data>
+  <data name="wfr_chart_y_requests" xml:space="preserve">
+    <value>Requests</value>
+  </data>
+  <data name="wfr_grid_search" xml:space="preserve">
+    <value>Search...</value>
+  </data>
+  <data name="wfr_highcharts_missing" xml:space="preserve">
+    <value>Highcharts is not loaded.</value>
+  </data>
+  <data name="wfr_no_data_filtered" xml:space="preserve">
+    <value>No records found for the selected filters.</value>
+  </data>
+  <data name="wfr_requests_export_title" xml:space="preserve">
+    <value>Workflow Requests Report</value>
+  </data>
+  <data name="wfr_theme_dark_moon" xml:space="preserve">
+    <value>Dark Moon</value>
+  </data>
+  <data name="admin_btn_export_excel" xml:space="preserve">
+    <value>Export Excel</value>
+  </data>
+  <data name="admin_msg_exporting" xml:space="preserve">
+    <value>Exporting...</value>
+  </data>
+  <data name="admin_msg_export_fail" xml:space="preserve">
+    <value>Export failed.</value>
+  </data>
+  <data name="not_access_title" xml:space="preserve">
+    <value>No Access</value>
+  </data>
+  <data name="not_access_message_1" xml:space="preserve">
+    <value>You do not have permission to access this feature.</value>
+  </data>
+  <data name="not_access_message_2" xml:space="preserve">
+    <value>Please contact your administrator or the MIS university unit for access support.</value>
+  </data>
+  <data name="not_access_btn_back" xml:space="preserve">
+    <value>Go Back</value>
+  </data>
+  <data name="not_access_btn_home" xml:space="preserve">
+    <value>Go to Home</value>
+  </data>
+  <data name="not_access_note" xml:space="preserve">
+    <value>Employee Access · Permission Required</value>
+  </data>
+  <data name="ot_lines_title" xml:space="preserve">
+    <value>Chi tiết yêu cầu</value>
+  </data>
+  <data name="grid_btn_add" xml:space="preserve">
+    <value>Thêm dòng</value>
+  </data>
+  <data name="grid_btn_download_template" xml:space="preserve">
+    <value>Tải mẫu</value>
+  </data>
+  <data name="grid_btn_import_excel" xml:space="preserve">
+    <value>Import Excel</value>
+  </data>
+  <data name="grid_col_no" xml:space="preserve">
+    <value>STT</value>
+  </data>
+  <data name="ot_col_emp_id" xml:space="preserve">
+    <value>Mã NV</value>
+  </data>
+  <data name="ot_col_fullname" xml:space="preserve">
+    <value>Họ và tên</value>
+  </data>
+  <data name="ot_col_request_type" xml:space="preserve">
+    <value>Loại yêu cầu</value>
+  </data>
+  <data name="ot_col_shift" xml:space="preserve">
+    <value>Ca-Kíp</value>
+  </data>
+  <data name="ot_col_start_time" xml:space="preserve">
+    <value>Từ giờ</value>
+  </data>
+  <data name="ot_col_end_time" xml:space="preserve">
+    <value>Đến giờ</value>
+  </data>
+  <data name="ot_col_cross_shift" xml:space="preserve">
+    <value>Thông ca</value>
+  </data>
+  <data name="ot_col_work_hours" xml:space="preserve">
+    <value>Số giờ</value>
+  </data>
+  <data name="ot_work_hours_must_positive" xml:space="preserve">
+    <value>Số giờ phải lớn hơn 0.</value>
+  </data>
+  <data name="ot_overlap_current" xml:space="preserve">
+    <value>Dòng {0}: Mã NV '{1}' bị trùng với dòng {3} cho yêu cầu {2} từ {4} đến {5}.</value>
+  </data>
+  <data name="ot_overlap_existing" xml:space="preserve">
+    <value>Dòng {0}: Mã NV '{1}' đã có yêu cầu {2} từ {3} đến {4} trong phiếu {5}.</value>
+  </data>
+  <data name="ot_col_reason" xml:space="preserve">
+    <value>Lý do</value>
+  </data>
+  <data name="ot_time_range_invalid" xml:space="preserve">
+    <value>Đến giờ phải lớn hơn Từ giờ.</value>
+  </data>
+  <data name="ot_reason_required" xml:space="preserve">
+    <value>Chưa nhập lý do.</value>
+  </data>
+  <data name="ot_line_required" xml:space="preserve">
+    <value>Vui lòng nhập ít nhất 1 dòng làm thêm giờ.</value>
+  </data>
+  <data name="ot_summary_format" xml:space="preserve">
+    <value>Tổng: {0} dòng</value>
+  </data>
+  <data name="ot_validate_required" xml:space="preserve">
+    <value>Vui lòng nhập thông tin.</value>
+  </data>
+  <data name="ot_request_type_overtime" xml:space="preserve">
+    <value>Chấm công tăng ca</value>
+  </data>
+  <data name="ot_request_type_additional_attendance" xml:space="preserve">
+    <value>Chấm công bổ sung</value>
+  </data>
+  <data name="ot_shift_type_shift" xml:space="preserve">
+    <value>Ca</value>
+  </data>
+  <data name="ot_shift_type_kip" xml:space="preserve">
+    <value>Kíp</value>
+  </data>
+  <data name="ot_ref_col_shift" xml:space="preserve">
+    <value>Ca</value>
+  </data>
+  <data name="ot_ref_col_shift_code" xml:space="preserve">
+    <value>Mã ca</value>
+  </data>
+  <data name="ot_ref_col_working_hours" xml:space="preserve">
+    <value>Giờ làm</value>
+  </data>
+  <data name="ot_ref_col_break_times" xml:space="preserve">
+    <value>Giờ nghỉ</value>
+  </data>
+  <data name="ot_ref_col_type" xml:space="preserve">
+    <value>Loại</value>
+  </data>
+  <data name="ot_shift_ref_title" xml:space="preserve">
+    <value>Bảng giờ ca tham khảo</value>
+  </data>
+  <data name="ot_shift_ref_search" xml:space="preserve">
+    <value>Tìm ca...</value>
+  </data>
+  <data name="ot_invalid_approval_setup" xml:space="preserve">
+    <value>Người phê duyệt chưa được thiết lập đầy đủ.</value>
+  </data>
+  <data name="ot_submit_success" xml:space="preserve">
+    <value>Tạo phiếu làm thêm giờ thành công.</value>
+  </data>
+  <data name="common_approval_flow_warning" xml:space="preserve">
+    <value>Chưa đủ thông tin cấu hình cho luồng phê duyệt. Vui lòng liên hệ quản trị viên.</value>
+  </data>
+  <data name="ot_grid_validation_failed" xml:space="preserve">
+    <value>Vui lòng điền đầy đủ thông tin trong phần chi tiết yêu cầu.</value>
+  </data>
+  <data name="workflow_edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="common_remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="security_display_title" xml:space="preserve">
+    <value>Employee In/Out List</value>
+  </data>
+  <data name="security_display_page_info" xml:space="preserve">
+    <value>Total {2} | Page {0}/{1}</value>
+  </data>
+  <data name="home_security_status_confirmed" xml:space="preserve">
+    <value>Security confirmed</value>
+  </data>
+  <data name="home_security_status_pending" xml:space="preserve">
+    <value>Processing</value>
+  </data>
+  <data name="home_security_status_total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="home_security_status_waiting" xml:space="preserve">
+    <value>Waiting for confirm</value>
+  </data>
+  <data name="wfr_export_sheet_creating" xml:space="preserve">
+    <value>Creating sheet..</value>
+  </data>
+  <data name="wtr_col_from" xml:space="preserve">
+    <value>Điểm đi / From</value>
+  </data>
+  <data name="workflow_export_row" xml:space="preserve">
+    <value>rows</value>
+  </data>
+  <data name="wfr_follow_by_detail" xml:space="preserve">
+    <value>Year details</value>
+  </data>
+  <data name="wfr_chart_title_by_dept" xml:space="preserve">
+    <value>Summary Request by University Unit/Section</value>
+  </data>
+  <data name="wfr_chart_title_by_issuer" xml:space="preserve">
+    <value>Summary Request by Requester</value>
+  </data>
+  <data name="wfr_chart_title_by_status" xml:space="preserve">
+    <value>Summary Request by Status</value>
+  </data>
+  <data name="wfr_chart_title_by_type" xml:space="preserve">
+    <value>Summary Request by Type</value>
+  </data>
+  <data name="wfr_chart_title_by_approver" xml:space="preserve">
+    <value>Summary Request by Approval</value>
+  </data>
+  <data name="wfr_chart_title_dept_prefix" xml:space="preserve">
+    <value>Summary Request – </value>
+  </data>
+  <data name="wfr_chart_title_approval_prefix" xml:space="preserve">
+    <value>Summary Approval for</value>
+  </data>
+  <data name="wfr_chart_y_approvals" xml:space="preserve">
+    <value>Approvals</value>
+  </data>
+  <data name="wfr_chart_total_requests" xml:space="preserve">
+    <value>Total requests</value>
+  </data>
+  <data name="wfr_chart_btn_back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="wfr_filter_placeholder_requester" xml:space="preserve">
+    <value>Requester name</value>
+  </data>
+  <data name="wfr_filter_placeholder_user_name" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="wfr_filter_placeholder_all_sections" xml:space="preserve">
+    <value>All sections</value>
+  </data>
+  <data name="wfr_filter_placeholder_all_types" xml:space="preserve">
+    <value>All types</value>
+  </data>
+  <data name="wfr_filter_placeholder_all_cases" xml:space="preserve">
+    <value>All cases</value>
+  </data>
+  <data name="wfr_filter_placeholder_all_depts" xml:space="preserve">
+    <value>All university units</value>
+  </data>
+  <data name="wfr_filter_placeholder_approver" xml:space="preserve">
+    <value>e.g. VNAL</value>
+  </data>
+  <data name="wfr_grid_export_excel" xml:space="preserve">
+    <value>Export Excel</value>
+  </data>
+  <data name="wfr_grid_export_excel_hint" xml:space="preserve">
+    <value>Export all rows to Excel</value>
+  </data>
+  <data name="wfr_chip_from" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="wfr_chip_to" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="wfr_chip_user" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="wfr_chip_approver_status" xml:space="preserve">
+    <value>Approval Action</value>
+  </data>
+  <data name="security_display_clear_filters" xml:space="preserve">
+    <value>Clear Filter</value>
+  </data>
+  <data name="leave_balance_setting" xml:space="preserve">
+    <value>Leave balance settings</value>
+  </data>
+  <data name="machine_setting" xml:space="preserve">
+    <value>Machine settings</value>
+  </data>
+  <data name="ms_import_title" xml:space="preserve">
+    <value>Import machine settings from Excel</value>
+  </data>
+  <data name="ms_col_machine_code" xml:space="preserve">
+    <value>Machine code</value>
+  </data>
+  <data name="ms_col_machine_name" xml:space="preserve">
+    <value>Machine name</value>
+  </data>
+  <data name="ms_col_serial_no" xml:space="preserve">
+    <value>Serial No</value>
+  </data>
+  <data name="ms_col_current_name" xml:space="preserve">
+    <value>Current name</value>
+  </data>
+  <data name="ms_col_current_serial_no" xml:space="preserve">
+    <value>Current serial No</value>
+  </data>
+  <data name="ms_col_current_note" xml:space="preserve">
+    <value>Current note</value>
+  </data>
+  <data name="ms_err_no_rows" xml:space="preserve">
+    <value>No machine rows found in the file.</value>
+  </data>
+  <data name="ms_err_code_required" xml:space="preserve">
+    <value>Machine code is required.</value>
+  </data>
+  <data name="ms_err_code_max" xml:space="preserve">
+    <value>Machine code must be at most 200 characters.</value>
+  </data>
+  <data name="ms_err_action_required" xml:space="preserve">
+    <value>Action is required.</value>
+  </data>
+  <data name="ms_err_action_invalid" xml:space="preserve">
+    <value>Action must be C, U, or D.</value>
+  </data>
+  <data name="ms_err_name_required" xml:space="preserve">
+    <value>Machine name is required.</value>
+  </data>
+  <data name="ms_err_name_max" xml:space="preserve">
+    <value>Machine name must be at most 500 characters.</value>
+  </data>
+  <data name="ms_err_serial_max" xml:space="preserve">
+    <value>Serial number must be at most 200 characters.</value>
+  </data>
+  <data name="ms_err_note_max" xml:space="preserve">
+    <value>Note must be at most 1000 characters.</value>
+  </data>
+  <data name="ms_err_duplicate_code" xml:space="preserve">
+    <value>Duplicate machine code '{0}' in the file.</value>
+  </data>
+  <data name="ms_err_duplicate_code_serial" xml:space="preserve">
+    <value>Duplicate machine code '{0}' and serial number '{1}' in the file.</value>
+  </data>
+  <data name="ms_err_code_exists" xml:space="preserve">
+    <value>Machine code '{0}' already exists.</value>
+  </data>
+  <data name="ms_err_code_serial_exists" xml:space="preserve">
+    <value>Machine code '{0}' and serial number '{1}' already exists.</value>
+  </data>
+  <data name="ms_err_code_update_not_found" xml:space="preserve">
+    <value>Machine code '{0}' not found for update.</value>
+  </data>
+  <data name="ms_err_serial_update_invalid" xml:space="preserve">
+    <value>Machine code '{0}' exists but serial number '{1}' is invalid for update.</value>
+  </data>
+  <data name="ms_err_code_delete_not_found" xml:space="preserve">
+    <value>Machine code '{0}' not found for delete.</value>
+  </data>
+  <data name="ms_err_code_serial_delete_invalid" xml:space="preserve">
+    <value>Machine code '{0}' or serial number '{1}' is invalid for delete.</value>
+  </data>
+  <data name="ms_err_code_or_serial_delete_invalid" xml:space="preserve">
+    <value>Machine code '{0}' or serial number is invalid for delete.</value>
+  </data>
+  <data name="upload_invalid_files_title" xml:space="preserve">
+    <value>Some files are invalid</value>
+  </data>
+  <data name="upload_empty_file" xml:space="preserve">
+    <value>File "{fileName}" is empty (0 bytes)</value>
+  </data>
+  <data name="upload_file_too_large" xml:space="preserve">
+    <value>File "{fileName}" exceeds the {maxSize} limit.</value>
+  </data>
+  <data name="upload_invalid_clipboard_files_title" xml:space="preserve">
+    <value>Some clipboard files are invalid</value>
+  </data>
+  <data name="upload_invalid_file" xml:space="preserve">
+    <value>File "{fileName}" is not valid.</value>
+  </data>
+  <data name="upload_max_files_exceeded" xml:space="preserve">
+    <value>You can only select up to {maxFiles} file(s).</value>
+  </data>
+  <data name="upload_unnamed_file" xml:space="preserve">
+    <value>unnamed</value>
+  </data>
+  <data name="upload_unsupported_type" xml:space="preserve">
+    <value>This file type is not supported.</value>
+  </data>
+  <data name="wfr_col_lang_chinese" xml:space="preserve">
+    <value>Chinese</value>
+  </data>
+  <data name="calendar_menu" xml:space="preserve">
+    <value>Working Calendar</value>
+  </data>
+  <data name="calendar_title" xml:space="preserve">
+    <value>Working Calendar</value>
+  </data>
+  <data name="grid_btn_export_excel" xml:space="preserve">
+    <value>Export Excel</value>
+  </data>
+  <data name="customer_setting" xml:space="preserve">
+    <value>Customer setting</value>
+  </data>
+  <data name="cs_import_title" xml:space="preserve">
+    <value>Import customer setting</value>
+  </data>
+  <data name="cs_col_customer_code" xml:space="preserve">
+    <value>Customer code</value>
+  </data>
+  <data name="cs_col_customer_name" xml:space="preserve">
+    <value>Customer name</value>
+  </data>
+  <data name="cs_err_code_required" xml:space="preserve">
+    <value>Customer code is required.</value>
+  </data>
+  <data name="cs_err_code_max" xml:space="preserve">
+    <value>Customer code must be at most 200 characters.</value>
+  </data>
+  <data name="cs_err_name_required" xml:space="preserve">
+    <value>Customer name is required.</value>
+  </data>
+  <data name="cs_err_name_max" xml:space="preserve">
+    <value>Customer name must be at most 200 characters.</value>
+  </data>
+  <data name="cs_err_duplicate_code" xml:space="preserve">
+    <value>Duplicate customer code '{0}' in the file.</value>
+  </data>
+  <data name="cs_err_code_exists" xml:space="preserve">
+    <value>Customer code '{0}' already exists.</value>
+  </data>
+  <data name="cs_err_code_update_not_found" xml:space="preserve">
+    <value>Customer code '{0}' not found for update.</value>
+  </data>
+  <data name="cs_err_code_delete_not_found" xml:space="preserve">
+    <value>Customer code '{0}' not found for delete.</value>
+  </data>
+  <data name="product_setting" xml:space="preserve">
+    <value>Product setting</value>
+  </data>
+  <data name="ps_import_title" xml:space="preserve">
+    <value>Import product setting</value>
+  </data>
+  <data name="ps_col_product_code" xml:space="preserve">
+    <value>Product code</value>
+  </data>
+  <data name="ps_col_product_name" xml:space="preserve">
+    <value>Product name</value>
+  </data>
+  <data name="ps_col_unit" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="ps_err_code_required" xml:space="preserve">
+    <value>Product code is required.</value>
+  </data>
+  <data name="ps_err_code_max" xml:space="preserve">
+    <value>Product code must be at most 200 characters.</value>
+  </data>
+  <data name="ps_err_name_required" xml:space="preserve">
+    <value>Product name is required.</value>
+  </data>
+  <data name="ps_err_name_max" xml:space="preserve">
+    <value>Product name must be at most 500 characters.</value>
+  </data>
+  <data name="ps_err_unit_max" xml:space="preserve">
+    <value>Unit must be at most 200 characters.</value>
+  </data>
+  <data name="ps_err_duplicate_code" xml:space="preserve">
+    <value>Duplicate product code '{0}' in the file.</value>
+  </data>
+  <data name="ps_err_code_exists" xml:space="preserve">
+    <value>Product code '{0}' already exists.</value>
+  </data>
+  <data name="ps_err_code_update_not_found" xml:space="preserve">
+    <value>Product code '{0}' not found for update.</value>
+  </data>
+  <data name="ps_err_code_delete_not_found" xml:space="preserve">
+    <value>Product code '{0}' not found for delete.</value>
+  </data>
+  <data name="ng_code_setting" xml:space="preserve">
+    <value>NG Code Setting</value>
+  </data>
+  <data name="brand_university" xml:space="preserve">
+    <value>Nam Viet University</value>
+  </data>
+  <data name="brand_portal" xml:space="preserve">
+    <value>Approval portal</value>
+  </data>
+  <data name="brand_hero_title" xml:space="preserve">
+    <value>Connecting knowledge. Growing together.</value>
+  </data>
+  <data name="brand_hero_subtitle" xml:space="preserve">
+    <value>One place for university requests, collaboration and approvals.</value>
+  </data>
+  <data name="brand_campus_alt" xml:space="preserve">
+    <value>Nam Viet University campus</value>
+  </data>
+  <data name="workflow_noty_submitted_detail" xml:space="preserve">
+    <value>{0} submitted the request “{1}” ({2})</value>
+  </data>
+  <data name="noti_clear_all" xml:space="preserve">
+    <value>Mark all as read</value>
+  </data>
+</root>

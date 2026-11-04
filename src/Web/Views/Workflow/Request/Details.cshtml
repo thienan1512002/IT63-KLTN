@@ -1,0 +1,89 @@
+﻿@model Web.Models.Dtos.Workflow.RequestDetailsDto
+@using Web.Data.Enums.Workflow
+@using Web.Services.Workflow
+@{
+    ViewData["Title"] = Model.CanApprove ? "Phê duyệt yêu cầu" : "Chi tiết yêu cầu";
+    var businessDefinition = RequestFormCatalog.All.FirstOrDefault(x => x.Code == Model.TemplateCode);
+    string StatusName(RequestStatus s) => s switch { RequestStatus.Ongoing => "Đang xử lý", RequestStatus.Completed => "Đã hoàn thành", RequestStatus.Returned => "Yêu cầu bổ sung", RequestStatus.Rejected => "Đã từ chối", RequestStatus.Draft => "Bản nháp", RequestStatus.Cancelled => "Đã hủy", _ => "Chưa xác định" };
+    string PriorityName(RequestPriority p) => p switch { RequestPriority.Low => "Thấp", RequestPriority.High => "Cao", RequestPriority.Urgent => "Khẩn cấp", _ => "Bình thường" };
+    string StepName(ApprovalStepStatus s) => s switch { ApprovalStepStatus.Pending => "Đang chờ phê duyệt", ApprovalStepStatus.Approved => "Đã phê duyệt", ApprovalStepStatus.Returned => "Yêu cầu bổ sung", ApprovalStepStatus.Rejected => "Đã từ chối", ApprovalStepStatus.Cancelled => "Đã hủy", _ => "Chưa xử lý" };
+    string StepTone(ApprovalStepStatus s) => s switch { ApprovalStepStatus.Approved => "done", ApprovalStepStatus.Pending => "current", ApprovalStepStatus.Rejected or ApprovalStepStatus.Returned => "stopped", _ => "waiting" };
+}
+<link rel="stylesheet" href="~/css/workflow/request-forms.css" asp-append-version="true" />
+<div class="wf-page">
+    <nav class="wf-breadcrumb" aria-label="Đường dẫn"><a href="@(Model.CanApprove ? "/Approvals" : "/Requests")"><i class="mdi mdi-arrow-left" aria-hidden="true"></i> @(Model.CanApprove ? "Phê duyệt" : "Danh sách yêu cầu")</a><i class="mdi mdi-chevron-right" aria-hidden="true"></i><span>@Model.ApplicationNo</span></nav>
+    <section class="wf-panel wf-details">
+        <header class="wf-detail-header">
+            <div class="wf-form-heading"><span class="wf-feature-icon"><i class="mdi mdi-file-document-outline" aria-hidden="true"></i></span><div><div class="wf-title-line"><h1>@ViewData["Title"]</h1><span class="wf-badge wf-status-@((int)Model.Status)">@StatusName(Model.Status)</span></div><p class="wf-request-code">@Model.ApplicationNo</p><h2>@Model.Title</h2></div></div>
+            <div class="wf-actions"><a class="wf-button wf-button-outline" href="/Requests/Details/@Model.Id/pdf"><i class="mdi mdi-file-pdf-box" aria-hidden="true"></i> Xuất PDF</a>@if (Model.CanEdit) { <a class="wf-button wf-button-outline" href="/Requests/Edit/@Model.Id"><i class="mdi mdi-pencil-outline" aria-hidden="true"></i> Chỉnh sửa</a> }</div>
+        </header>
+        <div class="wf-meta"><span><i class="mdi mdi-account-circle-outline" aria-hidden="true"></i> @Model.CreatedBy</span><span><i class="mdi mdi-office-building" aria-hidden="true"></i> @Model.Department</span><span><i class="mdi mdi-calendar-blank-outline" aria-hidden="true"></i> @Model.CreatedAt.ToLocalTime().ToString("dd/MM/yyyy HH:mm")</span><span class="wf-type-tag">@Model.RequestType</span><span class="wf-badge wf-priority-@((int)Model.Priority)">Ưu tiên: @PriorityName(Model.Priority)</span></div>
+        @if (Model.TemplateCode is "BUSINESS_TRIP" or "LEAVE" or "VEHICLE" or "OVERTIME")
+        {
+            var operationTab = Model.TemplateCode == "VEHICLE" ? "dispatch" : Model.TemplateCode == "LEAVE" ? "leave" : "calendar";
+            <div class="wf-info-note" style="margin:0 24px 18px"><i class="mdi mdi-calendar-check" aria-hidden="true"></i><span>@(Model.Status == RequestStatus.Completed ? "Yêu cầu đã duyệt được ghi nhận vào vận hành liên quan." : "Lịch công tác và hàng chờ điều xe được tạo khi hoàn tất phê duyệt. Phép tồn được giữ chỗ khi gửi yêu cầu.") <a href="/Operations?tab=@operationTab&amp;request=@Model.Id&amp;month=@Model.BusinessData?.StartAt?.ToString("yyyy-MM")">@(operationTab == "dispatch" ? "Theo dõi điều xe →" : operationTab == "leave" ? "Xem sổ phép →" : "Xem lịch làm việc →")</a></span></div>
+        }
+        <nav class="wf-detail-tabs" role="tablist" aria-label="Thông tin yêu cầu">
+            <button type="button" role="tab" id="tab-general" class="is-active" aria-selected="true" aria-controls="panel-general" data-detail-tab="general"><i class="mdi mdi-file-document-outline" aria-hidden="true"></i> Thông tin chung</button>
+            <button type="button" role="tab" id="tab-attachments" aria-selected="false" aria-controls="panel-attachments" tabindex="-1" data-detail-tab="attachments"><i class="mdi mdi-paperclip" aria-hidden="true"></i> Tệp đính kèm <span class="wf-count">@Model.Attachments.Count</span></button>
+            <button type="button" role="tab" id="tab-history" aria-selected="false" aria-controls="panel-history" tabindex="-1" data-detail-tab="history"><i class="mdi mdi-history" aria-hidden="true"></i> Lịch sử phê duyệt</button>
+        </nav>
+        <div class="wf-detail-layout">
+            <div class="wf-detail-main">
+                <div id="panel-general" role="tabpanel" aria-labelledby="tab-general" tabindex="0" data-detail-panel="general">
+                    <section class="wf-inset-panel"><h2>Thông tin yêu cầu</h2><dl class="wf-info-table">
+                        <dt>Người đề nghị</dt><dd>@Model.CreatedBy</dd>
+                        <dt>Đơn vị</dt><dd>@Model.Department</dd>
+                        <dt>Loại yêu cầu</dt><dd>@Model.RequestType</dd>
+                        @if (Model.BusinessData == null || businessDefinition?.HasPeriod != true) { <dt>@(businessDefinition?.DateLabel ?? "Ngày yêu cầu")</dt><dd>@(Model.RequestedDate?.ToString("dd/MM/yyyy") ?? "Chưa có thông tin")</dd> }
+                        <dt>Ngày gửi</dt><dd>@(Model.SubmittedAt?.ToLocalTime().ToString("dd/MM/yyyy HH:mm") ?? "Chưa gửi phê duyệt")</dd>
+                        <dt>Người đang xử lý</dt><dd>@(string.IsNullOrWhiteSpace(Model.CurrentApprover) ? "—" : Model.CurrentApprover)</dd>
+                        @foreach (var field in Model.BusinessFields) { <dt>@field.Label</dt><dd class="wf-multiline">@field.Value</dd> }
+                        @if (Model.ParticipantNames.Count > 0) { <dt>Nhân viên tham gia</dt><dd>@string.Join(", ", Model.ParticipantNames)</dd> }
+                        <dt>@(businessDefinition?.ContentLabel ?? "Nội dung chi tiết")</dt><dd class="wf-multiline">@Model.Content</dd>
+                    </dl></section>
+                    @if (Model.BusinessItems.Count > 0)
+                    {
+                        <section class="wf-inset-panel"><h2>@businessDefinition?.LineLabel</h2><div class="wf-table-scroll"><table class="wf-history-table"><thead><tr><th>Hạng mục</th><th>Diễn giải</th><th>ĐVT</th><th>Số lượng</th>@if (businessDefinition?.PricedLines == true) { <th>Đơn giá</th><th>Thành tiền</th> }<th>Ghi chú</th></tr></thead><tbody>
+                        @foreach (var line in Model.BusinessItems) { <tr><td>@line.Item</td><td>@line.Description</td><td>@line.Unit</td><td>@line.Quantity.ToString("N2")</td>@if (businessDefinition?.PricedLines == true) { <td>@line.UnitPrice.ToString("N2")</td><td>@line.LineTotal.ToString("N2")</td> }<td>@line.Note</td></tr> }
+                        </tbody></table></div></section>
+                    }
+                    <section class="wf-inset-panel"><h2>@(businessDefinition?.PricedLines == true ? "Tổng chi phí & Lý do đề nghị" : "Thông tin bổ sung")</h2><dl class="wf-info-table">@if (Model.BusinessData != null && businessDefinition?.PricedLines == true) { <dt>Tổng tiền nguyên tệ</dt><dd>@Model.BusinessData?.OriginalAmount?.ToString("N2")</dd> }@if (Model.Amount.HasValue) { <dt>@(Model.BusinessData == null ? "Số tiền" : "Tổng tiền (VND)")</dt><dd class="wf-amount">@Model.Amount?.ToString("N2")</dd> }<dt>Lý do</dt><dd class="wf-multiline">@(string.IsNullOrWhiteSpace(Model.Reason) ? "Chưa có thông tin" : Model.Reason)</dd></dl></section>
+                </div>
+                <section id="panel-attachments" class="wf-inset-panel" role="tabpanel" aria-labelledby="tab-attachments" tabindex="0" data-detail-panel="attachments" hidden>
+                    <h2>Tệp đính kèm <span class="wf-count">@Model.Attachments.Count</span></h2>
+                    @if (Model.Attachments.Count == 0) { <div class="wf-empty"><i class="mdi mdi-folder-open-outline" aria-hidden="true"></i><h3>Chưa có tài liệu đính kèm</h3><p>Các tài liệu của yêu cầu sẽ hiển thị tại đây.</p></div> }
+                    else { <div class="wf-attachments">@foreach (var file in Model.Attachments) { <a class="wf-attachment" href="@file.Url"><i class="mdi mdi-file-document-outline" aria-hidden="true"></i><span>@file.FileName<small>@((file.FileSize / 1024d).ToString("N0")) KB</small></span><i class="mdi mdi-download" aria-hidden="true"></i></a> }</div> }
+                </section>
+                <section id="panel-history" class="wf-inset-panel" role="tabpanel" aria-labelledby="tab-history" tabindex="0" data-detail-panel="history" hidden>
+                    <h2>Lịch sử xử lý</h2>
+                    <partial name="~/Views/Workflow/Request/_RequestHistoryTable.cshtml" model="Model" />
+                </section>
+            </div>
+            <aside class="wf-approval-panel">
+                <h2>Luồng phê duyệt</h2>
+                <ol class="wf-timeline">
+                    <li class="wf-timeline-done"><span class="wf-timeline-dot" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="m6 12 4 4 8-8" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" /></svg></span><div><h3>Người tạo yêu cầu</h3><p>@Model.CreatedBy</p><time>@Model.CreatedAt.ToLocalTime().ToString("dd/MM/yyyy HH:mm")</time></div></li>
+                    @foreach (var step in Model.Steps.OrderBy(x => x.StepOrder))
+                    {
+                        <li class="wf-timeline-@StepTone(step.Status)"><span class="wf-timeline-dot" aria-hidden="true">@if (step.Status == ApprovalStepStatus.Approved) { <svg viewBox="0 0 24 24" focusable="false"><path d="m6 12 4 4 8-8" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" /></svg> }</span><div><h3>@step.StepName</h3><p>@step.ApproverName</p><span class="wf-step-status">@StepName(step.Status)</span>@if (step.ActionAt.HasValue) { <time>@step.ActionAt.Value.ToLocalTime().ToString("dd/MM/yyyy HH:mm")</time> }@if (!string.IsNullOrWhiteSpace(step.Comment)) { <blockquote>@step.Comment</blockquote> }</div></li>
+                    }
+                </ol>
+                @if (Model.Steps.Count == 0) { <p class="wf-help">Luồng phê duyệt sẽ hiển thị sau khi yêu cầu được gửi.</p> }
+                @if (Model.CanApprove)
+                {
+                    <div class="wf-approval-comment"><label for="approvalComment">Ý kiến của bạn</label><textarea id="approvalComment" rows="4" maxlength="2000" placeholder="Nhập ý kiến phê duyệt..."></textarea><div class="wf-comment-footer"><small>Bắt buộc khi từ chối hoặc yêu cầu bổ sung.</small><span id="approvalCommentCount">0/2000</span></div></div>
+                }
+            </aside>
+        </div>
+        <div id="requestActionError" class="wf-alert" role="alert" hidden></div>
+        <footer class="wf-detail-footer"><a class="wf-button" href="@(Model.CanApprove ? "/Approvals" : "/Requests")"><i class="mdi mdi-arrow-left" aria-hidden="true"></i> Quay lại</a><div class="wf-actions">
+            @if (Model.CanCancel) { <button class="wf-button wf-button-danger-outline request-action" type="button" data-action="cancel">Hủy yêu cầu</button> }
+            @if (Model.CanEdit) { <button class="wf-button wf-button-primary request-action" type="button" data-action="submit"><i class="mdi mdi-send" aria-hidden="true"></i> Gửi phê duyệt</button> }
+            @if (Model.CanApprove) { <button class="wf-button wf-button-warning request-action" type="button" data-action="return" data-comment="true"><i class="mdi mdi-undo-variant" aria-hidden="true"></i> Yêu cầu bổ sung</button><button class="wf-button wf-button-danger-outline request-action" type="button" data-action="reject" data-comment="true"><i class="mdi mdi-close" aria-hidden="true"></i> Từ chối</button><button class="wf-button wf-button-success request-action" type="button" data-action="approve"><i class="mdi mdi-check" aria-hidden="true"></i> Phê duyệt</button> }
+        </div></footer>
+    </section>
+</div>
+@section Scripts { <script>window.requestId = @Model.Id;</script><script src="~/js/workflow/request-feedback.js" asp-append-version="true"></script><script src="~/js/workflow/request-details.js" asp-append-version="true"></script> }
+
+

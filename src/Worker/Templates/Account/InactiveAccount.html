@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Main Approver Notice</title>
+  </head>
+  <body>
+    <div style="margin-bottom: 10px;">Dear you/ Bạn thân mến,</div>
+    <div class="font-larger" style="margin-bottom:5px;">We would like to inform you that user <b>{{CreateName}}</b> will be inactive for a period of time:</div>
+    <p>
+      <i>
+      Chúng tôi xin thông báo rằng tài khoản <b>{{CreateName}}</b> sẽ không hoạt
+      động một khoảng thời gian:
+      </i>
+    </p>
+    <!-- HR line-->
+    <table
+        role="presentation"
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+        width="100%"
+        style="margin-left:2px;"
+    >
+        <tr>
+            <td
+                style="
+                    border-top:1px solid #000;
+                    font-size:0;
+                    line-height:0;
+                "
+            >
+                &nbsp;
+            </td>
+        </tr>
+    </table>
+    <table>
+      <tr>
+        <td style="padding-right: 40px">[Time Period/ Khoảng thời gian]</td>
+        <td>{{DateTime}}</td>
+      </tr>
+      <tr>
+        <td>[Comment/ Ghi chú]</td>
+        <td>{{Title}}</td>
+      </tr>      
+    </table>
+    <p style="margin-top: 10px;">For more detail, <a href="{{Detail}}">Click here</a>!</p>  
+    <!-- HR line-->
+    <table
+        role="presentation"
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+        width="100%"
+        style="margin-left:2px;"
+    >
+        <tr>
+            <td
+                style="
+                    border-top:1px solid #000;
+                    font-size:0;
+                    line-height:0;
+                "
+            >
+                &nbsp;
+            </td>
+        </tr>
+    </table>
+
+    <p style="margin-top: 10px;"><i>This is automatic email from Nam Viet University system, please do not reply!</i></p>    
+
+  </body>
+  <style>
+      p{
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+
+      .font-larger {
+        font-size: larger;
+      }
+    </style>
+</html>

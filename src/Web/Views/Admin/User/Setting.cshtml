@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["title"] = Lang.GetKey("us_page_title");
+}
+
+
+<div class="card">
+    <input type="hidden" id="userName" value="@User.Identity.Name" />
+
+    <div class="card-body">
+
+        <div id="setting-form"></div>
+        <div class="float-right">
+            <div class="mx-1" id="btnSave"></div>
+            <div class="mx-1" id="btnBack"></div>
+        </div>
+    </div>
+</div>
+<script>
+    window.usI18n = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(new
+    {
+        photo_click = Lang.GetKey("us_photo_click"),
+        photo_label = Lang.GetKey("us_photo_label"),
+        grp_personal = Lang.GetKey("us_grp_personal"),
+        grp_work = Lang.GetKey("us_grp_work"),
+        grp_online = Lang.GetKey("us_grp_online"),
+        lbl_empid = Lang.GetKey("us_lbl_empid"),
+        lbl_username = Lang.GetKey("us_lbl_username"),
+        lbl_fullname = Lang.GetKey("us_lbl_fullname"),
+        lbl_phone = Lang.GetKey("us_lbl_phone"),
+        lbl_dob = Lang.GetKey("us_lbl_dob"),
+        lbl_change_pwd = Lang.GetKey("us_lbl_change_pwd"),
+        lbl_current_pwd = Lang.GetKey("us_lbl_current_pwd"),
+        lbl_new_pwd = Lang.GetKey("us_lbl_new_pwd"),
+        lbl_confirm_pwd = Lang.GetKey("us_lbl_confirm_pwd"),
+        lbl_site = Lang.GetKey("us_lbl_site"),
+        lbl_dept = Lang.GetKey("us_lbl_dept"),
+        lbl_section = Lang.GetKey("us_lbl_section"),
+        lbl_position = Lang.GetKey("us_lbl_position"),
+        lbl_email = Lang.GetKey("us_lbl_email"),
+        lbl_online = Lang.GetKey("us_lbl_online"),
+        lbl_offline_from = Lang.GetKey("us_lbl_offline_from"),
+        lbl_offline_to = Lang.GetKey("us_lbl_offline_to"),
+        lbl_offline_comment = Lang.GetKey("us_lbl_offline_comment"),
+        btn_save = Lang.GetKey("us_btn_save"),
+        swal_warning = Lang.GetKey("us_swal_warning"),
+        swal_success = Lang.GetKey("us_swal_success"),
+        swal_error = Lang.GetKey("us_swal_error"),
+        pwd_mismatch = Lang.GetKey("us_pwd_mismatch"),
+        pwd_required = Lang.GetKey("us_pwd_required"),
+        change_pwd_failed = Lang.GetKey("us_change_pwd_failed"),
+        save_success = Lang.GetKey("us_save_success"),
+        save_error = Lang.GetKey("us_save_error"),
+        offline_required = Lang.GetKey("us_offline_required"),
+        offline_invalid_range = Lang.GetKey("us_offline_invalid_range"),
+        offline_future = Lang.GetKey("us_offline_future"),
+        status_error = Lang.GetKey("us_status_error"),
+        status_error2 = Lang.GetKey("us_status_error2")
+    }));
+</script>
+<script type="module" src="~/js/admin/user-setting.js" asp-append-version="true"></script>

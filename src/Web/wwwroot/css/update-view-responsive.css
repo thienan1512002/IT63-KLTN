@@ -1,0 +1,229 @@
+﻿
+/*search bar*/
+.dataTables_filter {
+    display: flex;
+    justify-content: end;
+}
+
+.dtr-details * {
+    white-space: normal !important;
+}
+
+.table th, .jsgrid .jsgrid-table th, .table td, .jsgrid .jsgrid-table td {
+    padding: 0.8rem;
+}
+
+.dtr-data .w-100 {
+    width: unset !important;
+}
+
+@media screen and (max-width: 767px) {
+    div .dataTables_wrapper div.dataTables_length, div.dataTables_wrapper div.dataTables_filter, div.dataTables_wrapper div.dataTables_info, div.dataTables_wrapper div.dataTables_paginate {
+        text-align: center !important;
+        overflow: hidden !important;
+    }
+
+    .table td, .jsgrid .jsgrid-table td {
+        white-space: normal !important;
+    }
+
+    .dtr-details *, .dtr-control > * {
+        white-space: normal !important;
+    }
+
+    .dtr-control {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+
+    .dtr-control div {
+        flex: 1 1 100%;
+    }
+
+    tr.child {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .table-wrapper [class*="col-"] {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .table td > div, .table td > a, .table td > div > a {
+        max-width: 400px;
+        white-space: nowrap !important;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .table td .dtr-data > div, .table td .dtr-data > a, .table td .dtr-data > div > a {
+        max-width: unset;
+        white-space: normal;
+    }
+}
+
+.table-wrapper {
+    padding: 0.5rem;
+    width:100% !important;
+}
+.table-responsive {
+    overflow-x: unset !important;
+    width: 100% !important;
+}
+.table-responsive .table , .table-wrapper .table{
+    width:100% !important;
+}
+.card {
+    border-radius: 0.7rem;
+}
+
+.dtr-details {
+    width: 100%;
+}
+
+    .dtr-details .form-check-input {
+        transform: unset !important;
+    }
+/*model popup*/
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+}
+
+.modal-body {
+    padding: 0.5rem !important;
+}
+
+.modal-content {
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/*detail view content*/
+.title-section {
+    flex: 0 0 100px;
+    font-weight: bold;
+    line-height: 2;
+}
+
+.content-section {
+    flex-grow: 1;
+    word-break: break-word;
+    line-height: 2;
+}
+
+/*.dtr-control {
+    display: flex ;
+    flex-direction: row;
+    min-width: 200px;
+}*/
+.dtr-control {
+    display: table-cell;
+    /*display: flex;*/
+    min-width: 100px;
+}
+
+td.child {
+    padding: 0.5rem !important;
+}
+
+.dtr-details > li {
+    /* display: flex !important;*/
+    flex-direction: column !important;
+}
+
+/*.table td, .jsgrid .jsgrid-table td {
+    white-space: nowrap;   
+}
+*/
+.content-wrapper, .card .card-body, .card-header {
+    padding: 1rem;
+}
+
+.col-form-label {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+/*.form-group {
+    margin-bottom: 1.5rem;
+}*/
+@media (max-width: 576px) {
+    .dataTables_length, .dataTables_info {
+        display: none !important;
+    }
+
+    .content-wrapper, .card .card-body, .card-header {
+        padding: 0.5rem;
+    }
+
+    .border-bot {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .col-form-label {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .form-group {
+        margin-bottom: 1rem !important;
+    }
+}
+.form-control {
+    height: 2.575rem;
+    padding: 0.5rem 0.81rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+}
+.btn {
+    padding: 0.5rem 0.81rem !important;
+    font-size: 0.812rem !important;
+    border-radius: 15px !important;
+}
+.file-upload-browse.btn {
+    border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+}
+.footer {
+    padding: 1rem !important;
+}
+
+.gap {
+    gap: 0.5rem;
+}
+
+
+/*datagrid devextreme adaptability*/
+/* Only hide columns on small screens */
+@@media (max-width: 768px) {
+    .dx-datagrid-nowrap, .dx-datagrid-nowrap .dx-header-row > td > .dx-datagrid-text-content {
+        white-space: normal !important;
+    }
+
+    .dx-field-item-content.dx-field-item-content-location-right.dx-adaptive-item-text {
+        overflow-x: auto !important;
+    }
+
+    .dx-first-col.dx-last-col.dx-last-row.dx-field-item.dx-col-0.dx-field-item-optional.dx-flex-layout.dx-label-h-align {
+        flex-direction: column !important;
+    }
+}
+
+/*.dx-datagrid, .dx-datagrid * {
+    background-color: inherit !important;
+}*/
+
+.dx-context-menu .dx-submenu {
+    background-color: #fff !important;
+}

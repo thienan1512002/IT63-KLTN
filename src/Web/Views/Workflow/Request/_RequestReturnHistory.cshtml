@@ -1,0 +1,30 @@
+@model Web.Models.Dtos.Workflow.RequestDetailsDto
+@using Web.Data.Enums.Workflow
+@{
+    var returns = Model.Histories.Where(x => x.Action == ApprovalAction.Returned)
+        .OrderByDescending(x => x.ActionAt).ThenByDescending(x => x.Id).ToList();
+    var latest = returns.FirstOrDefault();
+}
+@if (latest != null)
+{
+    <section class="wf-return-panel" aria-labelledby="requestReturnHeading">
+        <div class="wf-return-heading">
+            <i class="mdi mdi-comment-alert-outline" aria-hidden="true"></i>
+            <div>
+                <h2 id="requestReturnHeading">@(Model.Status == RequestStatus.Returned ? "Yêu cầu đang được trả lại để bổ sung" : "Ý kiến trả lại gần nhất")</h2>
+                <p>@(Model.Status == RequestStatus.Returned ? "Vui lòng chỉnh sửa theo ý kiến bên dưới trước khi gửi lại." : "Các ý kiến được giữ lại qua từng lần gửi lại yêu cầu.")</p>
+            </div>
+            <span class="wf-return-count">@returns.Count lần trả lại</span>
+        </div>
+        <div class="wf-return-meta">
+            <strong>@latest.ActionBy</strong>
+            @if (latest.StepOrder.HasValue) { <span>Tầng @latest.StepOrder@if (!string.IsNullOrWhiteSpace(latest.StepName)) { <text> · @latest.StepName</text> }</span> }
+            <time datetime="@latest.ActionAt.ToUniversalTime().ToString("O")">@latest.ActionAt.ToLocalTime().ToString("dd/MM/yyyy HH:mm")</time>
+        </div>
+        <blockquote class="wf-return-comment">@(string.IsNullOrWhiteSpace(latest.Comment) ? "Không có nội dung ý kiến được lưu." : latest.Comment)</blockquote>
+        <details class="wf-return-history">
+            <summary><i class="mdi mdi-history" aria-hidden="true"></i> Xem lịch sử phê duyệt &amp; trả lại <span>(@Model.Histories.Count thao tác)</span></summary>
+            <partial name="~/Views/Workflow/Request/_RequestHistoryTable.cshtml" model="Model" />
+        </details>
+    </section>
+}

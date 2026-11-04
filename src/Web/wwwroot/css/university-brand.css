@@ -1,0 +1,61 @@
+.nvu-brand-lockup {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #142e58;
+    text-align: left;
+    vertical-align: middle;
+}
+.nvu-brand-copy { display: flex; flex-direction: column; gap: 4px; line-height: 1.2; }
+.nvu-brand-copy strong { font-size: 13px; font-weight: 800; white-space: nowrap; }
+.nvu-brand-copy > span { font-size: 10px; font-weight: 500; color: #64748b; }
+.nvu-brand-mark { width: 42px; height: 42px; object-fit: contain; flex-shrink: 0; }
+.navbar #notificationDropdown1 { width: min(480px, calc(100vw - 24px)); max-height: min(480px, 70vh); overflow-y: auto; }
+.navbar #notificationDropdown1 .preview-item { clear: both; padding: 13px 20px; }
+.navbar #notificationDropdown1 .preview-item-content { min-width: 0; width: 100%; }
+.navbar #notificationDropdown1 .preview-subject { white-space: normal; overflow-wrap: anywhere; line-height: 1.65; margin-bottom: 0; }
+.navbar .navbar-brand-wrapper .navbar-brand.nvu-navbar-brand { margin-right: 0 !important; }
+.navbar .navbar-brand-wrapper .navbar-brand .nvu-brand-mark { width: 39px; height: 39px; margin: 0; }
+.navbar .navbar-brand-wrapper .brand-logo-mini.nvu-navbar-brand img { width: 38px; height: 38px; object-fit: contain; }
+.nvu-auth {
+    background: #f6f8fc;
+    color: #243550;
+    font-family: 'Be Vietnam Pro', Arial, sans-serif;
+    font-weight: 400;
+}
+.nvu-auth .page-header { position: relative; overflow: hidden; }
+.nvu-auth .card { border: 1px solid #e4eaf2; border-radius: 20px; box-shadow: 0 18px 55px #142e580b; }
+.nvu-auth .card-header, .nvu-auth .card-footer { background: transparent; }
+.nvu-auth .card-header { padding-top: 30px; }
+.nvu-auth .nvu-auth-brand { display: block; margin-bottom: 34px; text-decoration: none; }
+.nvu-auth .nvu-auth-brand .nvu-brand-mark { width: 49px; height: 49px; }
+.nvu-auth .nvu-auth-brand .nvu-brand-copy strong { font-size: 17px; }
+.nvu-auth .nvu-auth-brand .nvu-brand-copy > span { font-size: 11px; }
+.nvu-auth h4 { color: #142e58; font-size: 26px; letter-spacing: -.6px; }
+.nvu-auth .card-header p { color: #69788e; font-size: 14px; line-height: 1.7; font-weight: 400; }
+.nvu-auth .form-control { border-color: #dce4ee; border-radius: 10px; font-weight: 400; background: #fff; }
+.nvu-auth .form-control:focus { border-color: #3465a3; box-shadow: 0 0 0 3px #3465a315; }
+.nvu-auth .btn[type="submit"] { background: #142e58; color: #fff; box-shadow: 0 5px 15px #142e581c; border-radius: 10px; }
+.nvu-auth .btn[type="submit"]:hover { background: #204575; }
+.nvu-auth .form-check-input:checked { background-color: #142e58; border-color: #142e58; }
+.nvu-auth .card-footer a { color: #245a99; font-weight: 600; }
+.nvu-auth :is(a, button, input):focus-visible { outline: 3px solid #c99a42; outline-offset: 3px; }
+.nvu-auth-hero { position: absolute; inset: 20px 20px 20px 50%; border-radius: 22px; overflow: hidden; align-items: flex-end; background: #142e58; }
+.nvu-auth-hero > img { position: absolute; width: 100%; height: 100%; object-fit: cover; object-position: 62% center; inset: 0; }
+.nvu-auth-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, #10254400 35%, #102544b8 78%, #102544ed); }
+.nvu-auth-hero-copy { position: relative; z-index: 1; color: #fff; padding: clamp(28px, 4vw, 64px); max-width: 730px; text-align: left; }
+.nvu-auth-eyebrow { display: block; font-size: 12px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; margin-bottom: 18px; color: #f2d59f; }
+.nvu-auth-hero-copy h2 { color: #fff; font-size: clamp(30px, 3vw, 48px); line-height: 1.25; font-weight: 700; letter-spacing: -1.2px; }
+.nvu-auth-hero-copy p { max-width: 450px; margin: 20px 0 0; font-size: 15px; line-height: 1.8; color: #e5edf7; font-weight: 400; }
+@media (max-width: 991.98px) {
+    .nvu-auth .page-header > .container { padding: 28px 20px; }
+    .nvu-auth .card { max-width: 490px; width: 100%; margin: 0 auto; }
+    .nvu-auth .nvu-auth-brand { margin-bottom: 26px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .nvu-auth .btn, .nvu-auth .form-control { transition: none; }
+}
+.sidebar-hierarchy #pendingApprovalsLink .menu-title { flex:1 1 auto; min-width:0; line-height:1.3; white-space:normal; }
+.sidebar-hierarchy .pending-approvals-badge { margin-left:10px; flex:0 0 auto; display:inline-flex; align-items:center; justify-content:center; min-width:21px; height:21px; padding:0 6px; border-radius:999px; background:#e94054; color:#fff; font-size:11px; font-weight:700; line-height:1; }
+.sidebar-hierarchy .pending-approvals-badge[hidden] { display:none; }
+@media (min-width: 992px) { .sidebar-icon-only .sidebar-hierarchy .pending-approvals-badge { display:none; } }

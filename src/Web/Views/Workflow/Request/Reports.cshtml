@@ -1,0 +1,31 @@
+﻿@{ ViewData["Title"] = "Báo cáo yêu cầu"; }
+<link rel="stylesheet" href="~/css/workflow/request-forms.css" asp-append-version="true" />
+<div class="wf-page">
+    <nav class="wf-breadcrumb"><a href="/Requests">Danh sách yêu cầu</a><i class="mdi mdi-chevron-right" aria-hidden="true"></i><span>Báo cáo</span></nav>
+    <header class="wf-page-header"><div><p class="wf-eyebrow">THỐNG KÊ NGHIỆP VỤ</p><h1>Báo cáo yêu cầu</h1><p>Lọc số liệu theo mẫu biểu, đơn vị, nhân viên và thời gian.</p></div><button type="button" id="reportExport" class="wf-button wf-button-primary"><i class="mdi mdi-download" aria-hidden="true"></i> Xuất CSV</button></header>
+    <div class="wf-operation-links" aria-label="Báo cáo và vận hành mở rộng"><a href="/Operations?tab=calendar"><i class="mdi mdi-calendar-month-outline" aria-hidden="true"></i><span><strong>Lịch làm việc</strong><small>Công tác, nghỉ phép và làm thêm đã duyệt</small></span><i class="mdi mdi-arrow-right" aria-hidden="true"></i></a><a href="/Operations?tab=dispatch"><i class="mdi mdi-car" aria-hidden="true"></i><span><strong>Điều phối xe &amp; Lịch tài xế</strong><small>Phân công, kiểm tra lịch và theo dõi chuyến</small></span><i class="mdi mdi-arrow-right" aria-hidden="true"></i></a><a href="/Operations?tab=leave"><i class="mdi mdi-calendar-check" aria-hidden="true"></i><span><strong>Sổ phép &amp; Phép tồn</strong><small>Phép cấp, đã dùng, giữ chỗ và khả dụng</small></span><i class="mdi mdi-arrow-right" aria-hidden="true"></i></a></div>
+    <section class="wf-panel wf-list-panel">
+        <div class="wf-list-tabs" role="group" aria-label="Loại báo cáo"><button type="button" class="is-active" data-report-mode="requests" aria-pressed="true">Tổng hợp yêu cầu</button><button type="button" data-report-mode="purchase" aria-pressed="false">Báo cáo mua hàng</button><button type="button" data-report-mode="items" aria-pressed="false">Chi tiết hàng hóa / Chi phí</button></div>
+        <div class="wf-filters">
+            <label><span>Mẫu biểu</span><select id="reportTemplate"><option value="">Tất cả mẫu biểu</option></select></label>
+            <label><span>Đơn vị</span><select id="reportDepartment"><option value="">Tất cả đơn vị</option></select></label>
+            <label id="reportPartnerFilter" hidden><span>Nhà cung cấp đề xuất</span><select id="reportPartner"><option value="">Tất cả nhà cung cấp</option></select></label>
+            <label><span>Nhân viên tham gia</span><select id="reportEmployee"><option value="">Tất cả nhân viên</option></select></label>
+            <label><span>Trạng thái</span><select id="reportStatus"><option value="2">Đã hoàn thành</option><option value="1">Đang xử lý</option><option value="3">Yêu cầu bổ sung</option><option value="4">Đã từ chối</option><option value="5">Bản nháp</option><option value="">Tất cả trạng thái</option></select></label>
+            <label><span>Từ ngày</span><input id="reportFrom" type="date" /></label><label><span>Đến ngày</span><input id="reportTo" type="date" /></label>
+        </div>
+        <p class="wf-help">Ngày báo cáo là ngày bắt đầu nghỉ / công tác / làm thêm / chuyến xe; với các mẫu khác là ngày yêu cầu. Số ngày tính theo lịch, số giờ làm thêm tính theo thời lượng đăng ký. Các tổng tiền được quy đổi sang VND theo tỷ giá đã lưu trong yêu cầu.</p>
+        <section id="purchaseSummary" hidden aria-label="Tổng quan mua hàng">
+            <div class="wf-stats" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr));margin-top:18px">
+                <article class="wf-stat"><div><span>Số đề nghị</span><strong id="purchaseCount">—</strong></div></article>
+                <article class="wf-stat"><div><span>Giá trị đề nghị (VND)</span><strong id="purchaseTotal">—</strong></div></article>
+                <article class="wf-stat"><div><span>Đã hoàn thành phê duyệt</span><strong id="purchaseCompletedCount">—</strong></div></article>
+                <article class="wf-stat"><div><span>Giá trị đã duyệt (VND)</span><strong id="purchaseCompletedTotal">—</strong></div></article>
+            </div>
+            <p class="wf-help">Giá trị là dự toán trong yêu cầu, không phải số tiền đã thanh toán. Số liệu theo quyền xem và các bộ lọc phía trên; phần tổng quan không áp dụng bộ lọc trong bảng chi tiết.</p>
+            <details style="margin:16px 0"><summary>Theo nhà cung cấp đề xuất</summary><div class="wf-table-scroll"><table class="wf-history-table"><thead><tr><th>Nhà cung cấp</th><th>Số đề nghị</th><th>Giá trị đề nghị (VND)</th></tr></thead><tbody id="purchaseSuppliers"></tbody></table></div></details>
+        </section>
+        <div id="reportError" class="wf-alert" role="alert" hidden></div><div id="businessReportGrid"></div>
+    </section>
+</div>
+@section Scripts { <script src="~/js/workflow/request-reports.js" asp-append-version="true"></script> }

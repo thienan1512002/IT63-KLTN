@@ -1,0 +1,82 @@
+
+
+/* Custom filter row input */
+.dx-datagrid-filter-row .dx-editor-cell .dx-texteditor-input {
+  padding-left: 28px !important;
+  font-size: 14px !important;
+  height: 33px !important;
+  /* font-weight: bolder !important; */
+}
+
+.dx-datagrid-text-content {
+  font-size: 14px !important;
+  font-weight: bold !important;
+  color: rgb(26, 25, 25);
+}
+
+.dx-gridbase-a11y-status-container {
+  display: none !important;
+}
+
+.dx-field-item-label-text {
+    color:rgba(0,0,0,.87) !important;
+    font-weight: 500;
+}
+
+.dx-placeholder{
+    display:none;
+}
+
+.dx-button-text{
+    text-transform: none;
+}
+
+/* Portal notification: label đồng bộ (HTML detail + form popup) */
+.portal-field-label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #6c757d;
+}
+
+
+
+.swal2-container {
+    z-index: 3000 !important;
+}
+
+    .swal2-container.swal2-top-end {
+        z-index: 2000 !important;
+    }
+
+.swal2-success-toast .swal2-timer-progress-bar {
+    background-color: #28a745 !important;
+}
+
+.swal2-warning-toast .swal2-timer-progress-bar {
+    background-color: #ffc107 !important;
+}
+
+.swal2-error-toast .swal2-timer-progress-bar {
+    background-color: #dc3545 !important;
+}
+
+.swal2-modal .swal2-icon {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 920px) {
+    .modal-dialog {
+        min-width: 90% !important;      
+    }
+}
+
+
+/* --------- Update search bar' placeholder color --------- */
+#navbar-search-input::placeholder {
+    color: #3d3d3d4d!important;
+}

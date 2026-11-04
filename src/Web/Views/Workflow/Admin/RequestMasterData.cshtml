@@ -1,0 +1,8 @@
+﻿@{ ViewData["Title"] = "Danh mục nhập liệu yêu cầu"; }
+<link rel="stylesheet" href="~/css/workflow/request-forms.css" asp-append-version="true" />
+<div class="wf-page">
+    <nav class="wf-breadcrumb"><a href="/RequestTypes">Loại yêu cầu</a><i class="mdi mdi-chevron-right" aria-hidden="true"></i><span>Danh mục nhập liệu</span></nav>
+    <header class="wf-page-header"><div><h1>Danh mục nhập liệu yêu cầu</h1><p>Quản lý dữ liệu dùng chung cho các select box của từng mẫu biểu.</p></div><a class="wf-button" href="/Requests/Create">Tạo yêu cầu</a></header>
+    <section class="wf-panel wf-list-panel"><div class="wf-filters"><label><span>Nhóm danh mục</span><select id="masterCategory"><option value="">Tất cả danh mục</option></select></label></div><div class="wf-info-note">Dùng trạng thái “Sử dụng” để ngừng cho phép lựa chọn dữ liệu cũ. Các tham chiếu trong yêu cầu và báo cáo được giữ lại.</div><div id="masterGrid"></div><div id="masterError" class="wf-alert" role="alert" hidden></div></section>
+</div>
+@section Scripts { <script src="~/js/workflow/request-master-data.js" asp-append-version="true"></script> }

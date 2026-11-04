@@ -1,0 +1,99 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Return request</title>
+  </head>
+  <body>
+    <p class="font-larger" style="margin-bottom:5px;">Your application has been returned.</p>
+    <p><i>Yêu cầu của bạn đã bị trả lại.</i></p>
+    <!-- HR line-->
+    <table
+        role="presentation"
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+        width="100%"
+        style="margin-left:2px;"
+    >
+        <tr>
+            <td
+                style="
+                    border-top:1px solid #000;
+                    font-size:0;
+                    line-height:0;
+                "
+            >
+                &nbsp;
+            </td>
+        </tr>
+    </table>
+    <table>
+      <tr>
+        <td>[Application/ Đơn]</td>
+        <td>{{RequestName}}</td>
+      </tr>
+      <tr><td>[Request/ Yêu cầu]</td><td>{{RequestTitle}}</td></tr>
+      <tr><td>[Reference/ Mã phiếu]</td><td>{{ApplicationNo}}</td>
+      </tr>
+      <tr>
+        <td>[Applicant/ Người gửi]</td>
+        <td>{{RequesterName}}</td>
+      </tr>
+      <tr>
+        <td>[Section/ Bộ phận, Bộ môn]</td>
+        <td>{{RequesterSection}}</td>
+      </tr>
+      <tr>
+        <td>[Return Date/ Ngày trả lại]</td>
+        <td>{{DateRequest}}</td>
+      </tr>
+      <tr>
+        <td style="padding-right:50px">[Approver Return/ Người phê duyệt]</td>
+        <td>{{ApproverReturn}}</td>
+      </tr>
+      <tr>
+        <td style="padding-right:50px">[Note/ Ghi chú]</td>
+        <td>{{Note}}</td>
+      </tr>      
+    </table>
+
+    <p style="margin-top:10px">For more detail, <a href="{{Link}}">Click here</a>!</p>    
+    <!-- HR line-->
+    <table
+        role="presentation"
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+        width="100%"
+        style="margin-left:2px;"
+    >
+        <tr>
+            <td
+                style="
+                    border-top:1px solid #000;
+                    font-size:0;
+                    line-height:0;
+                "
+            >
+                &nbsp;
+            </td>
+        </tr>
+    </table>
+
+    <p style="margin-top:10px"><i>This is automatic email from Nam Viet University approval system, please do not reply!</i></p>   
+    
+     <style>
+         p{
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+
+      .font-larger {
+        font-size: larger;
+      }
+    </style>
+  </body>
+</html>

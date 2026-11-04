@@ -1,0 +1,37 @@
+@inject LanguageService language
+
+<script>
+    window.workflow_i18n = {
+        workflow: {
+            no: "@Html.Raw(language.GetKey("workflow_grid_no"))",
+            approvalName: "@Html.Raw(language.GetKey("workflow_grid_approval_name"))",
+            fullName: "@Html.Raw(language.GetKey("workflow_grid_full_name"))",
+            section: "@Html.Raw(language.GetKey("workflow_grid_section"))",
+            position: "@Html.Raw(language.GetKey("workflow_grid_position"))",
+            email: "@Html.Raw(language.GetKey("workflow_grid_email"))",
+            phone: "@Html.Raw(language.GetKey("workflow_grid_phone"))",
+            confirmation: "@Html.Raw(language.GetKey("workflow_grid_confirmation"))",
+            status: "@Html.Raw(language.GetKey("workflow_grid_status"))",
+            approvalDate: "@Html.Raw(language.GetKey("workflow_grid_approval_date"))",
+            comment: "@Html.Raw(language.GetKey("workflow_grid_comment"))",
+            statusWaitingApproval: "@Html.Raw(language.GetKey("workflow_status_waiting_approval"))",
+            statusWaitingConfirm: "@Html.Raw(language.GetKey("workflow_status_waiting_confirm"))",
+            approvalStatusApproved: "@Html.Raw(language.GetKey("workflow_status_approved"))",
+            approvalStatusConfirmed: "@Html.Raw(language.GetKey("workflow_status_confirmed"))",
+            approvalStatusReturned: "@Html.Raw(language.GetKey("workflow_status_returned"))",
+            approvalStatusRejected: "@Html.Raw(language.GetKey("workflow_status_rejected"))",
+            approvalTypeApproval: "@Html.Raw(language.GetKey("workflow_approval_type_approval"))",
+            approvalTypeConfirm: "@Html.Raw(language.GetKey("workflow_approval_type_confirm"))",
+            submit: "@Html.Raw(language.GetKey("workflow_submit"))",
+            cancel: "@Html.Raw(language.GetKey("workflow_cancel"))",
+            backToLists: "@Html.Raw(language.GetKey("workflow_back_to_lists"))",
+            btnApprove: "@Html.Raw(language.GetKey("workflow_btn_approve"))",
+            btnReject: "@Html.Raw(language.GetKey("workflow_btn_reject"))",
+            btnReturn: "@Html.Raw(language.GetKey("workflow_btn_return"))",
+            btnConfirm: "@Html.Raw(language.GetKey("workflow_btn_confirm"))",
+            btnExport: "@Html.Raw(language.GetKey("workflow_btn_export"))",
+            rejectedMessage: "@Html.Raw(language.GetKey("workflow_rejected_message"))",
+            gridSearch: "@Html.Raw(language.GetKey("wfr_grid_search"))"
+        }
+    };
+</script>

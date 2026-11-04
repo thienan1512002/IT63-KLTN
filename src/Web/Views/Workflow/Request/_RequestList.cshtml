@@ -1,0 +1,36 @@
+@model bool
+<link rel="stylesheet" href="~/css/workflow/request-forms.css" asp-append-version="true" />
+<div class="wf-page" data-approval-list="@Model.ToString().ToLowerInvariant()">
+    <header class="wf-page-header">
+        <div><p class="wf-eyebrow">QUẢN LÝ YÊU CẦU</p><h1>@(Model ? "Phê duyệt yêu cầu" : "Danh sách yêu cầu")</h1><p>@(Model ? "Xem và xử lý các yêu cầu đang chờ bạn phê duyệt." : "Quản lý và theo dõi các yêu cầu phê duyệt của bạn.")</p></div>
+        @if (!Model) { <div class="wf-actions"><a class="wf-button" href="/RequestReports"><i class="mdi mdi-chart-bar" aria-hidden="true"></i> Báo cáo</a><a class="wf-button wf-button-primary" href="/Requests/Create"><i class="mdi mdi-plus" aria-hidden="true"></i> Tạo yêu cầu mới</a></div> }
+        else { <span class="wf-header-note"><i class="mdi mdi-shield-check-outline" aria-hidden="true"></i> Công việc chờ xử lý</span> }
+    </header>
+    <div class="wf-stats" aria-label="Thống kê yêu cầu">
+        <div class="wf-stat"><span class="wf-stat-icon"><i class="mdi mdi-file-document-outline" aria-hidden="true"></i></span><div><span>@(Model ? "Chờ bạn xử lý" : "Tổng yêu cầu")</span><strong data-stat="total">—</strong></div></div>
+        <div class="wf-stat"><span class="wf-stat-icon wf-tone-amber"><i class="mdi mdi-clock-outline" aria-hidden="true"></i></span><div><span>Đang xử lý</span><strong data-stat="1">—</strong></div></div>
+        <div class="wf-stat"><span class="wf-stat-icon wf-tone-green"><i class="mdi mdi-check-circle-outline" aria-hidden="true"></i></span><div><span>Đã hoàn thành</span><strong data-stat="2">—</strong></div></div>
+        <div class="wf-stat"><span class="wf-stat-icon wf-tone-violet"><i class="mdi mdi-undo-variant" aria-hidden="true"></i></span><div><span>Yêu cầu bổ sung</span><strong data-stat="3">—</strong></div></div>
+        <div class="wf-stat"><span class="wf-stat-icon wf-tone-red"><i class="mdi mdi-close-circle-outline" aria-hidden="true"></i></span><div><span>Đã từ chối</span><strong data-stat="4">—</strong></div></div>
+    </div>
+    <section class="wf-panel wf-list-panel" aria-label="Danh sách yêu cầu">
+        @if (Model)
+        {
+            <div class="wf-list-tabs" role="group" aria-label="Lọc theo mức độ ưu tiên">
+                <button class="is-active" type="button" data-priority="">Tất cả yêu cầu</button>
+                <button type="button" data-priority="2">Ưu tiên cao</button>
+                <button type="button" data-priority="3">Khẩn cấp</button>
+            </div>
+        }
+        <div class="wf-filters">
+            <label class="wf-search-field"><span>Tìm kiếm</span><div class="wf-input-icon"><i class="mdi mdi-magnify" aria-hidden="true"></i><input id="requestSearch" type="search" placeholder="Tìm mã phiếu, tiêu đề, người tạo..." /></div></label>
+            <label><span>Loại yêu cầu</span><select id="requestTypeFilter"><option value="">Tất cả loại yêu cầu</option></select></label>
+            <label><span>Trạng thái</span><select id="requestStatusFilter" disabled="@Model"><option value="">Tất cả trạng thái</option><option value="1" selected="@Model">Đang xử lý</option><option value="2">Đã hoàn thành</option><option value="3">Yêu cầu bổ sung</option><option value="4">Đã từ chối</option><option value="5">Bản nháp</option><option value="6">Đã hủy</option></select></label>
+            <label><span>Từ ngày</span><input id="requestFrom" type="date" /></label>
+            <label><span>Đến ngày</span><input id="requestTo" type="date" /></label>
+            <button class="wf-button wf-button-icon" id="requestResetFilters" type="button" title="Đặt lại bộ lọc" aria-label="Đặt lại bộ lọc"><i class="mdi mdi-filter-remove-outline" aria-hidden="true"></i></button>
+        </div>
+        <div id="requestListError" class="wf-alert" role="alert" hidden></div>
+        <div id="requestGrid"></div>
+    </section>
+</div>
